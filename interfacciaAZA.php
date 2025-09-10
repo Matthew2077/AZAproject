@@ -11,7 +11,7 @@ require_once __DIR__ . '/config/dz.php';
 
 
 ?>
-<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
 <!DOCTYPE html>
 <html lang="en" id="wholepage">
 <head>
@@ -46,8 +46,8 @@ require_once __DIR__ . '/config/dz.php';
 
     	<!--SWEET ALERT-->
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-    
+        <!--GRAFICI JS-->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 	<?php include 'elements/page-css.php'; ?>
 	<style>
 /* Layout Modal */
@@ -182,55 +182,107 @@ require_once __DIR__ . '/config/dz.php';
 		<!--**********************************
             Content body start
         ***********************************-->
-    <div class="content-body chart-wrapper" >
-        <!-- ROW INTESTAZIONE -->
-        <div class="container-fluid">
-            <div class="row mb-4">
-                <div class="col-md-12">
-                    <div class="card chart-wrapper" >
-                        <div class="card-body">
-                            <h2 class="card-title">AZA - Advanced Zelda Analysis</h3>
-                            <!-- <h4 class="card-title">Carica file JSON</h3> -->
-                            <form id="uploadForm" method="post" enctype="multipart/form-data"> <!--form upload file-->
-                                <div class="mb-3"> <!--input file-->
-                                    <input class="form-control" type="file" name="jsonFile" accept=".json" id="json-upload" required>
-                                </div>
-                                <button id="uplpadfile" type="submit" class="btn btn-primary">Carica File</button>
-                                <div class="mt-2" id="filename">Nessun file selezionato</div>
-                                <input type='hidden' id="action" name="action" value='upload'>
-                            </form>
+        <div class="content-body chart-wrapper" >
+            <!-- ROW INTESTAZIONE -->
+            <div class="container-fluid">
+                <div class="row mb-4">
+                    <div class="col-md-12">
+                        <div class="card chart-wrapper" >
+                            <div class="card-body">
+                                <h2 class="card-title">AZA - Advanced Zelda Analysis</h3>
+                                <!-- <h4 class="card-title">Carica file JSON</h3> -->
+                                <form id="uploadForm" method="post" enctype="multipart/form-data"> <!--form upload file-->
+                                    <div class="mb-3"> <!--input file-->
+                                        <input class="form-control" type="file" name="jsonFile" accept=".json" id="json-upload" required>
+                                    </div>
+                                    <button id="uplpadfile" type="submit" class="btn btn-primary">Carica File</button>
+                                    <div class="mt-2" id="filename">Nessun file selezionato</div>
+                                    <input type='hidden' id="action" name="action" value='upload'>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Dati generali caricati da AZAserver.php -->
-            <div id='datiaggreg' class="row mb-3 chart-wrapper" >
-                <!-- Reso dinamico da funzione -->
-            </div>
+                <!-- Dati generali caricati da AZAserver.php -->
+                <div id='datiaggreg' class="row mb-3 chart-wrapper" >
+                    <!-- Reso dinamico da funzione -->
+                </div>
 
-            <!-- Tabs -->
-            <div class="row mb-3 chart-wrapper">
-                <!--TAB DINAMICHE -->
-                <ul class="nav nav-pills nav-fill" id="tabs-paesi">
-                    <!-- Creazione dinamica tab con funzione generateCountryTabs()
-                     Esempio di una tab:
-                    <li class="nav-item">
-                        <a class="nav-link country active" aria-current="page" country="IT" href="#">IT</a>
-                    </li>
+                <!-- Tabs -->
+                <div class="row mb-3 chart-wrapper">
+                    <!--TAB DINAMICHE -->
+                    <ul class="nav nav-pills nav-fill" id="tabs-paesi">
+                        <!-- Creazione dinamica tab con funzione generateCountryTabs()
+                        Esempio di una tab:
+                        <li class="nav-item">
+                            <a class="nav-link country active" aria-current="page" country="IT" href="#">IT</a>
+                        </li>
 
-                    qui viene messo anche il bottone per il pdf-->
-                </ul>
+                        qui viene messo anche il bottone per il pdf-->
+                    </ul>
 
-            </div>
-
+                </div>
 
 
 
+<!--GRAFICI STRUTTURA HTML-->
+<div class="card chart-wrapper">
+    <div class='row'>
+        <div class='card-body'>
+            <div class='card-title'></div>
+                <!--QUI VA UN GRAFICO IS_AMZ--> 
+                <div class="col-md-6 dashboard" id="is_AMZ" KPI="is_AMZ"></div>
+        </div>
+        <div class='card-body'>
+            <div class='card-title'></div>
+                <!--QUI VA UN GRAFICO ASIN-->
+                <div class="col-md-6 dashboard" id="ASIN" KPI="ASIN"></div>
+        </div>    
+    </div>
+    <div class='row'>
+        <div class='card-body'>
+            <div class='card-title'></div>
+                <!--QUI VA UN GRAFICO OFFERS-->
+                <div class="col-md-4 dashboard" id="OFFERS" KPI="OFFERS"></div>
+        </div>
+        <div class='card-body'>
+            <div class='card-title'></div>
+                <!--QUI VA UN GRAFICO NODE-->
+                <div class="col-md-8 dashboard" id="NODE" KPI="NODE" ></div>
+        </div>    
+    </div>
+    <div class='row'>
+        <div class='card-body'>
+            <div class='card-title'></div>
+                <!--QUI VA UN GRAFICO TEMPO_DI_CONSEGNA-->
+                <div class="col-md-4 dashboard" id="TEMPO_DI_CONSEGNA" KPI="TEMPO_DI_CONSEGNA"></div>
+        </div>
+        <div class='card-body'>
+            <div class='card-title'></div>
+                <!--QUI VA UN GRAFICO CAT-->
+                <div class="col-md-8 dashboard" id="CAT" KPI="CAT"></div>
+        </div>    
+    </div>
+     <div class='row'>
+        <div class='card-body'>
+            <div class='card-title'></div>
+                <!--QUI VA UN GRAFICO MARGINE-->
+                <div class="col-md-6 dashboard" id="MARGINE" KPI="MARGINE"></div>
+        </div>
+        <div class='card-body'>
+            <div class='card-title'></div>
+                <!--QUI VA UN GRAFICO IDQ-->
+                <div class="col-md-6 dashboard" id="IDQ" KPI="IDQ"></div>
+        </div>    
+    </div>
+</div>
 
 
 
-<!-- MODALE PER GENERAZIONE PDF -->
+
+
+<!-- ! MODALE PER GENERAZIONE PDF -->
 <div class="modal fade" id="pdfmodal" tabindex="-1" aria-labelledby="pdfmodalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg"> <!-- Aumenta dimensione -->
     <div class="modal-content">
@@ -575,32 +627,83 @@ $(document).ready(function() { //qui inserisci ogni cosa
             KPI: ["ASIN", "is_AMZ", "OFFERS", "NODE", "TEMPO_DI_CONSEGNA", "CAT", "MARGINE", "LISTA_TOP_X", "IDQ", "DETTAGLIO"], 
         };
 
-    fetch('AZAserver.php', { //AZAserver
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
+        fetch('AZAserver.php', { //AZAserver
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(params)
+        })
+        .then(response => response.text())
+        .then(data => {
+            console.log('Risposta dal server:', data);
+            alert('Python eseguito!\n' + data);
+        })
+        .catch(error => {
+            console.error('Errore:', error);
+            alert('Errore nell\'esecuzione dello script');
+        });
+
+
+
+        var asin_count = data.asin_count;
+        var no_asin_count = data.no_asin_count;
+        series = [asin_count, no_asin_count]; // dati
+        // qui inizia il bello
+        var options = {
+            series: series,
+            chart: {
+                width: 380,
+                type: 'pie',
+            },
+            title: {
+                text: "Amazon Seller:",
+                align: 'center',
+                style: {
+                    fontSize: '16px',
+                    fontWeight: 'bold',
+                    color: '#333'
+                }
+            },
+            labels: labels,
+            colors: ['#0edf8d', '#27b00e'], // Blu per "Yes", blu chiaro per "No"
+            dataLabels: {
+            enabled: true,
+            style: {
+                colors: ['#000000', '#000000'] // Testo nero per entrambe le etichette
+            },
+            dropShadow: { //toglie le ombre
+                enabled: false
+            },
+            formatter: function(val, opts) {
+                return opts.w.globals.series[opts.seriesIndex] + " (" + val.toFixed(1) + "%)";
+            },
+            style: {
+                colors: ['#FFFFFF'] // Colore del testo in basso (percentuale)
+            }
         },
-        body: JSON.stringify(params)
-    })
-    .then(response => response.text())
-    .then(data => {
-        console.log('Risposta dal server:', data);
-        alert('Python eseguito!\n' + data);
-    })
-    .catch(error => {
-        console.error('Errore:', error);
-        alert('Errore nell\'esecuzione dello script');
+            legend: {
+                position: 'bottom', // Posizione legenda
+                fontSize: '14px'
+            },
+            responsive: [{
+                breakpoint: 480,
+                options: {
+                    chart: {
+                        width: 200
+                    },
+                    legend: {
+                        position: 'bottom'
+                    }
+                }
+            }]
+        };
+
+        var chart = new ApexCharts(document.querySelector("#IS_AMZ"), options);
+        chart.render();
+
+
     });
-
-
-
-
-    // qui inizia il bello
-
-    });
-
-
-
 
 
 
