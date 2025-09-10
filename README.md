@@ -1,0 +1,2 @@
+# AZAproject
+Progetto tirocinio Konke
