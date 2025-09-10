@@ -1,4 +1,4 @@
-# READ ME - Everything About this project
+# AZA PROJECT 
 
 Il presente progetto ha come obbiettivo quello di creare una interfaccia grafica carina e interattiva per visualizzare dati di un'analisi precedente. <br>
 Di seguito una spiegazione dettagliata di come funziona il programma
@@ -31,15 +31,19 @@ __$('#uploadForm').on('submit', function(e))__, quando l'azione viene registrata
 Mando i parametri al file python che risponderà con i JSON necessari per i grafici. 
 4. Elaborazione python: 
     1. __Ridefinizione logica__
-    2. **aggiorno dopo**
+    2. **aggiorno dopo** tanto funziona ;)
 4. AZAserver.php controllo se la risposta è null, se non lo è mando la risposta ad interfacciaAZA.php
+5. In interfacciaAZA.php mmm
+
 
 
 
 
 # Task attuali: 
+- Far funzionare i grafici
 - __aggiungere sistema per aggiustare i valori nulli nel file__
 - fai gli output e collega tutto a InterfacciaAZA.php
 - __la country in cui cerca deve essere resa dinamica e fatto un ciclo__
 
 
+devo capire come funziona il chart, come vuole che gli passo le informazioni. Così le preparo o le gestisco di conseguenza... 
