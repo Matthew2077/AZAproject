@@ -9,7 +9,7 @@ import json
 
 try:
     # ---------------
-    # *Leggi i parametri dal file passato come argomento
+    # Leggi i parametri dal file passato come argomento
     # ---------------
     if len(sys.argv) > 1:
         input_file = sys.argv[1]
@@ -35,7 +35,7 @@ try:
             dati = json.load(f) #DATI FILE QUI --------
 
         # ---------------
-        # *DATI GENERALI
+        # DATI GENERALI
         # ---------------
         body = dati['body'] 
         asin_list = []
@@ -47,7 +47,7 @@ try:
         if output == "J":
 
             # ---------------
-            # *CONTEGGIO ASIN
+            # CONTEGGIO ASIN
             # ---------------
             asin_count = 0
             no_asin_count = 0
@@ -62,7 +62,7 @@ try:
             #print(no_asin_count)
 
             # ---------------
-            # *CONTEGGIO IS_AMZ
+            # CONTEGGIO IS_AMZ
             # ---------------
             IS_AMZ_list = []
             is_AMZ_count = 0
@@ -82,7 +82,7 @@ try:
            
             
             # ---------------
-            # *CONTEGGIO CATEGORIE
+            # CONTEGGIO CATEGORIE
             # ---------------
             category_list = []
             
@@ -98,11 +98,11 @@ try:
                         pass
                 except (ValueError, TypeError, KeyError):
                     continue
-            #?print(category_list)
+            #print(category_list)
             
             
             # ---------------
-            # *CONTEGGIO NODI
+            # CONTEGGIO NODI
             # ---------------
             node_list = []
             
@@ -120,11 +120,11 @@ try:
                 except (ValueError, TypeError, KeyError):
                     continue
                 
-            #?print(node_list)
+            #print(node_list)
             
             
             # ---------------
-            # *CONTEGGIO OFFERS 
+            # CONTEGGIO OFFERS 
             # ---------------
             offers_count = 0
             no_offers_count = 0
@@ -137,11 +137,11 @@ try:
                 else: 
                     no_offers_count = no_offers_count + 1
                 
-            # ?print(offers_count)
-            # ?print(no_offers_count)
+            # print(offers_count)
+            # print(no_offers_count)
             
             # ---------------
-            # *CONTEGGIO MARGINE 
+            # CONTEGGIO MARGINE 
             # ---------------
             fasce_margine = {
                 "meno_0%": 0,
@@ -198,7 +198,7 @@ try:
             
             
             # ---------------
-            # *CONTEGGIO TEMPO DI CONSEGNA
+            # CONTEGGIO TEMPO DI CONSEGNA
             # ---------------
             tempo_spedizione = {
                     "prime": 0,
@@ -236,7 +236,7 @@ try:
                 except (KeyError, TypeError, AttributeError):
                     pass
             # ---------------
-            # *CONTEGGIO TEMPO DI CONSEGNA
+            # CONTEGGIO TEMPO DI CONSEGNA
             # ---------------
 
             info_IDQ = {
@@ -290,7 +290,7 @@ try:
            
            
             # ---------------
-            # *CONTEGGIO LISTA TOP X
+            # CONTEGGIO LISTA TOP X
             # ---------------
             prodotti = []
            
@@ -337,7 +337,7 @@ try:
             prodotti_ordinati = sorted(prodotti, key=lambda x: x["NODE_RANK"])[:50]
             
             # ---------------
-            # *RISULTATI
+            # RISULTATI
             # ---------------
             result = {
                 'asin_count': asin_count,
@@ -356,10 +356,13 @@ try:
         
         print(json.dumps(result))
             
-    
+       
+
+
+       
         
     else:
-        #!Nessun parametro ricevuto
+        # Nessun parametro ricevuto
         error_result = {
             "status": "error",
             "message": "Nessun file di input specificato"
@@ -379,7 +382,7 @@ except json.JSONDecodeError as e:
     }
     print(json.dumps(error_result))
 except Exception as e:
-    # ? Gestione errori generici
+    # Gestione errori generici
     error_result = {
         "status": "error", 
         "message": f"Errore nello script Python: {str(e)}"
