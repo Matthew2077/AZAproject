@@ -1,0 +1,4424 @@
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "ABYSTYLE One Piece Calzini Skull One Size (38-43) nero, 70% cotone, 27% poliestere, 3% elastan."
+Answer:
+Risposta:
+"ABYSTYLE One Piece Skull Socks One Size (38-43) black, 70% cotton, 27% polyester, 3% elastane."
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Wizard W-63 Compatibile con Sony | Staffa di rotazione orizzontale/verticale, Arca-Swiss compatibile, rotazione a 0°, 90° e"
+Answer:
+Risposta:
+"NiSi W-63 for Sony; Horizontal/vertical rotation bracket; Arca-Swiss compatible; 0°, 90° rotation"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Wizard W-72 Compatibile con Fujifilm, Nikon Z, Panasonic S5, Leica SL/SL2 | Staffa di rotazione orizzontale/verticale, Arca"
+Answer:
+Risposta:
+"NiSi Wizard W-72 for Fujifilm, Nikon Z, Panasonic S5, Leica SL/SL2; Rotating bracket, Arca"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Wizard W-82D Compatibile con fotocamere DSLR | Staffa di rotazione orizzontale/verticale, Arca-Swiss compatibile, rotazione"
+Answer:
+Risposta:
+"NiSi Wizard W-82D for DSLR cameras; Horizontal/vertical rotation bracket; Arca-Swiss compatible; Rotating feature"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Wizard W-82M Compatibile con fotocamere Canon serie R | Staffa di rotazione orizzontale/verticale, Arca-Swiss compatibile, "
+Answer:
+Risposta:
+"NiSi Wizard W-82M for Canon R series; Horizontal/vertical rotation bracket; Arca-Swiss compatible;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Anello adattatore S6 per filettature di filtri standard (adattatori da 105 mm, 95 mm, 82 mm inclusi) | Adattatore per obiet"
+Answer:
+Risposta:
+"NiSi S6 Ring Adapter for standard filter threads (105mm, 95mm, 82mm incl.); Lens Adapter"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi JetMag Pro 62mm-82MAG Adattatore obiettivo filettatura 62 mm per collegare filtri magnetici 82MAG"
+Answer:
+Risposta:
+"NiSi JetMag Pro 62mm-82MAG Lens Adapter; 62mm thread for 82MAG magnetic filters"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi JetMag Pro 67mm-82MAG Adattatore obiettivo filettatura 67 mm per collegare filtri magnetici 82MAG"
+Answer:
+Risposta:
+"NiSi JetMag Pro 67mm-82MAG Lens Adapter; 67mm thread for 82MAG magnetic filters"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi JetMag Pro 82mm-82MAG Anello Adattatore obiettivo filettatura 82 mm per collegare filtri magnetici 82MAG"
+Answer:
+Risposta:
+"NiSi JetMag Pro 82mm-82MAG Lens Adapter Ring; Connects 82mm magnetic filters"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Kit Advanced 150 di Filtri da 150mm (no Holder, include 4 filtri di larghezza 150mm)"
+Answer:
+Risposta:
+"NiSi Adv. 150 Filter Kit (no Holder, incl. 4 150mm wide filters);"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Kit portafiltro V7 da 100 mm con True Color CPL, con anello adattatore da 67-82 mm, 72-82 mm e 77-82 mm"
+Answer:
+Risposta:
+"NiSi 100mm V7 Filter Kit w/ True Color CPL; 67-82mm, 72-82mm, 77-82mm adapt rings"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Kit Starter 150 di Filtri da 150mm (no Holder, include 3 filtri di larghezza 150mm)"
+Answer:
+Risposta:
+"NiSi 150 Starter Kit (no Holder, includes 3 150mm wide filters);"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Portafiltro da 100 mm - Switch (compatibile con l'adattatore principale da 82 mm di V6 / V5-Pro ??/ V5)"
+Answer:
+Risposta:
+"NiSi 100mm Filter Holder - Switch (fits 82mm V6/V5-Pro/V5 main adapter);"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Portafiltro da 100mm per Olympus 7-14 mm f/2.8 PRO | Contiene 2 filtri da 100x100 mm e 100x150 mm (ND, GND, ecc.), rotazion"
+Answer:
+Risposta:
+"NiSi 100mm Filter Holder for Olympus 7-14mm f/2.8 PRO | Includes 2 100x100mm and 100x150mm filters (ND, GND, etc.), rotation"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Professional Kit V7 e Filtri a lastra 100mm, Kit 7 filtri (GND Soft/Medium/Reverse 3 Stop, ND8 3 Stop, ND64 6 Stop, ND1000 "
+Answer:
+Risposta:
+"NiSi Pro Kit V7 & 100mm slab filters; 7 filter kit (GND Soft/Med/Reverse 3 Stop, ND8 3 Stop, ND64 6 Stop, ND1000"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi S6 Supporto per Filtro per Sony FE 12-24 mm F4 G (True Color CPL) – 150 mm  Filter Holder System"
+Answer:
+Risposta:
+"NiSi S6 Filter Support for Sony FE 12-24mm F4 G (True Color CPL) - 150mm Filter System;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Starter Kit V7 di Filtri 100mm, Kit di 2 filtri (GND 100x150 Medium 3 Stop, ND 100x100 ND1000 10 Stop) con Holder NiSi V7 c"
+Answer:
+Risposta:
+"NiSi Starter Kit V7, 2 filters (GND 100x150 Med 3 Stop, ND 100x100 ND1000 10 Stop) with V7 Holder;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "Filtro UV HUC (Ultra Hard Coating) con 18 rivestimenti multistrato UHD, rivestimento ultra duro, Nano Coating®, ultra-sottile re"
+Answer:
+Risposta:
+"UV HUC Filter with 18 UHD multilayer coatings, ultra-hard, Nano Coating®, ultra-thin;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "Filtro UV HUC (Ultra Hard Coating) con 18 rivestimenti multistrato UHD, rivestimento ultra duro, Nano Coating®, ultra-sottile re"
+Answer:
+Risposta:
+"UV HUC Filter with 18 UHD multilayer coatings, ultra-hard coat, Nano Coating®, ultra-thin;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "Filtro UV HUC (Ultra Hard Coating) con 18 rivestimenti multistrato UHD, rivestimento ultra duro, Nano Coating®, ultra-sottile re"
+Answer:
+Risposta:
+"UV HUC Filter with 18 UHD multilayer coatings, ultra-hard, Nano Coating®, ultra-thin;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi - Filtro circolare naturale notturno 112 mm per Nikon Z 14-24 mm f/2.8S (filtro di inquinamento della luce)"
+Answer:
+Risposta:
+"NiSi - 112mm Natural Night Filter for Nikon Z 14-24mm f/2.8S (Light Pollution Filter);"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi - JetMag Pro 82MAG Lens Front Cap - Lente magnetica durevole e protezione filtro per filtri di dimensioni 82MAG - Attacco r"
+Answer:
+Risposta:
+"NiSi JetMag Pro 82MAG Lens Cap; Durable magnetic lens; Filter protection for 82MAG filters; R mount"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi - JetMag Pro 82MAG True Color CPL, filtro magnetico circolare polarizzatore lente - Vetro ottico nano rivestito, telaio in "
+Answer:
+Risposta:
+"NiSi - JetMag Pro 82MAG True Color CPL, magnetic circular polarizer lens filter - Nano coated optical glass, frame in;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi 67mm Circular Starter Filter Kit, Including HUC UV Filter, HUC CPL and Filter Pouch"
+Answer:
+Risposta:
+"NiSi 67mm Starter Filter Kit; Includes HUC UV, CPL Filters & Pouch"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi 77mm Circular Filter Professional Kit, Including HUC UV Filter, Ti Enhance CPL, Natural Night Filter, ND1000(10 stops) and "
+Answer:
+Risposta:
+"NiSi 77mm Circular Filter Pro Kit; Includes HUC UV, Ti Enhance CPL, Natural Night, ND1000(10 stops)"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi 82mm Kit Filtri Circolari ND Filter Kit, Including ND8(3 stops), ND64(6 stops)+CPL, ND1000(10 stops) and Filter Pouch"
+Answer:
+Risposta:
+"NiSi 82mm ND Filter Kit; Includes ND8, ND64+CPL, ND1000; Comes with Filter Pouch"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi C5 Matte Box Cinema Kit – C5 Mattebox, Filtro vassoio True Color 1 – 5 filtri VND True Color Rotating PL, 4 filtri 5.65 FS "
+Answer:
+Risposta:
+"NiSi C5 Cinema Kit-Mattebox, True Color Filter Tray 1-5; VND True Color Rotating PL, 4 Filters 5.65 FS"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi C5 Matte Box Filmmaker Kit – C5 Mattebox, Filtro vassoio True Color 1 – 5 filtri VND 4 filtri 5.65 FS ND16, 4 filtri Black "
+Answer:
+Risposta:
+"NiSi C5 Matte Box Filmmaker Kit; C5 Mattebox; True Color Filter Tray 1-5; VND 4 Filters; 5.65 FS ND16; 4 Black Filters"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi C5 Matte Box Starter Kit – C5 Matte Box, vassoio filtro e anello adattatore, compatibile con obiettivo fotocamera da 67 mm/"
+Answer:
+Risposta:
+"NiSi C5 Matte Box Kit - C5 Box, filter tray, adapter ring, fits 67mm camera lens;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Cinema 4x5.65 ND 1.5 | Filtro per lenti a densità neutra 5-stop per scatole opache 4x5.65 | Fotografia e videografia"
+Answer:
+Risposta:
+"NiSi Cinema 4x5.65 ND 1.5 | 5-stop neutral density lens filter for 4x5.65 matte boxes | Photo & video"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Cinema 4x5.65 True Color Polarizzatore Lineare | Filtro Lente Polarizzatore per Scatole Opache 4x5.65 | Fotografia e Videog"
+Answer:
+Risposta:
+"NiSi Cinema 4x5.65 True Color Linear Polarizer; Lens Filter for 4x5.65 Matte Boxes; Photography & Video"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Cinema Allure Streak - Filtro circolare circolare rotante per effetto speciale, 82 mm, colore: Blu"
+Answer:
+Risposta:
+"NiSi Cinema Allure Streak - Rotating special effect filter, 82mm, Blue;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Contenitore porta filtri per filtro circolare, nero, 8 Filter Pockets Up to 95mm (Version II), Organizer tascabile"
+Answer:
+Risposta:
+"NiSi Circular Filter Holder, black, 8 Pockets Up to 95mm (V2), Pocket Organizer;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Extreme Kit con 4 Filtri ND e Accessori - Kit Filtri ND 100mm con ND8, ND64, ND1000, ND32000, 1x NiSi Custodia per 4 Filtri"
+Answer:
+Risposta:
+"NiSi Extreme Kit w/ 4 ND Filters & Accessories; 100mm ND Filters w/ ND8, ND64, ND1000, ND32000; 1x NiSi 4 Filter Case"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro 55mm UV HUC (Ultra Hard Coating) con 18 rivestimenti multistrato UHD, ultra duro, Nano Coating"
+Answer:
+Risposta:
+"NiSi 55mm UV HUC Filter with 18-layer UHD, ultra-hard, Nano Coating"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro 77mm Armor FX PRO Nano L395 UV, blocco ultravioletto, resistente agli urti, filtro di protezione delle lenti - Vetro"
+Answer:
+Risposta:
+"NiSi 77mm Armor FX PRO Nano L395 UV; UV block; shock-resistant; lens protection filter; Glass"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro 95 mm 1/8 Densità Circolare Nero Mist | Filtro Lente Effetto Nebbia per Fotografia e Videografia"
+Answer:
+Risposta:
+"NiSi 95mm 1/8 Density Black Mist Filter; Lens Fog Effect for Photo & Video"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro Armor FX PRO Nano L395 UV 82mm - Resistente agli urti, blocco ultravioletto, protezione dell'obiettivo, vetro ottico"
+Answer:
+Risposta:
+"NiSi Armor FX PRO Nano L395 UV 82mm Filter - Shock-resistant, UV block, lens protection, optical glass"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro Black Mist 1/4 | 82mm per Sistema Swift | senza filettatura da installare a pressione con Anello Swift o sopra VND T"
+Answer:
+Risposta:
+"NiSi Black Mist 1/4 Filter, 82mm for Swift System; No thread, pressure install with Swift Ring or over VND T"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro Black Mist 1/4 | 95mm per Sistema Swift | senza filettatura da installare a pressione con Anello Swift o sopra VND T"
+Answer:
+Risposta:
+"NiSi Black Mist 1/4 Filter, 95mm for Swift System; No thread, install w/ Swift Ring or over VND T"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro Cellulare iPhone fotocamera Filter Kit / Mobile Phone Lens Camera Filter for iOS iPhone Smartphone - Cinema Filter K"
+Answer:
+Risposta:
+"NiSi iPhone Camera Filter Kit; Mobile Lens Filter for iOS; Cinema Filter K"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro Circolare 112mm True Color Pro Nano CPL Filtro per Nikon Z 14-24mm f/2.8S"
+Answer:
+Risposta:
+"NiSi 112mm True Color Pro Nano CPL Filter for Nikon Z 14-24mm f/2.8S"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro Circolare 72mm Circular Filter ND Filter Kit, Including ND8(3 stops), ND64(6 stops)+CPL, ND1000(10 stops) e Borsa Po"
+Answer:
+Risposta:
+"NiSi 72mm Circular ND Filter Kit; Includes ND8, ND64+CPL, ND1000; Comes with Bag"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro circolare UV UHC da 49 mm con panno di pulizia – vetro bianco acqua, rivestimento ultra duro con trasmissione della "
+Answer:
+Risposta:
+"NiSi 49mm UV UHC Circular Filter w/ cleaning cloth; white water glass, ultra-hard coating"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "ABYSTYLE One Piece Calzini Skull One Size (38-43) nero, 70% cotone, 27% poliestere, 3% elastan."
+Answer:
+Risposta:
+"ABYSTYLE One Piece Skull Socks One Size (38-43) black; 70% cotton, 27% polyester, 3% elastane."
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Wizard W-63 Compatibile con Sony | Staffa di rotazione orizzontale/verticale, Arca-Swiss compatibile, rotazione a 0°, 90° e"
+Answer:
+Risposta:
+"NiSi Wizard W-63 for Sony; Horizontal/Vertical rotation bracket; Arca-Swiss compatible; 0°, 90° rotation"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Wizard W-72 Compatibile con Fujifilm, Nikon Z, Panasonic S5, Leica SL/SL2 | Staffa di rotazione orizzontale/verticale, Arca"
+Answer:
+Risposta:
+"NiSi W-72 for Fujifilm, Nikon Z, Panasonic S5, Leica SL/SL2; Rotating bracket, Arca"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Wizard W-82D Compatibile con fotocamere DSLR | Staffa di rotazione orizzontale/verticale, Arca-Swiss compatibile, rotazione"
+Answer:
+Risposta:
+"NiSi Wizard W-82D for DSLR cams; Horizontal/vertical rotation bracket; Arca-Swiss compatible; Rotates"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Wizard W-82M Compatibile con fotocamere Canon serie R | Staffa di rotazione orizzontale/verticale, Arca-Swiss compatibile, "
+Answer:
+Risposta:
+"NiSi Wizard W-82M for Canon R series; Rotating bracket, Arca-Swiss compatible;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Anello adattatore S6 per filettature di filtri standard (adattatori da 105 mm, 95 mm, 82 mm inclusi) | Adattatore per obiet"
+Answer:
+Risposta:
+"NiSi S6 Ring Adapter for standard filter threads (105mm, 95mm, 82mm incl); Lens Adapter"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi JetMag Pro 62mm-82MAG Adattatore obiettivo filettatura 62 mm per collegare filtri magnetici 82MAG"
+Answer:
+Risposta:
+"NiSi JetMag Pro 62mm-82MAG Lens Adapter; 62mm thread for 82MAG magnetic filters"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi JetMag Pro 67mm-82MAG Adattatore obiettivo filettatura 67 mm per collegare filtri magnetici 82MAG"
+Answer:
+Risposta:
+"NiSi JetMag Pro 67mm-82MAG Lens Adapter; 67mm thread for 82MAG magnetic filters"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi JetMag Pro 82mm-82MAG Anello Adattatore obiettivo filettatura 82 mm per collegare filtri magnetici 82MAG"
+Answer:
+Risposta:
+"NiSi JetMag Pro 82mm-82MAG Lens Adapter Ring; Connects 82mm magnetic filters"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Kit Advanced 150 di Filtri da 150mm (no Holder, include 4 filtri di larghezza 150mm)"
+Answer:
+Risposta:
+"NiSi Adv. 150 Filter Kit (no Holder, incl. 4 150mm wide filters);"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Kit portafiltro V7 da 100 mm con True Color CPL, con anello adattatore da 67-82 mm, 72-82 mm e 77-82 mm"
+Answer:
+Risposta:
+"NiSi 100mm V7 Filter Kit w/ True Color CPL; 67-82mm, 72-82mm, 77-82mm adapt rings"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Kit Starter 150 di Filtri da 150mm (no Holder, include 3 filtri di larghezza 150mm)"
+Answer:
+Risposta:
+"NiSi 150 Starter Kit (no Holder, includes 3 150mm wide filters);"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Portafiltro da 100 mm - Switch (compatibile con l'adattatore principale da 82 mm di V6 / V5-Pro ??/ V5)"
+Answer:
+Risposta:
+"NiSi 100mm Filter Holder - Switch (fits 82mm V6/V5-Pro/V5 main adapter);"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Portafiltro da 100mm per Olympus 7-14 mm f/2.8 PRO | Contiene 2 filtri da 100x100 mm e 100x150 mm (ND, GND, ecc.), rotazion"
+Answer:
+Risposta:
+"NiSi 100mm Filter Holder for Olympus 7-14mm f/2.8 PRO; Includes 2 100x100mm & 100x150mm filters (ND, GND, etc.), rotation"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Professional Kit V7 e Filtri a lastra 100mm, Kit 7 filtri (GND Soft/Medium/Reverse 3 Stop, ND8 3 Stop, ND64 6 Stop, ND1000 "
+Answer:
+Risposta:
+"NiSi Pro Kit V7 & 100mm sheet filters; 7 filter kit (GND Soft/Med/Rev 3 Stop, ND8 3 Stop, ND64 6 Stop, ND1000"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi S6 Supporto per Filtro per Sony FE 12-24 mm F4 G (True Color CPL) – 150 mm  Filter Holder System"
+Answer:
+Risposta:
+"NiSi S6 Filter Support for Sony FE 12-24mm F4 G (True Color CPL) - 150mm Filter System;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Starter Kit V7 di Filtri 100mm, Kit di 2 filtri (GND 100x150 Medium 3 Stop, ND 100x100 ND1000 10 Stop) con Holder NiSi V7 c"
+Answer:
+Risposta:
+"NiSi Starter Kit V7, 2 filters (GND 100x150 Med 3 Stop, ND 100x100 ND1000 10 Stop) with V7 Holder;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "Filtro UV HUC (Ultra Hard Coating) con 18 rivestimenti multistrato UHD, rivestimento ultra duro, Nano Coating®, ultra-sottile re"
+Answer:
+Risposta:
+"UV HUC Filter with 18 UHD multilayer coatings, ultra-hard, Nano Coating®, ultra-thin;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "Filtro UV HUC (Ultra Hard Coating) con 18 rivestimenti multistrato UHD, rivestimento ultra duro, Nano Coating®, ultra-sottile re"
+Answer:
+Risposta:
+"UV HUC Filter with 18 UHD multilayer coatings, ultra-hard coat, Nano Coating®, ultra-thin re;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "Filtro UV HUC (Ultra Hard Coating) con 18 rivestimenti multistrato UHD, rivestimento ultra duro, Nano Coating®, ultra-sottile re"
+Answer:
+Risposta:
+"UV HUC Filter with 18 UHD multilayer coatings, ultra-hard coat, Nano Coating®, ultra-thin;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi - Filtro circolare naturale notturno 112 mm per Nikon Z 14-24 mm f/2.8S (filtro di inquinamento della luce)"
+Answer:
+Risposta:
+"NiSi - 112mm Natural Night Filter for Nikon Z 14-24mm f/2.8S (Light Pollution Filter);"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi - JetMag Pro 82MAG Lens Front Cap - Lente magnetica durevole e protezione filtro per filtri di dimensioni 82MAG - Attacco r"
+Answer:
+Risposta:
+"NiSi JetMag Pro 82MAG Lens Cap; Durable magnetic lens; Filter protection for 82MAG filters; R mount"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi - JetMag Pro 82MAG True Color CPL, filtro magnetico circolare polarizzatore lente - Vetro ottico nano rivestito, telaio in "
+Answer:
+Risposta:
+"NiSi - JetMag Pro 82MAG True Color CPL, magnetic circular polarizer lens filter - Nano coated optical glass, frame in;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi 67mm Circular Starter Filter Kit, Including HUC UV Filter, HUC CPL and Filter Pouch"
+Answer:
+Risposta:
+"NiSi 67mm Starter Filter Kit; Includes HUC UV, HUC CPL, Filter Pouch"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi 77mm Circular Filter Professional Kit, Including HUC UV Filter, Ti Enhance CPL, Natural Night Filter, ND1000(10 stops) and "
+Answer:
+Risposta:
+"NiSi 77mm Circular Filter Pro Kit; Includes HUC UV, Ti Enhance CPL, Natural Night, ND1000(10 stops)"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi 82mm Kit Filtri Circolari ND Filter Kit, Including ND8(3 stops), ND64(6 stops)+CPL, ND1000(10 stops) and Filter Pouch"
+Answer:
+Risposta:
+"NiSi 82mm ND Filter Kit; Includes ND8, ND64+CPL, ND1000; Comes with Filter Pouch"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi C5 Matte Box Cinema Kit – C5 Mattebox, Filtro vassoio True Color 1 – 5 filtri VND True Color Rotating PL, 4 filtri 5.65 FS "
+Answer:
+Risposta:
+"NiSi C5 Cinema Kit-Mattebox, True Color Filter Tray 1-5; VND True Color Rotating PL, 4 Filters 5.65 FS"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi C5 Matte Box Filmmaker Kit – C5 Mattebox, Filtro vassoio True Color 1 – 5 filtri VND 4 filtri 5.65 FS ND16, 4 filtri Black "
+Answer:
+Risposta:
+"NiSi C5 Matte Box Filmmaker Kit; C5 Mattebox; True Color Filter Tray 1-5; VND 4 Filters; 5.65 FS ND16; 4 Black Filters"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi C5 Matte Box Starter Kit – C5 Matte Box, vassoio filtro e anello adattatore, compatibile con obiettivo fotocamera da 67 mm/"
+Answer:
+Risposta:
+"NiSi C5 Matte Box Kit - C5 Box, filter tray, adapter ring, fits 67mm camera lens;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Cinema 4x5.65 ND 1.5 | Filtro per lenti a densità neutra 5-stop per scatole opache 4x5.65 | Fotografia e videografia"
+Answer:
+Risposta:
+"NiSi Cinema 4x5.65 ND 1.5 | 5-stop neutral density lens filter for 4x5.65 matte boxes | Photography and videography"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Cinema 4x5.65 True Color Polarizzatore Lineare | Filtro Lente Polarizzatore per Scatole Opache 4x5.65 | Fotografia e Videog"
+Answer:
+Risposta:
+"NiSi Cinema 4x5.65 True Color Linear Polarizer; Lens Filter for 4x5.65 Matte Boxes; Photography & Video"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Cinema Allure Streak - Filtro circolare circolare rotante per effetto speciale, 82 mm, colore: Blu"
+Answer:
+Risposta:
+"NiSi Cinema Allure Streak - Rotating circular special effect filter, 82mm, Blue"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Contenitore porta filtri per filtro circolare, nero, 8 Filter Pockets Up to 95mm (Version II), Organizer tascabile"
+Answer:
+Risposta:
+"NiSi Circular Filter Holder, black, 8 Pockets Up to 95mm (V2), Pocket Organizer;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Extreme Kit con 4 Filtri ND e Accessori - Kit Filtri ND 100mm con ND8, ND64, ND1000, ND32000, 1x NiSi Custodia per 4 Filtri"
+Answer:
+Risposta:
+"NiSi Extreme Kit w/ 4 ND Filters & Accessories; 100mm ND Filters w/ ND8, ND64, ND1000, ND32000; 1x NiSi 4-Filter Case"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro 55mm UV HUC (Ultra Hard Coating) con 18 rivestimenti multistrato UHD, ultra duro, Nano Coating"
+Answer:
+Risposta:
+"NiSi 55mm UV HUC Filter with 18-layer UHD, ultra-hard, Nano Coating"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro 77mm Armor FX PRO Nano L395 UV, blocco ultravioletto, resistente agli urti, filtro di protezione delle lenti - Vetro"
+Answer:
+Risposta:
+"NiSi 77mm Armor FX PRO Nano L395 UV; UV block; shock-resistant; lens protection filter; Glass"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro 95 mm 1/8 Densità Circolare Nero Mist | Filtro Lente Effetto Nebbia per Fotografia e Videografia"
+Answer:
+Risposta:
+"NiSi 95mm 1/8 Density Circular Black Mist Filter; Lens Fog Effect for Photo & Video"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro Armor FX PRO Nano L395 UV 82mm - Resistente agli urti, blocco ultravioletto, protezione dell'obiettivo, vetro ottico"
+Answer:
+Risposta:
+"NiSi Armor FX PRO Nano L395 UV 82mm Filter - Shock-resistant, UV block, lens protection, optical glass;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro Black Mist 1/4 | 82mm per Sistema Swift | senza filettatura da installare a pressione con Anello Swift o sopra VND T"
+Answer:
+Risposta:
+"NiSi Black Mist 1/4 Filter, 82mm for Swift System; No thread, install w/ Swift Ring or over VND T"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro Black Mist 1/4 | 95mm per Sistema Swift | senza filettatura da installare a pressione con Anello Swift o sopra VND T"
+Answer:
+Risposta:
+"NiSi Black Mist 1/4 Filter, 95mm for Swift System; No thread, install w/ Swift Ring or over VND T"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro Cellulare iPhone fotocamera Filter Kit / Mobile Phone Lens Camera Filter for iOS iPhone Smartphone - Cinema Filter K"
+Answer:
+Risposta:
+"NiSi iPhone Camera Filter Kit; Mobile Lens Filter for iOS; Cinema Filter K"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro Circolare 112mm True Color Pro Nano CPL Filtro per Nikon Z 14-24mm f/2.8S"
+Answer:
+Risposta:
+"NiSi 112mm True Color Pro Nano CPL Filter for Nikon Z 14-24mm f/2.8S"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro Circolare 72mm Circular Filter ND Filter Kit, Including ND8(3 stops), ND64(6 stops)+CPL, ND1000(10 stops) e Borsa Po"
+Answer:
+Risposta:
+"NiSi 72mm Circular ND Filter Kit; Includes ND8, ND64+CPL, ND1000; Comes with Bag"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro circolare UV UHC da 49 mm con panno di pulizia – vetro bianco acqua, rivestimento ultra duro con trasmissione della "
+Answer:
+Risposta:
+"NiSi 49mm UV UHC Circular Filter w/ cleaning cloth; White water glass, ultra-hard coating"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro di diffusione Black Mist 1/8 da 49 mm - Filtro effetto Promist (apertura 1/8)"
+Answer:
+Risposta:
+"NiSi 49mm Black Mist 1/8 Diffusion Filter - Promist effect (1/8 opening);"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro GND 1.2 4 Stop 150X170mm Medio (16) Filtro IR graduato multistrato a densità neutra"
+Answer:
+Risposta:
+"NiSi GND 1.2 4 Stop 150X170mm Medio (16) IR grad multilayer neutral density filter"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro GND Nano IR 1.5 Soft Edge Filter (5-Stops) 100X150mm Nano Multicoated Graduated IR Neutral Density"
+Answer:
+Risposta:
+"NiSi GND Nano IR 1.5 Soft Edge Filter (5-Stops); 100X150mm Nano Coated Graduated IR ND"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "ABYSTYLE One Piece Calzini Skull One Size (38-43) nero, 70% cotone, 27% poliestere, 3% elastan."
+Answer:
+Risposta:
+"ABYSTYLE One Piece Skull Socks One Size (38-43) black, 70% cotton, 27% polyester, 3% elastane."
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Wizard W-63 Compatibile con Sony | Staffa di rotazione orizzontale/verticale, Arca-Swiss compatibile, rotazione a 0°, 90° e"
+Answer:
+Risposta:
+"NiSi W-63 for Sony; Horizontal/vertical rotation bracket; Arca-Swiss compatible; 0°, 90° rotation"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Wizard W-72 Compatibile con Fujifilm, Nikon Z, Panasonic S5, Leica SL/SL2 | Staffa di rotazione orizzontale/verticale, Arca"
+Answer:
+Risposta:
+"NiSi W-72 for Fujifilm, Nikon Z, Panasonic S5, Leica SL/SL2; Rotating bracket, Arca"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Wizard W-82D Compatibile con fotocamere DSLR | Staffa di rotazione orizzontale/verticale, Arca-Swiss compatibile, rotazione"
+Answer:
+Risposta:
+"NiSi Wizard W-82D for DSLR cams; Horizontal/vertical rotation bracket; Arca-Swiss compatible; Rotates"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Wizard W-82M Compatibile con fotocamere Canon serie R | Staffa di rotazione orizzontale/verticale, Arca-Swiss compatibile, "
+Answer:
+Risposta:
+"NiSi Wizard W-82M for Canon R series; Horizontal/vertical rotation bracket; Arca-Swiss compatible;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Anello adattatore S6 per filettature di filtri standard (adattatori da 105 mm, 95 mm, 82 mm inclusi) | Adattatore per obiet"
+Answer:
+Risposta:
+"NiSi S6 Ring Adapter for standard filter threads (105mm, 95mm, 82mm incl); Lens Adapter"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi JetMag Pro 62mm-82MAG Adattatore obiettivo filettatura 62 mm per collegare filtri magnetici 82MAG"
+Answer:
+Risposta:
+"NiSi JetMag Pro 62mm-82MAG Lens Adapter; 62mm thread for 82MAG magnetic filters"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi JetMag Pro 67mm-82MAG Adattatore obiettivo filettatura 67 mm per collegare filtri magnetici 82MAG"
+Answer:
+Risposta:
+"NiSi JetMag Pro 67mm-82MAG Lens Adapter; 67mm thread for 82MAG magnetic filters"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi JetMag Pro 82mm-82MAG Anello Adattatore obiettivo filettatura 82 mm per collegare filtri magnetici 82MAG"
+Answer:
+Risposta:
+"NiSi JetMag Pro 82mm-82MAG Lens Adapter Ring; Connects 82mm magnetic filters"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Kit Advanced 150 di Filtri da 150mm (no Holder, include 4 filtri di larghezza 150mm)"
+Answer:
+Risposta:
+"NiSi Adv. 150 Filter Kit (no Holder, incl. 4 150mm wide filters);"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Kit portafiltro V7 da 100 mm con True Color CPL, con anello adattatore da 67-82 mm, 72-82 mm e 77-82 mm"
+Answer:
+Risposta:
+"NiSi V7 100mm Filter Kit w/ True Color CPL; 67-82mm, 72-82mm, 77-82mm adapt rings"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Kit Starter 150 di Filtri da 150mm (no Holder, include 3 filtri di larghezza 150mm)"
+Answer:
+Risposta:
+"NiSi 150 Starter Kit (no Holder, includes 3 150mm wide filters);"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Portafiltro da 100 mm - Switch (compatibile con l'adattatore principale da 82 mm di V6 / V5-Pro ??/ V5)"
+Answer:
+Risposta:
+"NiSi 100mm Filter Holder - Switch (fits 82mm V6/V5-Pro/V5 adapter);"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Portafiltro da 100mm per Olympus 7-14 mm f/2.8 PRO | Contiene 2 filtri da 100x100 mm e 100x150 mm (ND, GND, ecc.), rotazion"
+Answer:
+Risposta:
+"NiSi 100mm Filter Holder for Olympus 7-14mm f/2.8 PRO | Includes 2 100x100mm and 100x150mm filters (ND, GND, etc.), rotation"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Professional Kit V7 e Filtri a lastra 100mm, Kit 7 filtri (GND Soft/Medium/Reverse 3 Stop, ND8 3 Stop, ND64 6 Stop, ND1000 "
+Answer:
+Risposta:
+"NiSi Pro Kit V7 & 100mm plate filters; 7 filter kit (GND Soft/Med/Rev 3 Stop, ND8 3 Stop, ND64 6 Stop, ND1000"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi S6 Supporto per Filtro per Sony FE 12-24 mm F4 G (True Color CPL) – 150 mm  Filter Holder System"
+Answer:
+Risposta:
+"NiSi S6 Filter Support for Sony FE 12-24mm F4 G (True Color CPL) - 150mm Filter System;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Starter Kit V7 di Filtri 100mm, Kit di 2 filtri (GND 100x150 Medium 3 Stop, ND 100x100 ND1000 10 Stop) con Holder NiSi V7 c"
+Answer:
+Risposta:
+"NiSi Starter Kit V7, 2 filters (GND 100x150 Med 3 Stop, ND 100x100 ND1000 10 Stop) with V7 Holder;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "Filtro UV HUC (Ultra Hard Coating) con 18 rivestimenti multistrato UHD, rivestimento ultra duro, Nano Coating®, ultra-sottile re"
+Answer:
+Risposta:
+"UV HUC Filter with 18 UHD multilayer coatings, ultra-hard, Nano Coating®, ultra-thin;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "Filtro UV HUC (Ultra Hard Coating) con 18 rivestimenti multistrato UHD, rivestimento ultra duro, Nano Coating®, ultra-sottile re"
+Answer:
+Risposta:
+"UV HUC Filter with 18 UHD multilayer coatings, ultra-hard, Nano Coating®, ultra-thin;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "Filtro UV HUC (Ultra Hard Coating) con 18 rivestimenti multistrato UHD, rivestimento ultra duro, Nano Coating®, ultra-sottile re"
+Answer:
+Risposta:
+"UV HUC Filter with 18 UHD multilayer coatings, ultra-hard coat, Nano Coating®, ultra-thin;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi - Filtro circolare naturale notturno 112 mm per Nikon Z 14-24 mm f/2.8S (filtro di inquinamento della luce)"
+Answer:
+Risposta:
+"NiSi - 112mm Natural Night Filter for Nikon Z 14-24mm f/2.8S (Light Pollution Filter);"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi - JetMag Pro 82MAG Lens Front Cap - Lente magnetica durevole e protezione filtro per filtri di dimensioni 82MAG - Attacco r"
+Answer:
+Risposta:
+"NiSi JetMag Pro 82MAG Lens Cap; Durable magnetic lens; Filter protection for 82MAG filters; R mount"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi - JetMag Pro 82MAG True Color CPL, filtro magnetico circolare polarizzatore lente - Vetro ottico nano rivestito, telaio in "
+Answer:
+Risposta:
+"NiSi - JetMag Pro 82MAG True Color CPL, magnetic circular polarizer lens filter - Nano coated optical glass, frame in;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi 67mm Circular Starter Filter Kit, Including HUC UV Filter, HUC CPL and Filter Pouch"
+Answer:
+Risposta:
+"NiSi 67mm Starter Filter Kit; Includes HUC UV, HUC CPL, Filter Pouch"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi 77mm Circular Filter Professional Kit, Including HUC UV Filter, Ti Enhance CPL, Natural Night Filter, ND1000(10 stops) and "
+Answer:
+Risposta:
+"NiSi 77mm Pro Circular Filter Kit; Includes HUC UV, Ti Enhance CPL, Natural Night, ND1000 Filters"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi 82mm Kit Filtri Circolari ND Filter Kit, Including ND8(3 stops), ND64(6 stops)+CPL, ND1000(10 stops) and Filter Pouch"
+Answer:
+Risposta:
+"NiSi 82mm ND Filter Kit; Includes ND8, ND64+CPL, ND1000; Comes with Filter Pouch"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi C5 Matte Box Cinema Kit – C5 Mattebox, Filtro vassoio True Color 1 – 5 filtri VND True Color Rotating PL, 4 filtri 5.65 FS "
+Answer:
+Risposta:
+"NiSi C5 Cinema Kit-Mattebox; True Color Filter Tray 1-5; VND True Color Rotating PL; 4 Filters 5.65 FS"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi C5 Matte Box Filmmaker Kit – C5 Mattebox, Filtro vassoio True Color 1 – 5 filtri VND 4 filtri 5.65 FS ND16, 4 filtri Black "
+Answer:
+Risposta:
+"NiSi C5 Matte Box Filmmaker Kit; C5 Mattebox; True Color Filter Tray 1-5; VND 4 Filters; 5.65 FS ND16; 4 Black Filters"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi C5 Matte Box Starter Kit – C5 Matte Box, vassoio filtro e anello adattatore, compatibile con obiettivo fotocamera da 67 mm/"
+Answer:
+Risposta:
+"NiSi C5 Matte Box Kit - C5 Box, filter tray, adapter ring, fits 67mm camera lens;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Cinema 4x5.65 ND 1.5 | Filtro per lenti a densità neutra 5-stop per scatole opache 4x5.65 | Fotografia e videografia"
+Answer:
+Risposta:
+"NiSi Cinema 4x5.65 ND 1.5 | 5-stop neutral density lens filter for 4x5.65 matte boxes | Photography and videography"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Cinema 4x5.65 True Color Polarizzatore Lineare | Filtro Lente Polarizzatore per Scatole Opache 4x5.65 | Fotografia e Videog"
+Answer:
+Risposta:
+"NiSi Cinema 4x5.65 True Color Linear Polarizer; Lens Filter for 4x5.65 Matte Boxes; Photography & Video"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Cinema Allure Streak - Filtro circolare circolare rotante per effetto speciale, 82 mm, colore: Blu"
+Answer:
+Risposta:
+"NiSi Cinema Allure Streak - Rotating special effect filter, 82mm, Blue;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Contenitore porta filtri per filtro circolare, nero, 8 Filter Pockets Up to 95mm (Version II), Organizer tascabile"
+Answer:
+Risposta:
+"NiSi Circular Filter Case, Black, 8 Pockets Up to 95mm (V2), Pocket Organizer;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Extreme Kit con 4 Filtri ND e Accessori - Kit Filtri ND 100mm con ND8, ND64, ND1000, ND32000, 1x NiSi Custodia per 4 Filtri"
+Answer:
+Risposta:
+"NiSi Extreme Kit w/ 4 ND Filters & Accessories; ND 100mm Filters w/ ND8, ND64, ND1000, ND32000; 1x NiSi 4 Filter Case"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro 55mm UV HUC (Ultra Hard Coating) con 18 rivestimenti multistrato UHD, ultra duro, Nano Coating"
+Answer:
+Risposta:
+"NiSi 55mm UV HUC Filter; 18-layer UHD, ultra-hard, Nano Coating"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro 77mm Armor FX PRO Nano L395 UV, blocco ultravioletto, resistente agli urti, filtro di protezione delle lenti - Vetro"
+Answer:
+Risposta:
+"NiSi 77mm Armor FX PRO Nano L395 UV; UV block; shock-resistant; lens protection filter - Glass"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro 95 mm 1/8 Densità Circolare Nero Mist | Filtro Lente Effetto Nebbia per Fotografia e Videografia"
+Answer:
+Risposta:
+"NiSi 95mm 1/8 Density Circular Black Mist Filter; Lens Fog Effect for Photo & Video"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro Armor FX PRO Nano L395 UV 82mm - Resistente agli urti, blocco ultravioletto, protezione dell'obiettivo, vetro ottico"
+Answer:
+Risposta:
+"NiSi Armor FX PRO Nano L395 UV 82mm Filter - Shockproof, UV block, lens protection, optical glass;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro Black Mist 1/4 | 82mm per Sistema Swift | senza filettatura da installare a pressione con Anello Swift o sopra VND T"
+Answer:
+Risposta:
+"NiSi Black Mist 1/4 Filter, 82mm for Swift System; No-thread, press-fit w/ Swift Ring or over VND T"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro Black Mist 1/4 | 95mm per Sistema Swift | senza filettatura da installare a pressione con Anello Swift o sopra VND T"
+Answer:
+Risposta:
+"NiSi Black Mist 1/4 Filter, 95mm for Swift System; No thread, pressure install with Swift Ring or over VND T"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro Cellulare iPhone fotocamera Filter Kit / Mobile Phone Lens Camera Filter for iOS iPhone Smartphone - Cinema Filter K"
+Answer:
+Risposta:
+"NiSi iPhone Camera Filter Kit; Mobile Lens Filter for iOS; Cinema Filter K"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro Circolare 112mm True Color Pro Nano CPL Filtro per Nikon Z 14-24mm f/2.8S"
+Answer:
+Risposta:
+"NiSi 112mm True Color Pro Nano CPL Filter for Nikon Z 14-24mm f/2.8S"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro Circolare 72mm Circular Filter ND Filter Kit, Including ND8(3 stops), ND64(6 stops)+CPL, ND1000(10 stops) e Borsa Po"
+Answer:
+Risposta:
+"NiSi 72mm Circular ND Filter Kit; Includes ND8, ND64+CPL, ND1000; Comes with Bag"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro circolare UV UHC da 49 mm con panno di pulizia – vetro bianco acqua, rivestimento ultra duro con trasmissione della "
+Answer:
+Risposta:
+"NiSi 49mm UV UHC Circular Filter w/ cleaning cloth; white water glass, ultra-hard coating"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro di diffusione Black Mist 1/8 da 49 mm - Filtro effetto Promist (apertura 1/8)"
+Answer:
+Risposta:
+"NiSi 49mm Black Mist 1/8 Diffusion Filter - Promist effect (1/8 aperture);"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro GND 1.2 4 Stop 150X170mm Medio (16) Filtro IR graduato multistrato a densità neutra"
+Answer:
+Risposta:
+"NiSi GND 1.2 4 Stop Filter 150X170mm Medium (16) IR multilayer neutral density filter"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro GND Nano IR 1.5 Soft Edge Filter (5-Stops) 100X150mm Nano Multicoated Graduated IR Neutral Density"
+Answer:
+Risposta:
+"NiSi GND Nano IR 1.5 Soft Edge Filter, 5-Stops, 100X150mm, IR ND;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro GND Nano IR 100X150mm Nano Multicoated Graduated IR Neutral Density 0.9 Reverse Edge Filter (3-Stops)"
+Answer:
+Risposta:
+"NiSi GND Nano IR Filter 100X150mm; Multicoated Graduated IR ND 0.9 Reverse Edge (3-Stops)"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro GND Nano IR 150x170mm 0.9 (3 Stop) Medium GND (Grad ND) Filter - GND8 Multicoated IR in Optical Glass"
+Answer:
+Risposta:
+"NiSi GND Nano IR Filter 150x170mm 0.9 (3 Stop); Medium GND Filter; GND8 IR Coated Optical Glass"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro GND16 1.2 4 Stop REVERSE 150X170mm Nano Multicoated Graduato IR Neutral Density 1.5 Soft Edge Filter"
+Answer:
+Risposta:
+"NiSi GND16 1.2 4 Stop REVERSE 150X170mm Nano IR ND 1.5 Soft Edge Filter;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro GND4 0.6 Soft (2-Stop) 100X150mm Nano Multicoated Graduated IR Neutral Density 0.6 Soft Edge Filter (2-Stops)"
+Answer:
+Risposta:
+"NiSi GND4 0.6 Soft Filter 100X150mm; Nano Coated Graduated IR ND 0.6 Soft Edge (2-Stops);"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro Graduato GND 2 stop (0.6) Medium 100x150mm con Nano Coating, trattamento IR, Vetro Ottico"
+Answer:
+Risposta:
+"NiSi GND 2 stop (0.6) Med Filter 100x150mm, Nano Coat, IR treat, Optic Glass;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro Graduato GND 3 stop (0.9) Hard 100x150mm con Nano Coating, trattamento IR, Vetro Ottico"
+Answer:
+Risposta:
+"NiSi GND 3 stop (0.9) Hard Filter 100x150mm, Nano Coated, IR treated, Optical Glass;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro Graduato GND 3 stop (0.9) Medium 100x150mm con Nano Coating, trattamento IR, Vetro Ottico"
+Answer:
+Risposta:
+"NiSi GND 3 stop (0.9) Med 100x150mm w/ Nano Coat, IR treat, Optic Glass;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro Graduato GND 3 stop (0.9) Medium 100x150mm con Nano Coating, trattamento IR, Vetro Ottico"
+Answer:
+Risposta:
+"NiSi GND 3 stop (0.9) Med Filter 100x150mm, Nano Coat, IR treatment, Optical Glass;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro Graduato GND 3 Stop (0.9) Soft 100x150mm con Nano Coating, Trattamento Anti-IR, Vetro Ottico"
+Answer:
+Risposta:
+"NiSi GND 3 Stop (0.9) Soft Filter 100x150mm, Nano Coated, Anti-IR, Optical Glass;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro Graduato GND 4 stop (1.2) Medium 100x150mm con Nano Coating, trattamento IR, Vetro Ottico"
+Answer:
+Risposta:
+"NiSi GND 4 stop (1.2) Med Filter 100x150mm, Nano Coat, IR treat, Optic Glass;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro graduato ND (2-Stop) 0,6 75 x 100 mm M75 Nano IR Soft Graduated Neutral Density Filter"
+Answer:
+Risposta:
+"NiSi Grad ND Filter (2-Stop) 0,6 75x100mm M75 Nano IR Soft Grad ND Filter;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro IR GND16 150X170mm Nano Multicoated Graduato IR Neutral Density 1.2 Soft Edge Filter (4-Stop)"
+Answer:
+Risposta:
+"NiSi IR GND16 150X170mm Nano Coated Grad IR ND 1.2 Soft Edge Filter (4-Stop);"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro IR rivestito ND Filter vetro ottico, filtro a densità neutra, 100X100mm IR ND32000(4.5) 15 Stops super stopper"
+Answer:
+Risposta:
+"NiSi IR Coated ND Filter, optical glass, neutral density filter, 100X100mm IR ND32000(4.5) 15 Stops super stopper"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro ND Densità Neutra ND1000K (6.0) 20 Stop, 100X100mm, nano coating, rivestimento IR, Black Hole, Vetro Ottico"
+Answer:
+Risposta:
+"NiSi ND Filter ND1000K (6.0) 20 Stop, 100X100mm, nano coat, IR coat, Black Hole, Optical Glass;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro ND Densità Neutra ND128 (2.1) 7 Stop, 100X100mm, nano coating, rivestimento IR, Little Stopper, Vetro Ottico"
+Answer:
+Risposta:
+"NiSi ND128 Filter, 7 Stop, 100X100mm, nano coat, IR coat, Little Stopper, Optical Glass;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro ND Densità Neutra ND16 (1.2) 4 Stop, 100X100mm, nano coating, rivestimento IR, Vetro Ottico"
+Answer:
+Risposta:
+"NiSi ND16 Filter (1.2) 4 Stop, 100X100mm, nano coat, IR coat, Optical Glass;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro ND Densità Neutra ND2000 (3.3) 11 Stop, 100X100mm, nano coating, rivestimento IR, Vetro Ottico"
+Answer:
+Risposta:
+"NiSi ND2000 (3.3) 11 Stop Filter, 100X100mm, nano coat, IR coat, Optical Glass;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro ND Densità Neutra ND256 (2.4) 8 Stop, 100X100mm, nano coating, rivestimento IR, Vetro Ottico"
+Answer:
+Risposta:
+"NiSi ND256 Filter, 8 Stop, 100X100mm, nano coat, IR coat, Optical Glass;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro ND Densità Neutra ND32 (1.5) 5 Stop, 100X100mm, nano coating, rivestimento IR, Little Stopper, Vetro Ottico"
+Answer:
+Risposta:
+"NiSi ND32 Filter (1.5) 5 Stop, 100X100mm, nano coat, IR coat, Little Stopper, Optical Glass;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro ND Densità Neutra ND4 (0.6) 2 Stop, 100X100mm, nano coating, rivestimento IR, Vetro Ottico"
+Answer:
+Risposta:
+"NiSi ND4 (0.6) 2 Stop Filter, 100X100mm, nano coat, IR coat, Optical Glass;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro ND Densità Neutra ND500 (2.7) 9 Stop, 100X100mm, nano coating, rivestimento IR, Vetro Ottico"
+Answer:
+Risposta:
+"NiSi ND500 Filter (2.7) 9 Stop, 100X100mm, nano coat, IR coat, Optical Glass;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro ND Densità Neutra ND64 (1.8) 6 Stop, 100X100mm, nano coating, rivestimento IR, Little Stopper, Vetro Ottico"
+Answer:
+Risposta:
+"NiSi ND64 Filter (1.8) 6 Stop, 100X100mm, nano coat, IR coat, Little Stopper, Optical Glass;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro ND Densità Neutra ND64 (1.8) 6 Stop, 150X150mm, nano coating, rivestimento IR, Little Stopper, Vetro Ottico"
+Answer:
+Risposta:
+"NiSi ND64 Filter (1.8) 6 Stop, 150X150mm, nano coat, IR coat, Little Stopper, Optical Glass;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro ND Densità Neutra ND8 (0.9) 3 Stop, 100X100mm, nano coating, rivestimento IR, Vetro Ottico"
+Answer:
+Risposta:
+"NiSi ND8 (0.9) 3 Stop Filter, 100X100mm, nano coat, IR coat, Optical Glass;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro ND Densità Neutra ND8 (0.9) 3 Stop, 150X150mm, nano coating, rivestimento IR, Vetro Ottico"
+Answer:
+Risposta:
+"NiSi ND8 (0.9) 3 Stop Filter, 150X150mm, nano coat, IR coat, Optical Glass;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro ND True Color Variable da 43 mm, per 1-5 diaframmi (ND2-ND32) VND Vario ND"
+Answer:
+Risposta:
+"NiSi 43mm True Color ND Filter, 1-5 stops (ND2-ND32) VND Vario ND"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro ND VND VND True Color da 1 a 5 diaframmi ND-Vario variabile, 67 mm (ND2-ND32)"
+Answer:
+Risposta:
+"NiSi ND VND True Color Filter, 1-5 stops variable, 67mm (ND2-ND32);"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro ND VND VND True Color da 55 mm - 1-5 diaframmi ND-Vario variabile (ND2-ND32)"
+Answer:
+Risposta:
+"NiSi 55mm ND VND True Color Filter - 1-5 variable diaphragms (ND2-ND32);"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro ND32000 (15 Stop) 67mm PRO Nano HUC IR (Vetro Ottico, Altissima Neutralità e Nano® Coating)"
+Answer:
+Risposta:
+"NiSi ND32000 Filter (15 Stop) 67mm PRO Nano HUC IR (Optical Glass, High Neutrality & Nano® Coating);"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro ND8 (3 Stop) 72mm PRO Nano HUC IR, Vetro Ottico, Ultra Sottile, Coating Resistente a Olio e Acqua"
+Answer:
+Risposta:
+"NiSi ND8 Filter (3 Stop) 72mm PRO Nano HUC IR, Optical Glass, Ultra Thin, Oil & Water Resistant Coating"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro ND8 (3 Stop) 77mm PRO Nano HUC IR, Vetro Ottico, Ultra Sottile, Coating Resistente a Olio e Acqua"
+Answer:
+Risposta:
+"NiSi ND8 Filter (3 Stop) 77mm PRO Nano HUC IR, Optical Glass, Ultra Thin, Oil & Water Resistant Coating"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro ND8 (3 Stop) 82mm PRO Nano HUC IR, Vetro Ottico, Ultra Sottile, Coating Resistente a Olio e Acqua"
+Answer:
+Risposta:
+"NiSi ND8 Filter (3 Stop) 82mm PRO Nano HUC IR, Optical Glass, Ultra Thin, Oil & Water Resistant Coating"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro per Fuji XA70 X100V X100T X100F X100S X100-49mm Allure Soft Filter Nero"
+Answer:
+Risposta:
+"NiSi Filter for Fuji XA70 X100V X100T X100F X100S X100-49mm Allure Soft Black Filter"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro polarizzatore circolare 67mm True Color CPL per sistema VND e Swift True Color"
+Answer:
+Risposta:
+"NiSi 67mm True Color CPL Circular Polarizer for VND & Swift System"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro polarizzatore circolare da 67 mm UHC CPL, con rivestimento ultra rigido"
+Answer:
+Risposta:
+"67mm NiSi UHC CPL circular polarizer filter, ultra-hard coating;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro polarizzatore circolare da 72mm UHC CPL, con rivestimento ultra rigido"
+Answer:
+Risposta:
+"72mm NiSi UHC CPL circular polarizer filter, ultra-hard coating;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro Polarizzatore Circolare Multi Coated HUC CPL PRO Slim Nano Coating (62mm)"
+Answer:
+Risposta:
+"NiSi HUC CPL PRO Slim Nano Coated Circular Polarizer Filter (62mm);"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro Polarizzatore Circolare Multi Coated HUC CPL PRO SLIM Nano Coating (67mm)"
+Answer:
+Risposta:
+"NiSi Multi Coated HUC CPL PRO SLIM Nano Coating Polarizer Filter (67mm);"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro Polarizzatore Circolare Multi Coated HUC CPL PRO Slim Nano Coating (72mm)"
+Answer:
+Risposta:
+"NiSi HUC CPL PRO Slim Nano Coated Circular Polarizer Filter (72mm);"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro Polarizzatore Circolare Multi Coated HUC CPL PRO Slim Nano Coating (77mm)"
+Answer:
+Risposta:
+"NiSi Multi Coated HUC CPL PRO Slim Nano Coating Polarizer Filter (77mm);"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro Polarizzatore Circolare Multi Coated HUC CPL PRO Slim Nano Coating (82mm)"
+Answer:
+Risposta:
+"NiSi HUC CPL PRO Slim Nano Coated Circular Polarizer Filter (82mm);"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro polarizzatore circolare True Color CPL per 82mm True Color VND e Swift System | sistema di filtri circolari Swift | "
+Answer:
+Risposta:
+"NiSi True Color CPL Polarizer Filter for 82mm VND, Swift System; Swift Circular Filter System;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro polarizzatore circolare True Color CPL per sistema VND e Swift True Color da 95 mm"
+Answer:
+Risposta:
+"NiSi True Color CPL Circular Polarizer for VND System, Swift True Color 95mm;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro polarizzatore circolare True Color CPL per VND e Swift da 77 mm | sistema di filtraggio circolare Swift | Fotografia"
+Answer:
+Risposta:
+"NiSi True Color CPL Polarizer for VND & Swift 77mm; Swift Circular Filter System; Photography"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro PRO Nano 82mm IR Filtro ND64 6 Stop + Polarizzatore CPL Integrato in Un Unico Filtro"
+Answer:
+Risposta:
+"NiSi PRO Nano 82mm IR ND64 6 Stop Filter + Integrated CPL Polarizer;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro Pro Nano IR ND64 6 Stop + Polarizzatore CPL integrato in un unico filtro (72 mm)"
+Answer:
+Risposta:
+"NiSi Pro Nano IR ND64 6 Stop Filter + Integrated CPL (72mm)"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro Pro Nano IR ND64 6 Stop + Polarizzatore CPL integrato in un unico filtro (77 mm)"
+Answer:
+Risposta:
+"NiSi Pro Nano IR ND64 6 Stop Filter + Integrated CPL (77mm);"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro Protettivo 52mm UV HUC (Ultra Hard Coating) con 18 rivestimenti multistrato UHD, rivestimento ultra duro, Nano Coati"
+Answer:
+Risposta:
+"NiSi 52mm UV HUC Filter; 18-layer UHD; Ultra-hard coat; Nano Coating"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "ABYSTYLE One Piece Calzini Skull One Size (38-43) nero, 70% cotone, 27% poliestere, 3% elastan."
+Answer:
+Risposta:
+"ABYSTYLE One Piece Skull Socks One Size (38-43) black, 70% cotton, 27% polyester, 3% elastane."
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Wizard W-63 Compatibile con Sony | Staffa di rotazione orizzontale/verticale, Arca-Swiss compatibile, rotazione a 0°, 90° e"
+Answer:
+Risposta:
+"NiSi W-63 for Sony; Horizontal/vertical rotation bracket; Arca-Swiss compatible; 0°, 90° rotation"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Wizard W-72 Compatibile con Fujifilm, Nikon Z, Panasonic S5, Leica SL/SL2 | Staffa di rotazione orizzontale/verticale, Arca"
+Answer:
+Risposta:
+"NiSi W-72 for Fujifilm, Nikon Z, Panasonic S5, Leica SL/SL2; Rotating bracket, Arca"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Wizard W-82D Compatibile con fotocamere DSLR | Staffa di rotazione orizzontale/verticale, Arca-Swiss compatibile, rotazione"
+Answer:
+Risposta:
+"NiSi Wizard W-82D for DSLR cams; Horizontal/vertical rotation bracket; Arca-Swiss compatible; Rotating"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Wizard W-82M Compatibile con fotocamere Canon serie R | Staffa di rotazione orizzontale/verticale, Arca-Swiss compatibile, "
+Answer:
+Risposta:
+"NiSi Wizard W-82M for Canon R series; Rotating bracket, Arca-Swiss compatible;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Anello adattatore S6 per filettature di filtri standard (adattatori da 105 mm, 95 mm, 82 mm inclusi) | Adattatore per obiet"
+Answer:
+Risposta:
+"NiSi S6 Adapter Ring for standard filter threads (105mm, 95mm, 82mm incl); Lens Adapter"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi JetMag Pro 62mm-82MAG Adattatore obiettivo filettatura 62 mm per collegare filtri magnetici 82MAG"
+Answer:
+Risposta:
+"NiSi JetMag Pro 62mm-82MAG Lens Adapter; 62mm thread for 82MAG magnetic filters"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi JetMag Pro 67mm-82MAG Adattatore obiettivo filettatura 67 mm per collegare filtri magnetici 82MAG"
+Answer:
+Risposta:
+"NiSi JetMag Pro 67mm-82MAG Lens Adapter; 67mm thread for connecting 82MAG magnetic filters"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi JetMag Pro 82mm-82MAG Anello Adattatore obiettivo filettatura 82 mm per collegare filtri magnetici 82MAG"
+Answer:
+Risposta:
+"NiSi JetMag Pro 82mm-82MAG Lens Adapter Ring; Connects 82mm magnetic filters"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Kit Advanced 150 di Filtri da 150mm (no Holder, include 4 filtri di larghezza 150mm)"
+Answer:
+Risposta:
+"NiSi Adv. 150 Filter Kit (no Holder, incl. 4 150mm wide filters);"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Kit portafiltro V7 da 100 mm con True Color CPL, con anello adattatore da 67-82 mm, 72-82 mm e 77-82 mm"
+Answer:
+Risposta:
+"NiSi V7 100mm filter kit w/ True Color CPL; 67-82mm, 72-82mm, 77-82mm adapter rings"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Kit Starter 150 di Filtri da 150mm (no Holder, include 3 filtri di larghezza 150mm)"
+Answer:
+Risposta:
+"NiSi 150 Starter Kit (no Holder, includes 3 150mm wide filters);"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Portafiltro da 100 mm - Switch (compatibile con l'adattatore principale da 82 mm di V6 / V5-Pro ??/ V5)"
+Answer:
+Risposta:
+"NiSi 100mm Filter Holder - Switch (fits 82mm V6/V5-Pro/V5 main adapter);"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Portafiltro da 100mm per Olympus 7-14 mm f/2.8 PRO | Contiene 2 filtri da 100x100 mm e 100x150 mm (ND, GND, ecc.), rotazion"
+Answer:
+Risposta:
+"NiSi 100mm Filter Holder for Olympus 7-14mm f/2.8 PRO | Includes 2 100x100mm and 100x150mm filters (ND, GND, etc.), rotation"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Professional Kit V7 e Filtri a lastra 100mm, Kit 7 filtri (GND Soft/Medium/Reverse 3 Stop, ND8 3 Stop, ND64 6 Stop, ND1000 "
+Answer:
+Risposta:
+"NiSi Pro Kit V7 & 100mm plate filters; 7 filter kit (GND Soft/Med/Rev 3 Stop, ND8 3 Stop, ND64 6 Stop, ND1000"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi S6 Supporto per Filtro per Sony FE 12-24 mm F4 G (True Color CPL) – 150 mm  Filter Holder System"
+Answer:
+Risposta:
+"NiSi S6 Filter Holder for Sony FE 12-24mm F4 G (True Color CPL) - 150mm System;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Starter Kit V7 di Filtri 100mm, Kit di 2 filtri (GND 100x150 Medium 3 Stop, ND 100x100 ND1000 10 Stop) con Holder NiSi V7 c"
+Answer:
+Risposta:
+"NiSi Starter Kit V7, 2 Filter Set (GND 100x150 Med 3 Stop, ND 100x100 ND1000 10 Stop) with V7 Holder;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "Filtro UV HUC (Ultra Hard Coating) con 18 rivestimenti multistrato UHD, rivestimento ultra duro, Nano Coating®, ultra-sottile re"
+Answer:
+Risposta:
+"UV HUC Filter with 18 UHD multilayer coatings, ultra-hard coat, Nano Coating®, ultra-thin;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "Filtro UV HUC (Ultra Hard Coating) con 18 rivestimenti multistrato UHD, rivestimento ultra duro, Nano Coating®, ultra-sottile re"
+Answer:
+Risposta:
+"UV HUC Filter with 18 UHD multilayer coatings, ultra-hard coat, Nano Coating®, ultra-thin;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "Filtro UV HUC (Ultra Hard Coating) con 18 rivestimenti multistrato UHD, rivestimento ultra duro, Nano Coating®, ultra-sottile re"
+Answer:
+Risposta:
+"UV HUC Filter with 18 UHD multilayer coatings, ultra-hard coat, Nano Coating®, ultra-thin;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi - Filtro circolare naturale notturno 112 mm per Nikon Z 14-24 mm f/2.8S (filtro di inquinamento della luce)"
+Answer:
+Risposta:
+"NiSi - 112mm Natural Night Filter for Nikon Z 14-24mm f/2.8S (Light Pollution Filter);"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi - JetMag Pro 82MAG Lens Front Cap - Lente magnetica durevole e protezione filtro per filtri di dimensioni 82MAG - Attacco r"
+Answer:
+Risposta:
+"NiSi JetMag Pro 82MAG Lens Cap; Durable magnetic lens; Filter protection for 82MAG filters; R mount"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi - JetMag Pro 82MAG True Color CPL, filtro magnetico circolare polarizzatore lente - Vetro ottico nano rivestito, telaio in "
+Answer:
+Risposta:
+"NiSi - JetMag Pro 82MAG True Color CPL, magnetic circular polarizer lens filter - Nano coated optical glass, frame in;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi 67mm Circular Starter Filter Kit, Including HUC UV Filter, HUC CPL and Filter Pouch"
+Answer:
+Risposta:
+"NiSi 67mm Starter Filter Kit; Includes HUC UV, HUC CPL, Filter Pouch"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi 77mm Circular Filter Professional Kit, Including HUC UV Filter, Ti Enhance CPL, Natural Night Filter, ND1000(10 stops) and "
+Answer:
+Risposta:
+"NiSi 77mm Pro Circular Filter Kit; Includes HUC UV, Ti Enhance CPL, Natural Night, ND1000(10 stops)"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi 82mm Kit Filtri Circolari ND Filter Kit, Including ND8(3 stops), ND64(6 stops)+CPL, ND1000(10 stops) and Filter Pouch"
+Answer:
+Risposta:
+"NiSi 82mm ND Filter Kit; Includes ND8, ND64+CPL, ND1000; Comes with Filter Pouch"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi C5 Matte Box Cinema Kit – C5 Mattebox, Filtro vassoio True Color 1 – 5 filtri VND True Color Rotating PL, 4 filtri 5.65 FS "
+Answer:
+Risposta:
+"NiSi C5 Matte Box Cinema Kit; C5 Mattebox; True Color 1 Filter Tray; 5 VND True Color Rotating PL Filters; 4 5.65 FS Filters"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi C5 Matte Box Filmmaker Kit – C5 Mattebox, Filtro vassoio True Color 1 – 5 filtri VND 4 filtri 5.65 FS ND16, 4 filtri Black "
+Answer:
+Risposta:
+"NiSi C5 Filmmaker Kit - C5 Mattebox, True Color Filter Tray 1-5; VND 4 Filters 5.65 FS ND16, 4 Black Filters"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi C5 Matte Box Starter Kit – C5 Matte Box, vassoio filtro e anello adattatore, compatibile con obiettivo fotocamera da 67 mm/"
+Answer:
+Risposta:
+"NiSi C5 Matte Box Kit - C5 Box, filter tray, adapter ring, fits 67mm camera lens;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Cinema 4x5.65 ND 1.5 | Filtro per lenti a densità neutra 5-stop per scatole opache 4x5.65 | Fotografia e videografia"
+Answer:
+Risposta:
+"NiSi Cinema 4x5.65 ND 1.5 | 5-stop neutral density lens filter for 4x5.65 matte boxes | Photography and videography"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Cinema 4x5.65 True Color Polarizzatore Lineare | Filtro Lente Polarizzatore per Scatole Opache 4x5.65 | Fotografia e Videog"
+Answer:
+Risposta:
+"NiSi Cinema 4x5.65 True Color Linear Polarizer; Lens Filter for 4x5.65 Matte Boxes; Photography & Video"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Cinema Allure Streak - Filtro circolare circolare rotante per effetto speciale, 82 mm, colore: Blu"
+Answer:
+Risposta:
+"NiSi Cinema Allure Streak - Rotating special effect filter, 82mm, Blue;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Contenitore porta filtri per filtro circolare, nero, 8 Filter Pockets Up to 95mm (Version II), Organizer tascabile"
+Answer:
+Risposta:
+"NiSi Circular Filter Case, Black, 8 Pockets Up to 95mm (V2), Pocket Organizer;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Extreme Kit con 4 Filtri ND e Accessori - Kit Filtri ND 100mm con ND8, ND64, ND1000, ND32000, 1x NiSi Custodia per 4 Filtri"
+Answer:
+Risposta:
+"NiSi Extreme Kit w/ 4 ND Filters & Accessories; ND 100mm Filters w/ ND8, ND64, ND1000, ND32000; 1x NiSi 4 Filter Case"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro 55mm UV HUC (Ultra Hard Coating) con 18 rivestimenti multistrato UHD, ultra duro, Nano Coating"
+Answer:
+Risposta:
+"NiSi 55mm UV HUC Filter with 18-layer UHD, ultra-hard, Nano Coating"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro 77mm Armor FX PRO Nano L395 UV, blocco ultravioletto, resistente agli urti, filtro di protezione delle lenti - Vetro"
+Answer:
+Risposta:
+"NiSi 77mm Armor FX PRO Nano L395 UV; UV block; shock-resistant; lens protection filter; Glass"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro 95 mm 1/8 Densità Circolare Nero Mist | Filtro Lente Effetto Nebbia per Fotografia e Videografia"
+Answer:
+Risposta:
+"NiSi 95mm 1/8 Density Black Mist Filter; Lens Filter for Photography & Videography"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro Armor FX PRO Nano L395 UV 82mm - Resistente agli urti, blocco ultravioletto, protezione dell'obiettivo, vetro ottico"
+Answer:
+Risposta:
+"NiSi Armor FX PRO Nano L395 UV 82mm Filter - Shock-resistant, UV block, lens protection, optical glass;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro Black Mist 1/4 | 82mm per Sistema Swift | senza filettatura da installare a pressione con Anello Swift o sopra VND T"
+Answer:
+Risposta:
+"NiSi Black Mist 1/4 Filter, 82mm for Swift System; No thread, installs w/ Swift Ring or over VND T"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "ABYSTYLE One Piece Calzini Skull One Size (38-43) nero, 70% cotone, 27% poliestere, 3% elastan."
+Answer:
+Risposta:
+"ABYSTYLE One Piece Skull Socks One Size (38-43) black, 70% cotton, 27% polyester, 3% elastane."
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro Black Mist 1/4 | 95mm per Sistema Swift | senza filettatura da installare a pressione con Anello Swift o sopra VND T"
+Answer:
+Risposta:
+"NiSi Black Mist 1/4 Filter, 95mm for Swift System; No thread, install w/ Swift Ring or over VND T"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Wizard W-63 Compatibile con Sony | Staffa di rotazione orizzontale/verticale, Arca-Swiss compatibile, rotazione a 0°, 90° e"
+Answer:
+Risposta:
+"NiSi Wizard W-63 for Sony; Horizontal/Vertical rotation bracket; Arca-Swiss compatible; 0°, 90° rotation"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro Cellulare iPhone fotocamera Filter Kit / Mobile Phone Lens Camera Filter for iOS iPhone Smartphone - Cinema Filter K"
+Answer:
+Risposta:
+"NiSi iPhone Camera Filter Kit; Mobile Lens Filter for iOS; Cinema Filter K"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Wizard W-72 Compatibile con Fujifilm, Nikon Z, Panasonic S5, Leica SL/SL2 | Staffa di rotazione orizzontale/verticale, Arca"
+Answer:
+Risposta:
+"NiSi W-72 for Fujifilm, Nikon Z, Panasonic S5, Leica SL/SL2; Rotating bracket, Arca"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro Circolare 112mm True Color Pro Nano CPL Filtro per Nikon Z 14-24mm f/2.8S"
+Answer:
+Risposta:
+"NiSi 112mm True Color Pro Nano CPL Filter for Nikon Z 14-24mm f/2.8S"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Wizard W-82D Compatibile con fotocamere DSLR | Staffa di rotazione orizzontale/verticale, Arca-Swiss compatibile, rotazione"
+Answer:
+Risposta:
+"NiSi Wizard W-82D for DSLR cams; Horizontal/vertical rotation bracket; Arca-Swiss compatible; Rotates"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Wizard W-82M Compatibile con fotocamere Canon serie R | Staffa di rotazione orizzontale/verticale, Arca-Swiss compatibile, "
+Answer:
+Risposta:
+"NiSi Wizard W-82M for Canon R series; Rotating bracket, Arca-Swiss compatible;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro Circolare 72mm Circular Filter ND Filter Kit, Including ND8(3 stops), ND64(6 stops)+CPL, ND1000(10 stops) e Borsa Po"
+Answer:
+Risposta:
+"NiSi 72mm Circular ND Filter Kit; Includes ND8, ND64+CPL, ND1000; Comes with Bag"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Anello adattatore S6 per filettature di filtri standard (adattatori da 105 mm, 95 mm, 82 mm inclusi) | Adattatore per obiet"
+Answer:
+Risposta:
+"NiSi S6 Ring Adapter for standard filter threads (105mm, 95mm, 82mm incl.); Lens Adapter"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro circolare UV UHC da 49 mm con panno di pulizia – vetro bianco acqua, rivestimento ultra duro con trasmissione della "
+Answer:
+Risposta:
+"NiSi 49mm UV UHC Circular Filter w/ cleaning cloth; white water glass, ultra-hard coating;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi JetMag Pro 62mm-82MAG Adattatore obiettivo filettatura 62 mm per collegare filtri magnetici 82MAG"
+Answer:
+Risposta:
+"NiSi JetMag Pro 62mm-82MAG Lens Adapter; 62mm thread for connecting 82MAG magnetic filters"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro di diffusione Black Mist 1/8 da 49 mm - Filtro effetto Promist (apertura 1/8)"
+Answer:
+Risposta:
+"NiSi 49mm Black Mist 1/8 Diffusion Filter - Promist effect (1/8 opening);"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi JetMag Pro 67mm-82MAG Adattatore obiettivo filettatura 67 mm per collegare filtri magnetici 82MAG"
+Answer:
+Risposta:
+"NiSi JetMag Pro 67mm-82MAG Lens Adapter; 67mm thread for 82MAG magnetic filters"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi JetMag Pro 82mm-82MAG Anello Adattatore obiettivo filettatura 82 mm per collegare filtri magnetici 82MAG"
+Answer:
+Risposta:
+"NiSi JetMag Pro 82mm-82MAG Lens Adapter Ring; Connects 82mm magnetic filters"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro GND 1.2 4 Stop 150X170mm Medio (16) Filtro IR graduato multistrato a densità neutra"
+Answer:
+Risposta:
+"NiSi GND 1.2 4 Stop 150X170mm Medio (16) IR grad multilayer ND filter;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro GND Nano IR 1.5 Soft Edge Filter (5-Stops) 100X150mm Nano Multicoated Graduated IR Neutral Density"
+Answer:
+Risposta:
+"NiSi GND Nano IR 1.5 Soft Edge Filter (5-Stops); 100X150mm Nano Coated Graduated IR ND"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro GND Nano IR 100X150mm Nano Multicoated Graduated IR Neutral Density 0.9 Reverse Edge Filter (3-Stops)"
+Answer:
+Risposta:
+"NiSi GND Nano IR Filter 100X150mm; Multicoated Graduated IR ND 0.9 Reverse Edge; 3-Stops"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro GND Nano IR 150x170mm 0.9 (3 Stop) Medium GND (Grad ND) Filter - GND8 Multicoated IR in Optical Glass"
+Answer:
+Risposta:
+"NiSi GND Nano IR Filter 150x170mm 0.9 (3 Stop); Medium GND Filter; GND8 IR Coated Optical Glass"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro GND16 1.2 4 Stop REVERSE 150X170mm Nano Multicoated Graduato IR Neutral Density 1.5 Soft Edge Filter"
+Answer:
+Risposta:
+"NiSi GND16 1.2 4 Stop REVERSE 150X170mm Nano IR ND 1.5 Soft Edge Filter;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro GND4 0.6 Soft (2-Stop) 100X150mm Nano Multicoated Graduated IR Neutral Density 0.6 Soft Edge Filter (2-Stops)"
+Answer:
+Risposta:
+"NiSi GND4 0.6 Soft Filter 100X150mm; Nano Coated Graduated IR ND 0.6 Soft Edge (2-Stops);"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro Graduato GND 2 stop (0.6) Medium 100x150mm con Nano Coating, trattamento IR, Vetro Ottico"
+Answer:
+Risposta:
+"NiSi GND 2 stop (0.6) Med 100x150mm w/ Nano Coat, IR treat, Optic Glass;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro Graduato GND 3 stop (0.9) Hard 100x150mm con Nano Coating, trattamento IR, Vetro Ottico"
+Answer:
+Risposta:
+"NiSi GND 3 stop (0.9) Hard Filter 100x150mm, Nano Coated, IR treated, Optical Glass;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro Graduato GND 3 stop (0.9) Medium 100x150mm con Nano Coating, trattamento IR, Vetro Ottico"
+Answer:
+Risposta:
+"NiSi GND 3 stop (0.9) Med 100x150mm w/ Nano Coat, IR treat, Optic Glass;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro Graduato GND 3 stop (0.9) Medium 100x150mm con Nano Coating, trattamento IR, Vetro Ottico"
+Answer:
+Risposta:
+"NiSi GND 3 stop (0.9) Med 100x150mm w/ Nano Coat, IR treat, Optic Glass;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Kit portafiltro V7 da 100 mm con True Color CPL, con anello adattatore da 67-82 mm, 72-82 mm e 77-82 mm"
+Answer:
+Risposta:
+"NiSi 100mm V7 Filter Kit w/ True Color CPL; 67-82mm, 72-82mm, 77-82mm adapt rings"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro Graduato GND 3 Stop (0.9) Soft 100x150mm con Nano Coating, Trattamento Anti-IR, Vetro Ottico"
+Answer:
+Risposta:
+"NiSi GND 3 Stop (0.9) Soft Filter 100x150mm, Nano Coated, Anti-IR, Optical Glass;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Kit Starter 150 di Filtri da 150mm (no Holder, include 3 filtri di larghezza 150mm)"
+Answer:
+Risposta:
+"NiSi 150 Starter Kit w/ 150mm Filters (no Holder, 3 wide filters included);"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro Graduato GND 4 stop (1.2) Medium 100x150mm con Nano Coating, trattamento IR, Vetro Ottico"
+Answer:
+Risposta:
+"NiSi GND 4 stop (1.2) Med Filter 100x150mm, Nano Coat, IR treatment, Optic Glass;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Portafiltro da 100 mm - Switch (compatibile con l'adattatore principale da 82 mm di V6 / V5-Pro ??/ V5)"
+Answer:
+Risposta:
+"NiSi 100mm Filter Holder - Switch (fits 82mm V6/V5-Pro/V5 main adapter);"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Portafiltro da 100mm per Olympus 7-14 mm f/2.8 PRO | Contiene 2 filtri da 100x100 mm e 100x150 mm (ND, GND, ecc.), rotazion"
+Answer:
+Risposta:
+"NiSi 100mm Filter Holder for Olympus 7-14mm f/2.8 PRO | Includes 2 100x100mm and 100x150mm filters (ND, GND, etc.), rotation"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro graduato ND (2-Stop) 0,6 75 x 100 mm M75 Nano IR Soft Graduated Neutral Density Filter"
+Answer:
+Risposta:
+"NiSi Grad ND Filter (2-Stop) 0,6 75x100mm M75 Nano IR Soft Grad ND Filter;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Professional Kit V7 e Filtri a lastra 100mm, Kit 7 filtri (GND Soft/Medium/Reverse 3 Stop, ND8 3 Stop, ND64 6 Stop, ND1000 "
+Answer:
+Risposta:
+"NiSi Pro Kit V7 & 100mm plate filters; 7 filter kit (GND Soft/Med/Reverse 3 Stop, ND8 3 Stop, ND64 6 Stop, ND1000"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro IR GND16 150X170mm Nano Multicoated Graduato IR Neutral Density 1.2 Soft Edge Filter (4-Stop)"
+Answer:
+Risposta:
+"NiSi IR GND16 150X170mm Nano Coated Grad IR ND 1.2 Soft Edge Filter (4-Stop);"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi S6 Supporto per Filtro per Sony FE 12-24 mm F4 G (True Color CPL) – 150 mm  Filter Holder System"
+Answer:
+Risposta:
+"NiSi S6 Filter Holder for Sony FE 12-24mm F4 G (True Color CPL) - 150mm System;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro IR rivestito ND Filter vetro ottico, filtro a densità neutra, 100X100mm IR ND32000(4.5) 15 Stops super stopper"
+Answer:
+Risposta:
+"NiSi IR Coated ND Filter, optical glass, neutral density filter, 100X100mm IR ND32000(4.5) 15 Stops super stopper"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Starter Kit V7 di Filtri 100mm, Kit di 2 filtri (GND 100x150 Medium 3 Stop, ND 100x100 ND1000 10 Stop) con Holder NiSi V7 c"
+Answer:
+Risposta:
+"NiSi Starter Kit V7, 2 Filter Set (GND 100x150 Med 3 Stop, ND 100x100 ND1000 10 Stop) w/ V7 Holder;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "Filtro UV HUC (Ultra Hard Coating) con 18 rivestimenti multistrato UHD, rivestimento ultra duro, Nano Coating®, ultra-sottile re"
+Answer:
+Risposta:
+"UV HUC Filter with 18 UHD multilayer coatings, ultra-hard, Nano Coating®, ultra-thin;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro ND Densità Neutra ND1000K (6.0) 20 Stop, 100X100mm, nano coating, rivestimento IR, Black Hole, Vetro Ottico"
+Answer:
+Risposta:
+"NiSi ND Filter ND1000K (6.0) 20 Stop, 100X100mm, nano coat, IR coat, Black Hole, Optical Glass;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "Filtro UV HUC (Ultra Hard Coating) con 18 rivestimenti multistrato UHD, rivestimento ultra duro, Nano Coating®, ultra-sottile re"
+Answer:
+Risposta:
+"UV HUC Filter with 18 UHD multilayer coatings, ultra-hard, Nano Coating®, ultra-thin;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro ND Densità Neutra ND128 (2.1) 7 Stop, 100X100mm, nano coating, rivestimento IR, Little Stopper, Vetro Ottico"
+Answer:
+Risposta:
+"NiSi ND128 Filter (2.1) 7 Stop, 100X100mm, nano coat, IR coat, Little Stopper, Optical Glass;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro ND Densità Neutra ND16 (1.2) 4 Stop, 100X100mm, nano coating, rivestimento IR, Vetro Ottico"
+Answer:
+Risposta:
+"NiSi ND16 Filter (1.2) 4 Stop, 100X100mm, nano coat, IR coat, Optical Glass;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro ND Densità Neutra ND2000 (3.3) 11 Stop, 100X100mm, nano coating, rivestimento IR, Vetro Ottico"
+Answer:
+Risposta:
+"NiSi ND2000 Filter (3.3) 11 Stop, 100X100mm, nano coat, IR coat, Optical Glass;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro ND Densità Neutra ND256 (2.4) 8 Stop, 100X100mm, nano coating, rivestimento IR, Vetro Ottico"
+Answer:
+Risposta:
+"NiSi ND256 Filter (2.4) 8 Stop, 100X100mm, nano coat, IR coat, Optical Glass;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro ND Densità Neutra ND32 (1.5) 5 Stop, 100X100mm, nano coating, rivestimento IR, Little Stopper, Vetro Ottico"
+Answer:
+Risposta:
+"NiSi ND32 (1.5) 5 Stop Filter, 100X100mm, nano coat, IR coat, Little Stopper, Optical Glass;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro ND Densità Neutra ND4 (0.6) 2 Stop, 100X100mm, nano coating, rivestimento IR, Vetro Ottico"
+Answer:
+Risposta:
+"NiSi ND4 (0.6) 2 Stop Filter, 100X100mm, nano coat, IR coat, Optical Glass;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro ND Densità Neutra ND500 (2.7) 9 Stop, 100X100mm, nano coating, rivestimento IR, Vetro Ottico"
+Answer:
+Risposta:
+"NiSi ND500 Filter (2.7) 9 Stop, 100X100mm, nano coat, IR coat, Optical Glass;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro ND Densità Neutra ND64 (1.8) 6 Stop, 100X100mm, nano coating, rivestimento IR, Little Stopper, Vetro Ottico"
+Answer:
+Risposta:
+"NiSi ND64 Filter (1.8) 6 Stop, 100X100mm, nano coat, IR coat, Little Stopper, Optical Glass;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro ND Densità Neutra ND64 (1.8) 6 Stop, 150X150mm, nano coating, rivestimento IR, Little Stopper, Vetro Ottico"
+Answer:
+Risposta:
+"NiSi ND64 Filter (1.8) 6 Stop, 150X150mm, nano coat, IR coat, Little Stopper, Optical Glass;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro ND Densità Neutra ND8 (0.9) 3 Stop, 100X100mm, nano coating, rivestimento IR, Vetro Ottico"
+Answer:
+Risposta:
+"NiSi ND Filter ND8 (0.9) 3 Stop, 100X100mm, nano coat, IR coat, Optical Glass"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro ND Densità Neutra ND8 (0.9) 3 Stop, 150X150mm, nano coating, rivestimento IR, Vetro Ottico"
+Answer:
+Risposta:
+"NiSi ND8 (0.9) 3 Stop Filter, 150X150mm, nano coat, IR coat, Optical Glass;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro ND True Color Variable da 43 mm, per 1-5 diaframmi (ND2-ND32) VND Vario ND"
+Answer:
+Risposta:
+"NiSi 43mm True Color ND Filter, 1-5 stops (ND2-ND32) VND Vario ND;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro ND VND VND True Color da 1 a 5 diaframmi ND-Vario variabile, 67 mm (ND2-ND32)"
+Answer:
+Risposta:
+"NiSi ND VND True Color Filter, 1-5 stops, variable, 67mm (ND2-ND32);"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro ND VND VND True Color da 55 mm - 1-5 diaframmi ND-Vario variabile (ND2-ND32)"
+Answer:
+Risposta:
+"NiSi 55mm ND VND True Color Filter; 1-5 Variable Aperture (ND2-ND32)"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro ND32000 (15 Stop) 67mm PRO Nano HUC IR (Vetro Ottico, Altissima Neutralità e Nano® Coating)"
+Answer:
+Risposta:
+"NiSi ND32000 Filter (15 Stop) 67mm PRO Nano HUC IR (Optical Glass, High Neutrality & Nano® Coating);"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro ND8 (3 Stop) 72mm PRO Nano HUC IR, Vetro Ottico, Ultra Sottile, Coating Resistente a Olio e Acqua"
+Answer:
+Risposta:
+"NiSi ND8 Filter (3 Stop) 72mm PRO Nano HUC IR, Optical Glass, Ultra Thin, Oil & Water Resistant Coating"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro ND8 (3 Stop) 77mm PRO Nano HUC IR, Vetro Ottico, Ultra Sottile, Coating Resistente a Olio e Acqua"
+Answer:
+Risposta:
+"NiSi ND8 Filter (3 Stop) 77mm PRO Nano HUC IR, Optical Glass, Ultra Thin, Oil & Water Resistant Coating;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro ND8 (3 Stop) 82mm PRO Nano HUC IR, Vetro Ottico, Ultra Sottile, Coating Resistente a Olio e Acqua"
+Answer:
+Risposta:
+"NiSi ND8 Filter (3 Stop) 82mm PRO Nano HUC IR, Optical Glass, Ultra Thin, Oil & Water Resistant Coating;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro per Fuji XA70 X100V X100T X100F X100S X100-49mm Allure Soft Filter Nero"
+Answer:
+Risposta:
+"NiSi Filter for Fuji XA70 X100V/T/F/S X100-49mm Allure Soft Black Filter"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro polarizzatore circolare 67mm True Color CPL per sistema VND e Swift True Color"
+Answer:
+Risposta:
+"NiSi 67mm True Color CPL Circular Polarizer for VND & Swift System"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro polarizzatore circolare da 67 mm UHC CPL, con rivestimento ultra rigido"
+Answer:
+Risposta:
+"67mm NiSi UHC CPL circular polarizer filter, ultra-hard coating;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro polarizzatore circolare da 72mm UHC CPL, con rivestimento ultra rigido"
+Answer:
+Risposta:
+"72mm NiSi UHC CPL circular polarizer filter, ultra-hard coating;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro Polarizzatore Circolare Multi Coated HUC CPL PRO Slim Nano Coating (62mm)"
+Answer:
+Risposta:
+"NiSi HUC CPL PRO Slim Nano Coated Circular Polarizer Filter (62mm);"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro Polarizzatore Circolare Multi Coated HUC CPL PRO SLIM Nano Coating (67mm)"
+Answer:
+Risposta:
+"NiSi Multi Coated HUC CPL PRO SLIM Nano Coating Circular Polarizer Filter (67mm);"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro Polarizzatore Circolare Multi Coated HUC CPL PRO Slim Nano Coating (72mm)"
+Answer:
+Risposta:
+"NiSi HUC CPL PRO Slim Nano Coated Circular Polarizer Filter (72mm);"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro Polarizzatore Circolare Multi Coated HUC CPL PRO Slim Nano Coating (77mm)"
+Answer:
+Risposta:
+"NiSi HUC CPL PRO Slim Nano Coated Circular Polarizer Filter (77mm);"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro Polarizzatore Circolare Multi Coated HUC CPL PRO Slim Nano Coating (82mm)"
+Answer:
+Risposta:
+"NiSi Multi Coated HUC CPL PRO Slim Nano Coating Circular Polarizer Filter (82mm);"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro polarizzatore circolare True Color CPL per 82mm True Color VND e Swift System | sistema di filtri circolari Swift | "
+Answer:
+Risposta:
+"NiSi True Color CPL Polarizer Filter for 82mm VND, Swift System; Swift Circular Filter System;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro polarizzatore circolare True Color CPL per sistema VND e Swift True Color da 95 mm"
+Answer:
+Risposta:
+"NiSi True Color CPL Circular Polarizer for VND & Swift System, 95mm"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro polarizzatore circolare True Color CPL per VND e Swift da 77 mm | sistema di filtraggio circolare Swift | Fotografia"
+Answer:
+Risposta:
+"NiSi True Color CPL Polarizer for 77mm VND & Swift; Swift Circular Filter System; Photography"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro PRO Nano 82mm IR Filtro ND64 6 Stop + Polarizzatore CPL Integrato in Un Unico Filtro"
+Answer:
+Risposta:
+"NiSi PRO Nano 82mm IR ND64 6 Stop Filter + Integrated CPL Polarizer;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Filtro Pro Nano IR ND64 6 Stop + Polarizzatore CPL integrato in un unico filtro (72 mm)"
+Answer:
+Risposta:
+"NiSi Pro Nano IR ND64 6 Stop + Integrated CPL Filter (72mm);"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "ABYSTYLE One Piece Calzini Skull One Size (38-43) nero, 70% cotone, 27% poliestere, 3% elastan."
+Answer:
+Risposta:
+"ABYSTYLE One Piece Skull Socks One Size (38-43) black, 70% cotton, 27% polyester, 3% elastane;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Wizard W-63 Compatibile con Sony | Staffa di rotazione orizzontale/verticale, Arca-Swiss compatibile, rotazione a 0°, 90° e"
+Answer:
+Risposta:
+"NiSi W-63 for Sony; Horizontal/vertical rotation bracket; Arca-Swiss compatible; 0°, 90° rotation"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Wizard W-72 Compatibile con Fujifilm, Nikon Z, Panasonic S5, Leica SL/SL2 | Staffa di rotazione orizzontale/verticale, Arca"
+Answer:
+Risposta:
+"NiSi Wizard W-72 for Fujifilm, Nikon Z, Panasonic S5, Leica SL/SL2; Rotating bracket, Arca"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Wizard W-82D Compatibile con fotocamere DSLR | Staffa di rotazione orizzontale/verticale, Arca-Swiss compatibile, rotazione"
+Answer:
+Risposta:
+"NiSi Wizard W-82D for DSLR cams; Horizontal/vertical rotation bracket; Arca-Swiss compatible; Rotates"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Wizard W-82M Compatibile con fotocamere Canon serie R | Staffa di rotazione orizzontale/verticale, Arca-Swiss compatibile, "
+Answer:
+Risposta:
+"NiSi Wizard W-82M for Canon R series; Horizontal/vertical rotation bracket; Arca-Swiss compatible;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Anello adattatore S6 per filettature di filtri standard (adattatori da 105 mm, 95 mm, 82 mm inclusi) | Adattatore per obiet"
+Answer:
+Risposta:
+"NiSi S6 Adapter Ring for standard filter threads (105mm, 95mm, 82mm incl.); Lens Adapter"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi JetMag Pro 62mm-82MAG Adattatore obiettivo filettatura 62 mm per collegare filtri magnetici 82MAG"
+Answer:
+Risposta:
+"NiSi JetMag Pro 62mm-82MAG Lens Adapter; 62mm thread for connecting 82MAG magnetic filters"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi JetMag Pro 67mm-82MAG Adattatore obiettivo filettatura 67 mm per collegare filtri magnetici 82MAG"
+Answer:
+Risposta:
+"NiSi JetMag Pro 67mm-82MAG Lens Adapter; 67mm thread for 82MAG magnetic filters"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi JetMag Pro 82mm-82MAG Anello Adattatore obiettivo filettatura 82 mm per collegare filtri magnetici 82MAG"
+Answer:
+Risposta:
+"NiSi JetMag Pro 82mm-82MAG Lens Adapter Ring; Connects 82mm magnetic filters"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Kit Advanced 150 di Filtri da 150mm (no Holder, include 4 filtri di larghezza 150mm)"
+Answer:
+Risposta:
+"NiSi Adv. 150 Filter Kit (no Holder, incl. 4 150mm wide filters);"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Kit portafiltro V7 da 100 mm con True Color CPL, con anello adattatore da 67-82 mm, 72-82 mm e 77-82 mm"
+Answer:
+Risposta:
+"NiSi 100mm V7 Filter Kit w/ True Color CPL; 67-82mm, 72-82mm, 77-82mm adapt rings"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Kit Starter 150 di Filtri da 150mm (no Holder, include 3 filtri di larghezza 150mm)"
+Answer:
+Risposta:
+"NiSi 150 Starter Kit w/ 150mm Filters (no Holder, incl. 3 150mm wide filters);"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Portafiltro da 100 mm - Switch (compatibile con l'adattatore principale da 82 mm di V6 / V5-Pro ??/ V5)"
+Answer:
+Risposta:
+"NiSi 100mm Filter Holder - Switch (fits 82mm V6/V5-Pro/V5 main adapter);"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Portafiltro da 100mm per Olympus 7-14 mm f/2.8 PRO | Contiene 2 filtri da 100x100 mm e 100x150 mm (ND, GND, ecc.), rotazion"
+Answer:
+Risposta:
+"NiSi 100mm Filter Holder for Olympus 7-14mm f/2.8 PRO | Includes 2 100x100mm and 100x150mm filters (ND, GND, etc.), rotation"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Professional Kit V7 e Filtri a lastra 100mm, Kit 7 filtri (GND Soft/Medium/Reverse 3 Stop, ND8 3 Stop, ND64 6 Stop, ND1000 "
+Answer:
+Risposta:
+"NiSi Pro Kit V7 & 100mm plate filters; 7 filter kit (GND Soft/Med/Reverse 3 Stop, ND8 3 Stop, ND64 6 Stop, ND1000"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi S6 Supporto per Filtro per Sony FE 12-24 mm F4 G (True Color CPL) – 150 mm  Filter Holder System"
+Answer:
+Risposta:
+"NiSi S6 Filter Holder for Sony FE 12-24mm F4 G (True Color CPL) - 150mm System;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "NiSi Starter Kit V7 di Filtri 100mm, Kit di 2 filtri (GND 100x150 Medium 3 Stop, ND 100x100 ND1000 10 Stop) con Holder NiSi V7 c"
+Answer:
+Risposta:
+"NiSi Starter Kit V7, 2 filters (GND 100x150 Med 3 Stop, ND 100x100 ND1000 10 Stop) with V7 Holder;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "Filtro UV HUC (Ultra Hard Coating) con 18 rivestimenti multistrato UHD, rivestimento ultra duro, Nano Coating®, ultra-sottile re"
+Answer:
+Risposta:
+"UV HUC Filter with 18 UHD multilayer coatings, ultra-hard coat, Nano Coating®, ultra-thin;"
+
+Prompt:
+Generate a new descritpion based on this rules for every description that I send you: 
+1. Keep descriptions concise and under 80 characters.
+2. Replace long phrases with shorter synonyms.
+3. Use abbreviations where appropriate.
+4. Maintain essential product information.
+
+Put all description on the same line and separate every description with ";"
+
+Original description: "Filtro UV HUC (Ultra Hard Coating) con 18 rivestimenti multistrato UHD, rivestimento ultra duro, Nano Coating®, ultra-sottile re"
+Answer:
+Risposta:
+"UV HUC Filter with 18 UHD multilayer coatings, ultra-hard coat, Nano Coating®, ultra-thin re;"
+

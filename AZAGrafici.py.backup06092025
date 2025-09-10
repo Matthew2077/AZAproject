@@ -1,0 +1,784 @@
+#from flask import Flask, request, jsonify, send_file
+import pandas as pd
+import matplotlib
+matplotlib.use('Agg') 
+import matplotlib.pyplot as plt
+from matplotlib.font_manager import FontProperties
+import io
+import json
+from collections import Counter
+import os
+from matplotlib import font_manager
+import sys
+import base64
+
+
+
+# IMPOSTAZIONE FONT x PDF
+base_dir = os.path.dirname(os.path.abspath(__file__))
+montserrat_path = os.path.join(base_dir, "fonts", "Montserrat-Black.ttf")
+if os.path.exists(montserrat_path):
+    font_manager.fontManager.addfont(montserrat_path)
+    plt.rcParams['font.family'] = 'Montserrat'
+else:
+    print(f"Font file not found at: {montserrat_path}")
+    # Fallback to default font
+    plt.rcParams['font.family'] = 'sans-serif'
+    
+
+# VARIABILI GLOBALI:
+response = {
+    
+}
+
+
+
+
+
+
+# recupero dati ed esecuzione tutte cose
+def AZA():
+    if len(sys.argv) < 2:
+        print(json.dumps({"success": False, "error": "Parametro JSON mancante"}))
+        sys.exit(1)
+
+    # Input è un JSON, sia da Fetch che curl
+    try:
+        params = json.loads(sys.argv[1])
+        filename = params["filename"]
+        output = params["output"]
+        country = params["country"]
+        KPI = params["KPI"]
+    except (json.JSONDecodeError, KeyError) as e:
+        print(json.dumps({"success": False, "error": f"Errore nei parametri: {str(e)}"}))
+        sys.exit(1)
+
+    # Caricamento dati JSON
+    data_path = os.path.join("upload", filename) 
+    if not os.path.exists(data_path):
+        print(json.dumps({"success": False, "error": "File non trovato"}))
+        sys.exit(1)
+
+    with open(data_path, 'r', encoding='utf-8') as f:
+        dati = json.load(f) #DATI FILE QUI --------
+
+
+
+   
+   #creazione grafici
+    match KPI:
+        case "ASIN":
+                r = {"asin": 0, "no_asin": 0}
+                for k, v in dati.get("body", {}).items():
+                    try:
+                        asin = v.get("summary", {}).get("ASIN", "").strip() #recupera asin
+                        if asin:
+                            r["asin"] += 1 #se ha asin
+                        else:
+                            r["no_asin"] += 1 #senza asin
+                    except (KeyError, TypeError, AttributeError):
+                        pass
+
+                if output == "J":
+                    response["ASIN"] = {
+                            "status": 1,
+                            "message": "Conteggio ASIN",
+                            "response": {
+                                "asin": r["asin"],
+                                "no_asin": r["no_asin"]
+                            }
+                        }
+
+                elif output == "G":
+                    labels = ['Con ASIN', 'Senza ASIN']
+                    sizes = [r["asin"], r["no_asin"]]
+                    colors = ['#0084ff', '#1ab7ea']
+
+                    def make_autopct(values):
+                        def my_autopct(pct):
+                            total = sum(values)
+                            val = int(round(pct * total / 100.0))
+                            return f'{val}'
+                        return my_autopct
+
+                    #plt.figure(figsize=(6, 6))
+                    fig = plt.figure(figsize=(9, 5), constrained_layout=True)
+                    wedges, texts, autotexts = plt.pie(sizes, labels=None, autopct=make_autopct(sizes), colors=colors, startangle=140)
+                    plt.axis('equal')
+                    #plt.title('Distribuzione ASIN')
+
+                    legend_labels = [f"{label}: {val}" for label, val in zip(labels, sizes)]
+                    leg = plt.legend(
+                        wedges,
+                        legend_labels,
+                        title="Legenda",
+                        loc="center left",
+                        bbox_to_anchor=(1.1, 0.5),
+                        fontsize=12,
+                        title_fontsize=14,
+                        labelcolor='black',
+                        frameon=False
+                    )
+
+
+                    plt.tight_layout()
+
+                    buf = io.BytesIO()
+                    #plt.savefig(buf, format='png')
+                    plt.savefig(buf, format='png', bbox_inches='tight', pad_inches=0.1)
+                    buf.seek(0)
+                    plt.close()
+
+                    img_base64 = base64.b64encode(buf.getvalue()).decode('utf-8')
+                    print(json.dumps({
+                        "status": 1,
+                        "message": "Grafico generato",
+                        "image_base64": img_base64
+                    }))
+
+        case "is_AMZ":
+                Y = 0
+                N = 0
+
+                for ean, v in dati["body"].items():
+                    isAMZ = v.get("data", {}).get(country, {}).get("is_AMZ", "").strip()
+                    if isAMZ == "Y":
+                        Y += 1
+                    else:
+                        N += 1
+
+                if output == "J":
+                    response["is_AMZ"] = {
+                        "status": 1,
+                        "message": "Distribuzione prodotti Amazon",
+                        "response": {
+                            "Y": Y,
+                            "N": N
+                        }
+                    }
+
+                elif output == "G":
+
+                    labels = ['Y', 'N']
+                    sizes = [Y, N]
+                    colors = ['#0084ff', '#1ab7ea']
+
+                    def make_autopct(values):
+                        def my_autopct(pct):
+                            total = sum(values)
+                            val = int(round(pct * total / 100.0))
+                            return f'{val}'
+                        return my_autopct
+
+                    #plt.figure(figsize=(6, 6))
+                    fig = plt.figure(figsize=(9, 5), constrained_layout=True)
+                    wedges, texts, autotexts = plt.pie(sizes, labels=None, autopct=make_autopct(sizes), colors=colors, startangle=140)
+                    plt.axis('equal')
+                    #plt.title(f'Amazon seller competitor')
+
+                    legend_labels = [f"{label}: {val}" for label, val in zip(labels, sizes)]
+                    leg = plt.legend(
+                        wedges,
+                        legend_labels,
+                        title="Legenda",
+                        loc="center left",
+                        bbox_to_anchor=(1.1, 0.5),
+                        fontsize=12,
+                        title_fontsize=14,
+                        frameon=False
+                    )
+
+                    plt.tight_layout()
+
+                    buf = io.BytesIO()
+                    #plt.savefig(buf, format='png', bbox_inches='tight', dpi=100)
+                    plt.savefig(buf, format='png', bbox_inches='tight', pad_inches=0.1)
+                    buf.seek(0)
+                    plt.close() 
+
+                    img_base64 = base64.b64encode(buf.getvalue()).decode('utf-8')
+                    print(json.dumps({
+                        "status": 1,
+                        "message": "Grafico generato",
+                        "image_base64": img_base64
+                    }))
+
+        case "CAT":
+                r = {}
+
+                for cod, v in dati.get("body", {}).items():
+                    try:
+                        category = v["data"][country]["ranking"]["category"]["name"].strip()
+                        if category:
+                            r[category] = r.get(category, 0) + 1
+                    except (KeyError, TypeError, AttributeError):
+                        pass
+
+                filtered_r = {k: v for k, v in r.items() if k and k.upper() != "NULL"}
+
+                if output == "J":
+                    print(json.dumps({
+                        "status": 1,
+                        "message": f"Categorie trovate per {country}",
+                        "response": filtered_r
+                    }))
+
+                elif output == "G":
+                    if not filtered_r:
+                        print(json.dumps({
+                            "status": 0,
+                            "message": "Nessuna categoria trovata",
+                            "response": {}
+                        }))
+
+                    sorted_items = sorted(filtered_r.items(), key=lambda x: x[1], reverse=True)[:25]
+                    categories, counts = zip(*sorted_items)
+
+                    plt.figure(figsize=(10, 6))
+                    bars = plt.barh(categories, counts, color="#1D7DC2")
+                    plt.xlabel("Numero di Prodotti")
+                    #plt.title("Categorie")
+                    plt.gca().invert_yaxis()
+
+                    ax = plt.gca()
+                    ax.spines['top'].set_visible(False)
+                    ax.spines['right'].set_visible(False)
+                    ax.spines['left'].set_visible(False)
+                    ax.spines['bottom'].set_visible(False)
+                    ax.tick_params(left=False, bottom=False)
+                    
+                    texts, autotexts = [], []
+
+
+                    for bar in bars:
+                        width = bar.get_width()
+                        ax.annotate(f'{int(width)}',
+                                    xy=(width, bar.get_y() + bar.get_height() / 2),
+                                    xytext=(5, 0),
+                                    textcoords='offset points',
+                                    va='center',
+                                    fontsize=9)
+
+
+                    plt.tight_layout()
+
+                    buf = io.BytesIO()
+                    plt.savefig(buf, format='png')
+                    buf.seek(0)
+                    plt.close()
+
+                    img_base64 = base64.b64encode(buf.getvalue()).decode('utf-8')
+                    print(json.dumps({
+                        "status": 1,
+                        "message": "Grafico generato",
+                        "image_base64": img_base64
+                    }))
+
+        case "NODE":
+                r = {}
+
+                for k, v in dati.get("body", {}).items():
+                    try:
+                        node = v["data"][country]["ranking"]["node"]["name"].strip()
+                        if node:
+                            r[node] = r.get(node, 0) + 1
+                    except (KeyError, TypeError, AttributeError):
+                        pass
+
+                    sorted_items = sorted(r.items(), key=lambda x: x[1], reverse=True)[:25]
+                    r = dict(sorted_items)
+
+                if output == "J":
+                    print(json.dumps({
+                        "status": 1,
+                        "message": f"Nodi trovati per {country}",
+                        "response": r
+                    }))
+
+                elif output == "G":
+                    if not r:
+                        print(json.dumps({
+                            "status": 0,
+                            "message": "Nessun nodo trovato",
+                            "response": {}
+                        }))
+
+                    sorted_items = sorted(r.items(), key=lambda x: x[1], reverse=True)
+                    nodes, counts = zip(*sorted_items)
+
+                    plt.figure(figsize=(10, 6))
+                    bars = plt.barh(nodes, counts, color="#1D7DC2")
+                    plt.xlabel("Numero di Prodotti")
+                    #plt.title("Nodi (Node)")
+                    plt.gca().invert_yaxis()
+
+                    ax = plt.gca()
+                    ax.spines['top'].set_visible(False)
+                    ax.spines['right'].set_visible(False)
+                    ax.spines['left'].set_visible(False)
+                    ax.spines['bottom'].set_visible(False)
+                    ax.tick_params(left=False, bottom=False)
+                    
+                    texts, autotexts = [], []
+
+
+                    for bar in bars:
+                        width = bar.get_width()
+                        ax.annotate(f'{int(width)}',
+                                    xy=(width, bar.get_y() + bar.get_height() / 2),
+                                    xytext=(5, 0),
+                                    textcoords='offset points',
+                                    va='center',
+                                    fontsize=9)
+
+                    plt.tight_layout()
+
+                    buf = io.BytesIO()
+                    plt.savefig(buf, format='png')
+                    buf.seek(0)
+                    plt.close()
+
+                    img_base64 = base64.b64encode(buf.getvalue()).decode('utf-8')
+                    print(json.dumps({
+                        "status": 1,
+                        "message": "Grafico generato",
+                        "image_base64": img_base64
+                    }))
+
+        case "OFFERS":
+                offers = 0
+                no_offers = 0
+
+                for cod, v in dati.get("body", {}).items():
+                    try:
+                        offerte = v.get("data", {}).get(country, {}).get("offers", [])
+                        if len(offerte) > 0:
+                            offers += 1
+                        else:
+                            no_offers += 1
+                    except (KeyError, TypeError):
+                        no_offers += 1 
+
+                if output == "J":
+                    print(json.dumps({
+                        "status": 1,
+                        "message": "Distribuzione prodotti con/senza offerte",
+                        "response": {"offerte attive": offers ,
+                                    "senza offerte": no_offers
+                        }
+                    }))
+            
+                if output == "G":
+                    labels = ['Con Offerte', 'Senza Offerte']
+                    sizes = [offers, no_offers]
+                    colors = ['#0084ff', '#1ab7ea']
+
+                    def make_autopct(values):
+                        def my_autopct(pct):
+                            total = sum(values)
+                            val = int(round(pct * total / 100.0))
+                            return f'{val}'
+                        return my_autopct
+
+                    fig = plt.figure(figsize=(9, 5), constrained_layout=True)
+                    wedges, texts, autotexts = plt.pie(sizes, labels=None, autopct=make_autopct(sizes), colors=colors, startangle=140)
+                    plt.axis('equal')
+
+                    legend_labels = [f"{label}: {size}" for label, size in zip(labels, sizes)]
+                    leg = plt.legend(
+                        wedges,
+                        legend_labels,
+                        title="Legenda",
+                        loc="center left",
+                        bbox_to_anchor=(1, 0.5),
+                        fontsize=11
+                    )
+
+
+                    plt.tight_layout()
+
+                    buf = io.BytesIO()
+                    #plt.savefig(buf, format='png', bbox_inches='tight', dpi=100)
+                    plt.savefig(buf, format='png', bbox_inches='tight', pad_inches=0.1)
+                    buf.seek(0)
+                    plt.close()
+
+                    img_base64 = base64.b64encode(buf.getvalue()).decode('utf-8')
+                    print(json.dumps({
+                        "status": 1,
+                        "message": "Grafico generato",
+                        "image_base64": img_base64
+                    }))
+
+        case "MARGINE":
+                fasce = {
+                    "meno_0%": 0,
+                    "1_a_10%": 0,
+                    "11_a_20%": 0,
+                    "21_a_30%": 0,
+                    "piu_30%": 0
+                }
+
+                tot_prod_margine = 0
+
+                for cod, v in dati.get("body", {}).items():
+                    try:
+                        buybox = v.get("data", {}).get(country, {}).get("buybox", {})
+                        if not isinstance(buybox, dict):
+                            continue
+
+                        margine_ass = buybox.get("margine_BB")
+                        landed_ass = buybox.get("landed")
+                        listing_ass = buybox.get("listing")
+                        if not margine_ass or not landed_ass:
+                            continue
+
+                        margine = float(margine_ass)
+                        landed = float(landed_ass)
+                        listing = float(listing_ass)
+
+                        if landed == 0:
+                            continue
+
+                        margine_perc = ((margine / landed)/margine) * 100
+                        tot_prod_margine += 1
+
+                        if margine_perc <= 0:
+                            fasce["meno_0%"] += 1
+                        elif 0 < margine_perc <= 10:
+                            fasce["1_a_10%"] += 1
+                        elif 10 < margine_perc <= 20:
+                            fasce["11_a_20%"] += 1
+                        elif 20 < margine_perc <= 30:
+                            fasce["21_a_30%"] += 1
+                        elif margine_perc >30:
+                            fasce ["piu_30%"] += 1
+
+                    except (ValueError, TypeError, KeyError):
+                        continue
+
+                    if tot_prod_margine == 0:
+                        print(json.dumps({
+                            "status": 0,
+                            "message": "Nessun margine valido trovato",
+                            "response": {}
+                        }))
+                    
+                if output == "J":
+                    print(json.dumps({
+                        "status": 1,
+                        "message": "Distribuzione dei margini in percentuale",
+                        "response": fasce 
+                    }))
+
+                elif output == "G":
+                    labels = list(fasce.keys())
+                    values = list(fasce.values())
+                    
+                    if sum(values) == 0:
+                        print(json.dumps({
+                            "status": 0,
+                            "message": "Nessun dato valido da visualizzare",
+                            "response":{}
+                        }))
+                    
+                    colors = ["#EC1E2F", "#F57C00", "#FBC02D", "#1D7DC2", "#1976D2"]
+
+                    plt.figure(figsize=(12,7))
+                    bars = plt.bar(labels, values, color=colors)
+
+                    for bar in bars:
+                        height = bar.get_height()
+                        plt.text(bar.get_x() + bar.get_width()/2, height + 0.5, str(height), ha='center', va='bottom',  color='black')
+
+
+                    plt.xlabel('Fasce') #fontproperties=montserrat_prop if montserrat_prop else None)
+                    plt.ylabel('Numero Prodotti') #fontproperties=montserrat_prop if montserrat_prop else None)
+                    plt.grid(axis='y', linestyle='--', alpha=0.6)
+
+                    plt.tight_layout()
+
+                    buf = io.BytesIO()
+                    plt.savefig(buf, format='png', dpi=100)
+                    buf.seek(0)
+                    plt.close()
+
+                    img_base64 = base64.b64encode(buf.getvalue()).decode('utf-8')
+                    print(json.dumps({
+                        "status": 1,
+                        "message": "Grafico generato",
+                        "image_base64": img_base64
+                    }))
+
+        case "TEMPO_DI_CONSEGNA":
+                result = {
+                    "prime": 0,
+                    "24h": 0,
+                    "48h": 0,
+                    "48h o più": 0
+                }
+
+                for cod, v in dati.get("body", {}).items():
+                    try:
+                        offerte = v.get("data", {}).get(country, {}).get("offers", {})
+                        tempi = []
+
+                        for seller_id, offer_list in offerte.items():
+                            if isinstance(offer_list, list):
+                                for offer_data in offer_list:
+                                    try:
+                                        tempo_consegna = offer_data.get("shipping_time_min", None)
+                                        if tempo_consegna is not None:
+                                            tempi.append(int(tempo_consegna))
+                                    except (ValueError, TypeError):
+                                        pass
+
+                        if tempi:
+                            spedizione = min(tempi)
+                            if spedizione == 0:
+                                result["prime"] += 1
+                            elif spedizione == 24:
+                                result["24h"] += 1
+                            elif spedizione <= 48:
+                                result["48h"] += 1
+                            else:
+                                result["48h o più"] += 1
+
+                    except (KeyError, TypeError, AttributeError):
+                        pass
+
+                if output == "J":
+                    print(json.dumps({
+                        "status": 1,
+                        "message": "Distribuzione prodotti per tempo di consegna",
+                        "response": result
+                    }))
+                
+                elif output == "G":
+                    labels = list(result.keys())
+                    values = list(result.values())
+                    colors = ["#1ab7ea", "#0084ff", "#0077B5", "#39539E" ]
+
+                    plt.figure(figsize=(10, 6))
+                    bars = plt.bar(labels, values, color=colors)
+
+                    for bar in bars:
+                        height = bar.get_height()
+                        plt.text(bar.get_x() + bar.get_width() / 2, height + 0.5, str(height), ha='center', va='bottom',  color='black')
+
+                    plt.xlabel('Tempo di consegna') #fontproperties=montserrat_prop if montserrat_prop else None)
+                    plt.ylabel('Numero prodotti') #fontproperties=montserrat_prop if montserrat_prop else None)
+                    plt.grid(axis='y', linestyle='--', alpha=0.6)
+                    
+                    texts, autotexts = [], []
+
+
+                    plt.tight_layout()
+
+                    buf = io.BytesIO()
+                    plt.savefig(buf, format='png', dpi=100)
+                    buf.seek(0)
+                    plt.close()
+
+                    img_base64 = base64.b64encode(buf.getvalue()).decode('utf-8')
+                    print(json.dumps({
+                        "status": 1,
+                        "message": "Grafico generato",
+                        "image_base64": img_base64
+                    }))
+
+        case "IDQ":
+                result = {
+                    "totale_immagini": {"scarso": 0, "medio": 0, "ottimo": 0},
+                    "lunghezza_titolo": {"scarso": 0, "medio": 0, "ottimo": 0},
+                    "lunghezza_descrizione": {"scarso": 0, "medio": 0, "ottimo": 0},
+                    "bullet_point": {"scarso": 0, "medio": 0, "ottimo": 0}
+                }
+
+                for cod, v in dati.get("body", {}).items():
+                    try:
+                        contenuto = v.get("data", {}).get(country, {}).get("IDQ", {})
+
+                        n_imm = int(contenuto.get("tot_images", 0))
+                        if n_imm <= 4:
+                            result["totale_immagini"]["scarso"] += 1
+                        elif 5 <= n_imm <= 6:
+                            result["totale_immagini"]["medio"] += 1
+                        elif n_imm >= 7:
+                            result["totale_immagini"]["ottimo"] += 1
+
+                        l_tit = int(contenuto.get("title_length", 0))
+                        if l_tit < 100:
+                            result["lunghezza_titolo"]["scarso"] += 1
+                        elif 100 <= l_tit <= 149:
+                            result["lunghezza_titolo"]["medio"] += 1
+                        elif l_tit >= 150:
+                            result["lunghezza_titolo"]["ottimo"] += 1
+
+                        if "description_length" in contenuto:
+                            l_desc = int(contenuto.get("description_length", 0))
+                            if l_desc < 1000:
+                                result["lunghezza_descrizione"]["scarso"] += 1
+                            elif 1000 <= l_desc <= 1499:
+                                result["lunghezza_descrizione"]["medio"] += 1
+                            elif l_desc >= 1500:
+                                result["lunghezza_descrizione"]["ottimo"] += 1
+
+                        n_bul = int(contenuto.get("tot_bullet_point", 0))
+                        if n_bul <= 2:
+                            result["bullet_point"]["scarso"] += 1
+                        elif 3 <= n_bul <= 4:
+                            result["bullet_point"]["medio"] += 1
+                        elif n_bul >= 5:
+                            result["bullet_point"]["ottimo"] += 1
+
+                    except (KeyError, TypeError, ValueError):
+                        pass
+
+                if output == "J":
+                    print(json.dumps({
+                        "status": 1,
+                        "message": "Analisi qualitativa prodotti",
+                        "response": result
+                    }))
+                
+                elif output == "G":
+                    categorie = list(result.keys())
+                    labels = ['scarso', 'medio', 'ottimo']
+                    bar_width = 0.2
+                    x = range(len(categorie))
+
+                    scarso_vals = [result[cat]['scarso'] for cat in categorie]
+                    medio_vals = [result[cat]['medio'] for cat in categorie]
+                    ottimo_vals = [result[cat]['ottimo'] for cat in categorie]
+
+                    plt.figure(figsize=(12, 6))
+
+                    scarso_bars = plt.bar([i - bar_width for i in x], scarso_vals, width=bar_width, label='Scarso', color="#39539E")
+                    medio_bars = plt.bar(x, medio_vals, width=bar_width, label='Medio', color="#0084ff")
+                    ottimo_bars = plt.bar([i + bar_width for i in x], ottimo_vals, width=bar_width, label='Ottimo', color="#1ab7ea")
+
+                    for bars in [scarso_bars, medio_bars, ottimo_bars]:
+                        for bar in bars:
+                            height = bar.get_height()
+                            plt.text(bar.get_x() + bar.get_width() / 2, height + 0.5, str(height), 
+                                    ha='center', va='bottom', fontsize=6,  color='black')
+
+                    plt.xticks(ticks=x, labels=categorie)
+                    plt.ylabel('Numero prodotti')
+                    #plt.title('Analisi qualitativa prodotti (IDQ)')
+                    plt.legend()
+                    plt.grid(axis='y', linestyle='--', alpha=0.6)
+                    plt.tight_layout()
+
+                    buf = io.BytesIO()
+                    plt.savefig(buf, format='png')
+                    buf.seek(0)
+                    plt.close()
+
+                    img_base64 = base64.b64encode(buf.getvalue()).decode('utf-8')
+                    print(json.dumps({
+                        "status": 1,
+                        "message": "Grafico generato",
+                        "image_base64": img_base64
+                    }))
+
+        case "LISTA_TOP_X":
+            if output == "J" or output == "G":
+                prodotti = []
+
+                for cod, v in dati.get("body", {}).items():
+                    summary = v.get("summary", {})
+                    data = v.get("data", {})
+
+                    if not isinstance(data, dict):
+                        continue
+
+                    for country, content in data.items():
+                        if not isinstance(content, dict):
+                            continue
+
+                        ranking = content.get("ranking", {})
+                        if not isinstance(ranking, dict):
+                            continue
+
+                        rankingC = ranking.get("category", {})
+                        rankingN = ranking.get("node", {})
+
+                        if not isinstance(rankingC, dict) or not isinstance(rankingN, dict):
+                            continue
+
+                        try:
+                            prodotto = {
+                                "idx": cod,
+                                "ASIN": summary.get("ASIN", cod),
+                                "EAN": summary.get("EAN", ""),
+                                "TITLE": summary.get("title", ""),
+                                "COUNTRY": country,
+                                "CAT_NAME": rankingC.get("name", ""),
+                                "CAT_RANK": int(rankingC.get("rank", 0)),
+                                "NODE_NAME": rankingN.get("name", ""),
+                                "NODE_RANK": int(rankingN.get("rank", 0)),
+                                "IMAGE": summary.get("img_lg") or ""
+                            }
+
+                            prodotti.append(prodotto)
+ 
+                        except (KeyError, TypeError, ValueError):
+                            continue
+
+                ordinati = sorted(prodotti, key=lambda x: x["NODE_RANK"])[:50]
+                
+                print(json.dumps({
+                    "status": 1,
+                    "message": f"Lista top prodotti",
+                    "response": ordinati
+                }))
+
+        case "DETTAGLIO":
+            if output == "J":
+                req_data = request.get_json()
+                if req_data:
+                    idx=req_data.get("idx").strip()
+                else:
+                    idx = None
+
+                if not idx:
+                    print(json.dumps({
+                        "status": 0,
+                        "message": "ID non fornito",
+                        "response": {}
+                    }))
+
+                prodotto = dati.get("body", {}).get(idx)
+                if not prodotto:
+                    print(json.dumps({
+                        "status": 0,
+                        "message": "Nessun dettaglio trovato per questo ID",
+                        "response": {}
+                    }))
+
+                try:
+                    summary = prodotto.get("summary", {})
+                    data_country = prodotto.get("data", {}).get(country, {}) 
+
+                    risultato = {
+                        "summary": summary,
+                        "data": data_country
+                    }
+
+                    print(json.dumps({
+                        "status": 1,
+                        "message": "Dettaglio per questo ID",
+                        "response": risultato
+                    }))
+
+                except (KeyError, TypeError, AttributeError):
+                    print(json.dumps({
+                        "status": 0,
+                        "message": "Errore nel recupero dettaglio per questo ID",
+                        "response": {}
+                    }))
+
+if __name__ == "__main__":
+    AZA()

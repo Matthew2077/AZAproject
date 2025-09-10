@@ -1,0 +1,626 @@
+<?php
+
+require_once __DIR__ . '/vendor/autoload.php';
+require_once __DIR__ . '/config/dz.php';
+// session_start(); 
+// require_once 'Authentication.php';
+
+
+// // validazione accesso
+// checkAccess($auth, ['2']);
+
+
+?>
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+<!DOCTYPE html>
+<html lang="en" id="wholepage">
+<head>
+   <!-- PAGE TITLE HERE -->
+	<title><?php echo $DexignZoneSettings['site_level']['site_title'] ?></title>
+
+	<?php include 'elements/meta.php';?>
+
+	<!-- FAVICONS ICON -->
+    <link rel="shortcut icon" type="image/png" href="<?php echo $DexignZoneSettings['site_level']['favicon']?>">
+    <!--bootstrap-->
+    <link href="assets/vendor/bootstrap-select/css/bootstrap-select.min.css" rel="stylesheet" type="text/css"/>
+    <link href="assets/vendor/datatables/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css"/>
+    <link href="assets/vendor/datatables/responsive/responsive.css" rel="stylesheet" type="text/css"/>
+
+    <link href="http://127.0.0.1/AZA/assets/js/plugins-init/datatables.init.js" rel="noreferrer noopener"></link> <!--datatable-->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+
+    <!-- jQuery-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+
+    <!-- Toastr -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+    <!-- PDF Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+
+    	<!--SWEET ALERT-->
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    
+	<?php include 'elements/page-css.php'; ?>
+	<style>
+/* Layout Modal */
+#DettaglioBody {
+    padding: 25px;
+}
+
+.row {
+    margin-bottom: 20px;
+}
+
+/*  immagine */
+#immagine-container {
+    padding-right: 20px;
+}
+
+.image-wrapper {
+    background-color: #f8f9fa;
+
+    padding: 15px;
+    height: 100%;
+}
+
+.product-image {
+    max-width: 100%;
+    max-height: 400px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* Stili sezioni */
+#intestModal #FBAMFNModal #BBModal {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.section-header {
+    color: #2c3e50;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Griglia informazioni */
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.info-label {
+    font-weight: 600;
+    color: #495057;
+    font-size: 0.95rem;
+    font-weight: bold;
+}
+
+.info-value {
+    color: #212529;
+    font-size: 0.95rem;
+    word-break: break-word;
+}
+
+/*NECESSARIO PER PDF*/
+.chart-wrapper {
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+    </style>
+
+</head>
+<body>
+
+    <!--*******************
+        Preloader start
+    ********************-->
+    <?php include 'elements/pre-loader.php'; ?>
+    <!--*******************
+        Preloader end
+    ********************-->
+
+    <!--**********************************
+        Main wrapper start
+    ***********************************-->
+    <id="main-wrapper">
+
+        <!--**********************************
+            Nav header start
+        ***********************************-->
+		<?php include 'elements/nav-header.php'; ?>
+        <!--**********************************
+            Nav header end
+        ***********************************-->
+
+		<!--**********************************
+            Chat box start
+        ***********************************-->
+		<?php include 'elements/chatbox.php'; ?>
+		<!--**********************************
+            Chat box End
+        ***********************************-->
+
+		<!--**********************************
+            Header start
+        ***********************************-->
+		<?php include 'elements/header.php'; ?>
+
+        <!--**********************************
+            Header end ti-comment-alt
+        ***********************************-->
+
+        <!--**********************************
+            Sidebar start
+        ***********************************-->
+		<?php include 'elements/sidebar.php'; ?>
+        <!--**********************************
+            Sidebar end
+        ***********************************-->
+
+		<!--**********************************
+            Content body start
+        ***********************************-->
+    <div class="content-body chart-wrapper" >
+        <!-- ROW INTESTAZIONE -->
+        <div class="container-fluid">
+            <div class="row mb-4">
+                <div class="col-md-12">
+                    <div class="card chart-wrapper" >
+                        <div class="card-body">
+                            <h2 class="card-title">AZA - Advanced Zelda Analysis</h3>
+                            <!-- <h4 class="card-title">Carica file JSON</h3> -->
+                            <form id="uploadForm" method="post" enctype="multipart/form-data"> <!--form upload file-->
+                                <div class="mb-3"> <!--input file-->
+                                    <input class="form-control" type="file" name="jsonFile" accept=".json" id="json-upload" required>
+                                </div>
+                                <button id="uplpadfile" type="submit" class="btn btn-primary">Carica File</button>
+                                <div class="mt-2" id="filename">Nessun file selezionato</div>
+                                <input type='hidden' id="action" name="action" value='upload'>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dati generali caricati da AZAserver.php -->
+            <div id='datiaggreg' class="row mb-3 chart-wrapper" >
+                <!-- Reso dinamico da funzione -->
+            </div>
+
+            <!-- Tabs -->
+            <div class="row mb-3 chart-wrapper">
+                <!--TAB DINAMICHE -->
+                <ul class="nav nav-pills nav-fill" id="tabs-paesi">
+                    <!-- Creazione dinamica tab con funzione generateCountryTabs()
+                     Esempio di una tab:
+                    <li class="nav-item">
+                        <a class="nav-link country active" aria-current="page" country="IT" href="#">IT</a>
+                    </li>
+
+                    qui viene messo anche il bottone per il pdf-->
+                </ul>
+
+            </div>
+
+
+
+
+
+
+
+<!-- MODALE PER GENERAZIONE PDF -->
+<div class="modal fade" id="pdfmodal" tabindex="-1" aria-labelledby="pdfmodalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg"> <!-- Aumenta dimensione -->
+    <div class="modal-content">
+      <!-- Header -->
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="pdfmodalLabel">Configurazione PDF</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Chiudi"></button>
+      </div>
+
+      <!-- Form -->
+      <form action="AZAserver.php" method="POST" target="_blank"> <!--redirect al server-->
+
+        <div class="modal-body">
+          <!-- Nome Cliente -->
+          <div class="mb-3">
+            <label for="nomecliente" class="form-label">Nome Cliente</label>
+            <input type="text" class="form-control" id="nomecliente" name="nomecliente" required>
+          </div>
+
+          <!-- Gli altri elementi-->
+          <div class="row">
+            <!-- prima colonna  -->
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="datareport" class="form-label">Data Report</label>
+                    <input type="text" class="form-control" id="PDFdatareport" name="datareport">
+                </div>
+                <div class="mb-3">
+                    <label for="filename" class="form-label">Paese scelto</label>
+                    <input type="text" class="form-control" id="countryforpdf" value="" name="country" >
+                </div>
+                <div class="mb-3">
+                    <label for="filename" class="form-label">Nome File</label>
+                    <input type="text" class="form-control" id="PDFfilename"  name="filename" >
+                </div>
+                <div class="mb-3">
+                    <label for="ASIN" class="form-label">Numero ASIN</label>
+                    <input type="text" class="form-control" id="PDFASIN" name="ASIN">
+                </div>
+            </div>
+            <!-- Seconda colonna -->
+            <div class="col-md-6">
+              <div class="mb-3">
+                <label for="EAN" class="form-label">Numero EAN</label>
+                <input type="text" class="form-control" id="PDFEAN"  name="EAN">
+              </div>
+              <div class="mb-3">
+                <label for="AMZ" class="form-label">Prodotti Amazon</label>
+                <input type="text" class="form-control" id="PDFAMZ"  name="AMZ">
+              </div>
+              <div class="mb-3">
+                <label for="totaleprodotti" class="form-label">Totale Prodotti</label>
+                <input type="text" class="form-control" id="PDFtotaleprodotti" name="totaleprodotti">
+                <input type="hidden" name="action" value="PDF">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
+          <button ID="generaPDF" type="submit" class="btn btn-primary">Genera PDF</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+    <!-- TOASTR: gestito da funzione: showToast-->
+<div class="position-fixed top-0 end-0 p-2" style="z-index: 11">
+            <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-header">
+                    <strong id="toast-title" class="me-auto">System</strong>
+                    <small>0 seconds ago</small>
+                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+                <div class="toast-body">
+                    Hai caricato il file con successo!
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+<!--Profile Datatable-->
+<div class="row">
+   </div>
+        <!--**********************************
+            Content body end
+        ***********************************-->
+
+
+        <!--**********************************
+            Footer start
+        ***********************************-->
+         <?php include 'elements/footer.php'; ?>
+        <!--**********************************
+            Footer end
+        ***********************************-->
+
+		<!--**********************************
+           Support ticket button start
+        ***********************************-->
+
+        <!--**********************************
+           Support ticket button end
+        ***********************************-->
+
+
+
+	            </div>
+    <!--**********************************
+        Main wrapper end
+    ***********************************-->
+
+    <!--**********************************
+        Scripts
+    ***********************************-->
+    <!-- Required vendors -->
+   <?php include 'elements/page-js.php'; ?>
+
+<script>
+//FUNZIONE PER GENERARE LE TABS, usata sotto
+function generateCountryTabs(countries, filename, lastupdate, asin_count, ean_count, total_products, amazon_products) {
+    var tabsContainer = $('#tabs-paesi');
+// $tabsContainer.empty(); // Rimuovi le tab esistenti
+    console.log('tesrt')
+   
+    // Aggiungi le tab per ogni paese
+    countries.forEach(function(country, index) {
+        var isActive = index === 0 ? 'active' : '';
+        var tabHtml = `
+            <li class="nav-item">
+                <a class="nav-link country ${isActive}" aria-current="page" country="${country}" href="#">${country}</a>
+            </li>
+        `;
+        console.log(countries)
+        tabsContainer.append(tabHtml);
+    });
+
+    // Aggiungi il pulsante PDF dopo le tab dei paesi
+    tabsContainer.append(`
+        <li class="nav-item">
+            <button id="generaPDF" class="btn btn-danger btn-block">Genera PDF</button>
+        </li>
+    `);
+
+}
+
+//FUNZIONE PER GENERARE DATI AGGREGATI (Data report, Asin trovati, Ean trovati, Prodotti in Amazon, Totale prodotti)
+function createDataAggreg (lastupdate, asin_count, ean_count, total_products, amazon_products){
+    var datiaggreg = $('#datiaggreg');
+    datiaggreg.empty(); //rimuove i dati precedenti
+    
+    //AGGIUNGERE I NUOVI DATI AGGREGATI
+        datiaggreg.append(`
+            <div class="col-md-3">
+                <div class="data-box">
+                    <h5>Data report</h5>
+                    <div id="last-update">${lastupdate}</div>
+                </div>
+            </div>
+             <div class="col-md-2">
+                    <div class="data-box">
+                        <h5>Asin trovati</h5>
+                        <div><span id="asin_count">${asin_count}</span></div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="data-box">
+                        <h5>Ean trovati</h5>
+                        <div id="ean_count">${ean_count}</div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="data-box">
+                        <h5>Prodotti in Amazon</h5>
+                        <div id="amazon_products">${amazon_products}</div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="data-box">
+                        <h5>Totale prodotti</h5>
+                        <div id="total_products">${total_products}</div>
+                    </div>
+                </div>
+    `);
+}
+
+
+
+// Inizializza il toast
+const toastEl = document.getElementById('liveToast');
+const bootstrapToast = new bootstrap.Toast(toastEl);
+
+function showToast(title, message) {
+    // Aggiorna il titolo
+    document.getElementById('toast-title').textContent = title;
+
+    // Aggiorna il corpo del toast
+    toastEl.querySelector('.toast-body').textContent = message;
+
+    // Mostra il toast
+    bootstrapToast.show();
+}
+
+
+//GESTIONE FILE --- QUI inizia
+$(document).ready(function() { //qui inserisci ogni cosa
+
+    // Evento upload del file-------------------------
+    $('#uploadForm').on('submit', function(e) {
+        e.preventDefault();
+        //cleanExistingCharts();
+
+        var formData = new FormData(this);
+        //ajax per elaborazione dati json
+        $.ajax({
+            url: 'AZAserver.php',
+            type: 'POST',
+            data: formData,
+            processData: false,
+            contentType: false,
+            success: function(response) {
+            //btw sarebbe un Content-Type: application/x-www-form-urlencoded
+                try {
+                    var r = typeof response === 'string' ? JSON.parse(response) : response;
+                    console.log("Risposta completa dal server:", r);
+
+
+                    //console.log("Risposta da AZAserver.php: " + response)
+                    if(r && r.success) {
+                        var countries = r.file_info?.countries || [];
+                        var filename = r.filename || '';
+                        var lastupdate = r.file_info?.last_update || '-';
+                        var asin_count = r.file_info?.asin_count || 0;
+                        var ean_count = r.file_info?.ean_count || 0;
+                        var total_products = r.file_info?.total_products || 0;
+                        var amazon_products = r.file_info?.amazon_products || 0;
+                    
+
+                        //Genera html per dati aggregati
+                        createDataAggreg (lastupdate, asin_count, ean_count, total_products, amazon_products)
+
+
+                        // Aggiorna l'interfaccia con i dati del file
+                        $('#filename').text(filename);
+                        $('#last-update').text(lastupdate);
+                        $('#asin_count').text(asin_count);
+                        $('#ean_count').text(ean_count);
+                        $('#total_products').text(total_products);
+                        $('#amazon_products').text(amazon_products);
+
+                        console.log('filename' + filename)//debug
+                        console.log('amazon_products' +  amazon_products)
+
+                        
+                        // Genera dinamicamente le tab dei paesi
+                        generateCountryTabs(countries, filename, lastupdate, asin_count, ean_count, total_products, amazon_products)
+
+                        // Mostra messaggio di successo
+                        showToast("Azione utente", "Hai caricato il file con successo!"); //prima va scritto il titolo e poi il body
+
+                    } else {
+                        showToast("System", "Errore");
+                    }
+                } catch(e) {
+                    showToast("System", "Errore nel parsing della risposta");
+                }
+            },
+            error: function(xhr, status, error) {
+                showToast("System", 'Errore durante il caricamento: ' + error);
+            }
+        });
+    });
+
+
+    //EVENTO PDF
+    $(document).on('click', '#generaPDF', function() {
+
+
+        function createPDF(){
+            // Recupera i valori dalla pagina
+            const lastUpdate = $('#last-update').text();
+            const asinCount = $('#asin_count').text();
+            const eanCount = $('#ean_count').text();
+            const amazonProducts = $('#amazon_products').text();
+            const totalProducts = $('#total_products').text();
+            const filename = $('#filename').text();
+
+            // Recupera il paese selezionato
+            const activeTab = $('.nav-link.country.active');
+            const country = activeTab.length ? activeTab.attr('country') : 'N/A';
+
+            // Popola i campi del modal
+            $('#PDFdatareport').val(lastUpdate);
+            $('#PDFASIN').val(asinCount);
+            $('#PDFEAN').val(eanCount);
+            $('#PDFAMZ').val(amazonProducts);
+            $('#PDFtotaleprodotti').val(totalProducts);
+            $('#PDFfilename').val(filename);
+            $('#PDFcountry').val(country);
+
+            // Imposta il valore dell'input hidden con il paese selezionato
+            $('#countryforpdf').val(country);
+
+            // Mostra il modal
+            var PDFmodal = new bootstrap.Modal(document.getElementById('pdfmodal'));
+            PDFmodal.show();
+        }
+
+        createPDF()
+
+    });
+
+
+    //RICHIESTE A PYTHON PER I GRAFICI        
+    $(document).on('click', '.country', function() {
+        const filename = $('#filename').text();
+        const activeTab = $('.nav-link.country.active');
+        const country = activeTab.length ? activeTab.attr('country') : 'N/A';
+        
+        const params = {
+            filename,
+            country,
+            action: 'grafici',
+            output: 'J',
+            KPI: ["ASIN", "is_AMZ", "OFFERS", "NODE", "TEMPO_DI_CONSEGNA", "CAT", "MARGINE", "LISTA_TOP_X", "IDQ", "DETTAGLIO"], 
+        };
+
+    fetch('AZAserver.php', { //AZAserver
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(params)
+    })
+    .then(response => response.text())
+    .then(data => {
+        console.log('Risposta dal server:', data);
+        alert('Python eseguito!\n' + data);
+    })
+    .catch(error => {
+        console.error('Errore:', error);
+        alert('Errore nell\'esecuzione dello script');
+    });
+
+
+
+
+    // qui inizia il bello
+
+    });
+
+
+
+
+
+
+
+
+
+
+
+});
+
+
+</script>
+
+<script src="assets/vendor/global/global.min.js" type="text/javascript"></script>
+<script src="assets/vendor/bootstrap-select/js/bootstrap-select.min.js" type="text/javascript"></script>
+<script src="assets/vendor/datatables/js/jquery.dataTables.min.js" type="text/javascript"></script>
+<script src="assets/vendor/datatables/responsive/responsive.js" type="text/javascript"></script>
+<script src="assets/js/plugins-init/datatables.init.js" type="text/javascript"></script>
+<script src="assets/js/custom.js" type="text/javascript"></script>
+<script src="assets/js/ic-sidenav-init.js" type="text/javascript"></script>
+
+</body>
+</html>
