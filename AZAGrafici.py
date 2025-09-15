@@ -99,29 +99,44 @@ try:
                 except (ValueError, TypeError, KeyError):
                     continue
             #print(category_list)
+
+
+            category_list = {}
+
+            for v in asin_list:
+                try:
+                    category = dati['body'][v]['data'][country]['ranking']['category']['name']
+                    if category:
+                        category_list[category] = category_list.get(category, 0) + 1
+                except (KeyError, TypeError, AttributeError):
+                        pass
+
+
+            category_keys = list(category_list.keys())
+            category_values = list(category_list.values())
+
             
             
             # ---------------
             # CONTEGGIO NODI
             # ---------------
-            node_list = []
-            
-            for element in asin_list:
+            node_list = {}
+
+            for v in asin_list:
                 try:
-                    
-                    node = dati['body'][element]['data'][country]['ranking']['node']['name']
-                    
-                    if node is None:
-                        pass
-                    elif node not in node_list:
-                        node_list.append(node)
-                    else: 
-                        pass
-                except (ValueError, TypeError, KeyError):
-                    continue
-                
+                    node = dati['body'][v]['data'][country]['ranking']['node']['name']
+                    if node:
+                        node_list[node] = node_list.get(node, 0) + 1
+                        
+                except (KeyError, TypeError, AttributeError):
+                    pass
+
+            nodes_keys = list(node_list.keys())
+            nodes_values = list(node_list.values())
+
             #print(node_list)
-            
+         
+
             
             # ---------------
             # CONTEGGIO OFFERS 
@@ -144,12 +159,18 @@ try:
             # CONTEGGIO MARGINE 
             # ---------------
             fasce_margine = {
-                "meno_0%": 0,
-                "1_a_10%": 0,
-                "11_a_20%": 0,
-                "21_a_30%": 0,
-                "piu_30%": 0
+                "meno_0": 0,
+                "1_a_10": 0,
+                "11_a_20": 0,
+                "21_a_30": 0,
+                "piu_30": 0
             }
+
+            margine_meno_0 = 0
+            margine_1_a_10 = 0
+            margine_11_a_20 = 0
+            margine_21_a_30 = 0
+            margine_piu_30 = 0
             
             tot_prod_margine = 0
             
@@ -172,15 +193,15 @@ try:
                     tot_prod_margine += 1
                     
                     if margine_perc <= 0:
-                        fasce_margine["meno_0%"] += 1
+                        margine_meno_0 += 1
                     elif 0 < margine_perc <= 10:
-                        fasce_margine["1_a_10%"] += 1
+                       margine_1_a_10 += 1
                     elif 10 < margine_perc <= 20:
-                        fasce_margine["11_a_20%"] += 1
+                        margine_11_a_20 += 1
                     elif 20 < margine_perc <= 30:
-                        fasce_margine["21_a_30%"] += 1
-                    elif margine_perc >30:
-                        fasce_margine ["piu_30%"] += 1
+                        margine_21_a_30 += 1
+                    elif margine_perc > 30:
+                        margine_piu_30 += 1
 
                         
                     
@@ -197,169 +218,180 @@ try:
             
             
             
-            # ---------------
-            # CONTEGGIO TEMPO DI CONSEGNA
-            # ---------------
-            tempo_spedizione = {
-                    "prime": 0,
-                    "24h": 0,
-                    "48h": 0,
-                    "48h o più": 0
-                }
-
-            for v in asin_list:
-                try:
-                    offerte = dati['body'][v]['data'][country]['offers']
-                    tempi = []
-                    
-                    for seller_id, offer_list in offerte.items():
-                        if isinstance(offer_list, list):
-                            for offer_data in offer_list:
-                                try:
-                                    tempo_consegna = offer_data.get("shipping_time_min", None)
-                                    if tempo_consegna is not None:
-                                        tempi.append(int(tempo_consegna))
-                                except (ValueError, TypeError):
-                                    pass
-
-                    if tempi:
-                        spedizione = min(tempi)
-                        if spedizione == 0:
-                            tempo_spedizione["prime"] += 1
-                        elif spedizione == 24:
-                            tempo_spedizione["24h"] += 1
-                        elif spedizione <= 48:
-                            tempo_spedizione["48h"] += 1
-                        else:
-                            tempo_spedizione["48h o più"] += 1
-
-                except (KeyError, TypeError, AttributeError):
-                    pass
-            # ---------------
-            # CONTEGGIO TEMPO DI CONSEGNA
-            # ---------------
-
-            info_IDQ = {
-                    "totale_immagini": {"scarso": 0, "medio": 0, "ottimo": 0},
-                    "lunghezza_titolo": {"scarso": 0, "medio": 0, "ottimo": 0},
-                    "lunghezza_descrizione": {"scarso": 0, "medio": 0, "ottimo": 0},
-                    "bullet_point": {"scarso": 0, "medio": 0, "ottimo": 0}
-                }
-
-            for v in asin_list:
-                try:
-                    contenuto = offerte = dati['body'][v]['data'][country]['IDQ']
-                    
-
-                    n_imm = int(contenuto.get("tot_images", 0))
-                    if n_imm <= 4:
-                        info_IDQ["totale_immagini"]["scarso"] += 1
-                    elif 5 <= n_imm <= 6:
-                        info_IDQ["totale_immagini"]["medio"] += 1
-                    elif n_imm >= 7:
-                        info_IDQ["totale_immagini"]["ottimo"] += 1
-
-                    l_tit = int(contenuto.get("title_length", 0))
-                    if l_tit < 100:
-                        info_IDQ["lunghezza_titolo"]["scarso"] += 1
-                    elif 100 <= l_tit <= 149:
-                        info_IDQ["lunghezza_titolo"]["medio"] += 1
-                    elif l_tit >= 150:
-                        info_IDQ["lunghezza_titolo"]["ottimo"] += 1
-
-                    if "description_length" in contenuto:
-                        l_desc = int(contenuto.get("description_length", 0))
-                        if l_desc < 1000:
-                            info_IDQ["lunghezza_descrizione"]["scarso"] += 1
-                        elif 1000 <= l_desc <= 1499:
-                            info_IDQ["lunghezza_descrizione"]["medio"] += 1
-                        elif l_desc >= 1500:
-                            info_IDQ["lunghezza_descrizione"]["ottimo"] += 1
-
-                    n_bul = int(contenuto.get("tot_bullet_point", 0))
-                    if n_bul <= 2:
-                        info_IDQ["bullet_point"]["scarso"] += 1
-                    elif 3 <= n_bul <= 4:
-                        info_IDQ["bullet_point"]["medio"] += 1
-                    elif n_bul >= 5:
-                        info_IDQ["bullet_point"]["ottimo"] += 1
-
-                except (KeyError, TypeError, ValueError):
-                    pass
-            
-           
-           
-            # ---------------
-            # CONTEGGIO LISTA TOP X
-            # ---------------
-            prodotti = []
-           
-            for v in asin_list:
-                summary = dati['body'][v]['summary'] 
-                data = dati['body'][v]['data']
-
-                if not isinstance(data, dict):
-                    continue
-
-                for country, content in data.items():
-                    if not isinstance(content, dict):
-                        continue
-
-                    ranking = content.get("ranking", {})
-                    if not isinstance(ranking, dict):
-                        continue
-
-                    ranking_CAT = ranking.get("category", {})
-                    ranking_NODE = ranking.get("node", {})
-
-                    if not isinstance(ranking_CAT, dict) or not isinstance(ranking_NODE, dict):
-                        continue
-
+                # ---------------
+                # CONTEGGIO TEMPO DI CONSEGNA
+                # ---------------
+                # TEMPO_DI_CONSEGNA = {
+                #         "prime": 0,
+                #         "24h": 0,
+                #         "48h": 0,
+                #         "48h o più": 0
+                #     }
+                tmp_cons_prime = 0
+                tmp_cons_24h = 0
+                tmp_cons_48h = 0
+                tmp_cons_more48h = 0
+                for v in asin_list:
                     try:
-                        prodotto = {
-                            "idx": v,
-                            "ASIN": summary.get("ASIN", v),
-                            "EAN": summary.get("EAN", ""),
-                            "TITLE": summary.get("title", ""),
-                            "COUNTRY": country,
-                            "CAT_NAME": ranking_CAT.get("name", ""),
-                            "CAT_RANK": int(ranking_CAT.get("rank", 0)),
-                            "NODE_NAME": ranking_NODE.get("name", ""),
-                            "NODE_RANK": int(ranking_NODE.get("rank", 0)),
-                            "IMAGE": summary.get("img_lg") or ""
-                        }
+                        offerte = dati['body'][v]['data'][country]['offers']
+                        tempi = []
+                        
+                        for seller_id, offer_list in offerte.items():
+                            if isinstance(offer_list, list):
+                                for offer_data in offer_list:
+                                    try:
+                                        tempo_consegna = offer_data.get("shipping_time_min", None)
+                                        if tempo_consegna is not None:
+                                            tempi.append(int(tempo_consegna))
+                                    except (ValueError, TypeError):
+                                        pass
 
-                        prodotti.append(prodotto)
+                        if tempi:
+                            spedizione = min(tempi)
+                            if spedizione == 0:
+                                tmp_cons_prime += 1
+                            elif spedizione == 24:
+                                tmp_cons_24h += 1
+                            elif spedizione <= 48:
+                                tmp_cons_48h += 1
+                            else:
+                                tmp_cons_more48h += 1
+        
+                    except (KeyError, TypeError, AttributeError):
+                        pass
+                # ---------------
+                # CONTEGGIO TEMPO DI CONSEGNA
+                # ---------------
+
+                info_IDQ = {
+                        "totale_immagini": {"scarso": 0, "medio": 0, "ottimo": 0},
+                        "lunghezza_titolo": {"scarso": 0, "medio": 0, "ottimo": 0},
+                        "lunghezza_descrizione": {"scarso": 0, "medio": 0, "ottimo": 0},
+                        "bullet_point": {"scarso": 0, "medio": 0, "ottimo": 0}
+                    }
+
+                for v in asin_list:
+                    try:
+                        contenuto = offerte = dati['body'][v]['data'][country]['IDQ']
+                        
+
+                        n_imm = int(contenuto.get("tot_images", 0))
+                        if n_imm <= 4:
+                            info_IDQ["totale_immagini"]["scarso"] += 1
+                        elif 5 <= n_imm <= 6:
+                            info_IDQ["totale_immagini"]["medio"] += 1
+                        elif n_imm >= 7:
+                            info_IDQ["totale_immagini"]["ottimo"] += 1
+
+                        l_tit = int(contenuto.get("title_length", 0))
+                        if l_tit < 100:
+                            info_IDQ["lunghezza_titolo"]["scarso"] += 1
+                        elif 100 <= l_tit <= 149:
+                            info_IDQ["lunghezza_titolo"]["medio"] += 1
+                        elif l_tit >= 150:
+                            info_IDQ["lunghezza_titolo"]["ottimo"] += 1
+
+                        if "description_length" in contenuto:
+                            l_desc = int(contenuto.get("description_length", 0))
+                            if l_desc < 1000:
+                                info_IDQ["lunghezza_descrizione"]["scarso"] += 1
+                            elif 1000 <= l_desc <= 1499:
+                                info_IDQ["lunghezza_descrizione"]["medio"] += 1
+                            elif l_desc >= 1500:
+                                info_IDQ["lunghezza_descrizione"]["ottimo"] += 1
+
+                        n_bul = int(contenuto.get("tot_bullet_point", 0))
+                        if n_bul <= 2:
+                            info_IDQ["bullet_point"]["scarso"] += 1
+                        elif 3 <= n_bul <= 4:
+                            info_IDQ["bullet_point"]["medio"] += 1
+                        elif n_bul >= 5:
+                            info_IDQ["bullet_point"]["ottimo"] += 1
 
                     except (KeyError, TypeError, ValueError):
+                        pass
+                
+            
+            
+                # ---------------
+                # CONTEGGIO LISTA TOP X
+                # ---------------
+                prodotti = []
+            
+                for v in asin_list:
+                    summary = dati['body'][v]['summary'] 
+                    data = dati['body'][v]['data']
+
+                    if not isinstance(data, dict):
                         continue
 
-            prodotti_ordinati = sorted(prodotti, key=lambda x: x["NODE_RANK"])[:50]
+                    for country, content in data.items():
+                        if not isinstance(content, dict):
+                            continue
+
+                        ranking = content.get("ranking", {})
+                        if not isinstance(ranking, dict):
+                            continue
+
+                        ranking_CAT = ranking.get("category", {})
+                        ranking_NODE = ranking.get("node", {})
+
+                        if not isinstance(ranking_CAT, dict) or not isinstance(ranking_NODE, dict):
+                            continue
+
+                        try:
+                            prodotto = {
+                                "idx": v,
+                                "ASIN": summary.get("ASIN", v),
+                                "EAN": summary.get("EAN", ""),
+                                "TITLE": summary.get("title", ""),
+                                "COUNTRY": country,
+                                "CAT_NAME": ranking_CAT.get("name", ""),
+                                "CAT_RANK": int(ranking_CAT.get("rank", 0)),
+                                "NODE_NAME": ranking_NODE.get("name", ""),
+                                "NODE_RANK": int(ranking_NODE.get("rank", 0)),
+                                "IMAGE": summary.get("img_lg") or ""
+                            }
+
+                            prodotti.append(prodotto)
+
+                        except (KeyError, TypeError, ValueError):
+                            continue
+
+                prodotti_ordinati = sorted(prodotti, key=lambda x: x["NODE_RANK"])[:50]
+                
+                # ---------------
+                # RISULTATI
+                # ---------------
+                result = {
+                    'asin_count': asin_count,
+                    'no_asin_count': no_asin_count,
+                    'is_AMZ_count': is_AMZ_count,
+                    'not_AMZ_count': not_AMZ_count,
+                    'category_keys': category_keys,
+                    'category_values': category_values,
+                    'nodes_keys': nodes_keys,
+                    'nodes_values': nodes_values,
+                    'offers_count': offers_count,
+                    'no_offers_count': no_offers_count,
+                    'margine_meno_0': margine_meno_0,
+                    'margine_1_a_10': margine_1_a_10,
+                    'margine_11_a_20': margine_11_a_20,
+                    'margine_21_a_30': margine_21_a_30,
+                    'margine_piu_30': margine_piu_30,
+                    'tmp_cons_prime': tmp_cons_prime,
+                    'tmp_cons_24h': tmp_cons_24h,
+                    'tmp_cons_48h': tmp_cons_48h,
+                    'tmp_cons_more48h': tmp_cons_more48h,
+                    'info_IDQ': info_IDQ,
+                    'prodotti_ordinati': prodotti_ordinati,
+                }
             
-            # ---------------
-            # RISULTATI
-            # ---------------
-            result = {
-                'asin_count': asin_count,
-                'no_asin_count': no_asin_count,
-                'is_AMZ_count': is_AMZ_count,
-                'not_AMZ_count': not_AMZ_count,
-                'category_list': category_list,
-                'node_list': node_list,
-                'offers_count': offers_count,
-                'no_offers_count': no_offers_count,
-                'fasce_margine': fasce_margine,
-                'tempo_spedizione': tempo_spedizione,
-                'info_IDQ': info_IDQ,
-                'prodotti_ordinati': prodotti_ordinati,
-            }
-        
-        print(json.dumps(result))
-            
+                print(json.dumps(result))
+                
        
 
 
-       
         
     else:
         # Nessun parametro ricevuto
