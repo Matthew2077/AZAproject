@@ -5,17 +5,11 @@ output = 'J'
 country = 'IT'
 
 with open(data_path, 'r', encoding='utf-8') as f:
-        dati = json.load(f) #DATI FILE QUI --------
-        # ---------------
-        # DATI GENERALI
-        # ---------------
-        body = dati['body'] 
-        asin_list = []
-        for i in body:
-            asin_list.append(i)
-    
+    try:
+        dati = json.load(f)  # DATI FILE QUI --------
+        body = dati['body']
+        asin_list = list(body.keys())
 
-             
         if output == "J":
 
             # ---------------
@@ -23,15 +17,13 @@ with open(data_path, 'r', encoding='utf-8') as f:
             # ---------------
             asin_count = 0
             no_asin_count = 0
-            
+
             for element in asin_list:
                 asin = dati['body'][element]['summary']['ASIN']
                 if asin is None:
-                    no_asin_count = no_asin_count + 1
+                    no_asin_count += 1
                 else:
-                    asin_count = asin_count + 1
-            #print(asin_count)
-            #print(no_asin_count)
+                    asin_count += 1
 
             # ---------------
             # CONTEGGIO IS_AMZ
@@ -40,83 +32,68 @@ with open(data_path, 'r', encoding='utf-8') as f:
             is_AMZ_count = 0
             not_AMZ_count = 0
             for element in asin_list:
-                is_amz = dati['body'][element]['data'][country]['is_AMZ']
-                IS_AMZ_list.append(is_amz)
-                if is_amz is None:
-                    not_AMZ_count = not_AMZ_count + 1
-                elif is_amz == 'N':
-                    not_AMZ_count = not_AMZ_count + 1
-                else:
-                   is_AMZ_count = is_AMZ_count + 1 
-                    
-           
-            
+                try:
+                    is_amz = dati['body'][element]['data'][country]['is_AMZ']
+                    IS_AMZ_list.append(is_amz)
+                    if is_amz is None or is_amz == 'N':
+                        not_AMZ_count += 1
+                    else:
+                        is_AMZ_count += 1
+                except (ValueError, TypeError, KeyError):
+                    continue
+
             # ---------------
             # CONTEGGIO CATEGORIE
             # ---------------
-            category_list = []
-            
-            for element in asin_list:
-                category = dati['body'][element]['data'][country]['ranking']['category']['name']
-                
-                if category is None:
+            category_list = {}
+            for v in asin_list:
+                try:
+                    category = dati['body'][v]['data'][country]['ranking']['category']['name']
+                    if category:
+                        category_list[category] = category_list.get(category, 0) + 1
+                except (KeyError, TypeError, AttributeError):
                     pass
-                elif category not in category_list:
-                     category_list.append(category)
-                else: 
-                     pass
-                
-            #print(category_list)
-            
-            
+
+            category_keys = list(category_list.keys())
+            category_values = list(category_list.values())
+
             # ---------------
             # CONTEGGIO NODI
             # ---------------
-            node_list = []
-            
-            for element in asin_list:
-                node = dati['body'][element]['data'][country]['ranking']['node']['name']
-                
-                if node is None:
+            node_list = {}
+            for v in asin_list:
+                try:
+                    node = dati['body'][v]['data'][country]['ranking']['node']['name']
+                    if node:
+                        node_list[node] = node_list.get(node, 0) + 1
+                except (KeyError, TypeError, AttributeError):
                     pass
-                elif node not in node_list:
-                     node_list.append(node)
-                else: 
-                     pass
-                
-            #print(node_list)
-            
-            
+
+            nodes_keys = list(node_list.keys())
+            nodes_values = list(node_list.values())
+
             # ---------------
             # CONTEGGIO OFFERS 
             # ---------------
             offers_count = 0
             no_offers_count = 0
-            
             for element in asin_list:
                 offer = dati['body'][element]['data'][country]['offers']
-                
-                if len(offer) <=0  :
-                   offers_count = offers_count + 1
-                else: 
-                    no_offers_count = no_offers_count + 1
-                
-            # print(offers_count)
-            # print(no_offers_count)
-            
+                if len(offer) <= 0:
+                    offers_count += 1
+                else:
+                    no_offers_count += 1
+
             # ---------------
             # CONTEGGIO MARGINE 
             # ---------------
-            fasce_margine = {
-                "meno_0%": 0,
-                "1_a_10%": 0,
-                "11_a_20%": 0,
-                "21_a_30%": 0,
-                "piu_30%": 0
-            }
-            
+            margine_meno_0 = 0
+            margine_1_a_10 = 0
+            margine_11_a_20 = 0
+            margine_21_a_30 = 0
+            margine_piu_30 = 0
             tot_prod_margine = 0
-            
+
             for v in asin_list:
                 try:
                     buybox = dati['body'][v]['data'][country]['buybox']
@@ -127,55 +104,38 @@ with open(data_path, 'r', encoding='utf-8') as f:
                     landed_ass = buybox.get("landed")
                     listing_ass = buybox.get("listing")
 
-                   
                     margine = float(margine_ass)
                     landed = float(landed_ass)
                     listing = float(listing_ass)
-                    
-                    margine_perc = ((margine / landed)/margine) * 100
-                    tot_prod_margine += 1
-                    
-                    if margine_perc <= 0:
-                        fasce_margine["meno_0%"] += 1
-                    elif 0 < margine_perc <= 10:
-                        fasce_margine["1_a_10%"] += 1
-                    elif 10 < margine_perc <= 20:
-                        fasce_margine["11_a_20%"] += 1
-                    elif 20 < margine_perc <= 30:
-                        fasce_margine["21_a_30%"] += 1
-                    elif margine_perc >30:
-                        fasce_margine ["piu_30%"] += 1
 
-                        
-                    
+                    margine_perc = ((margine / landed) / margine) * 100
+                    tot_prod_margine += 1
+
+                    if margine_perc <= 0:
+                        margine_meno_0 += 1
+                    elif 0 < margine_perc <= 10:
+                        margine_1_a_10 += 1
+                    elif 10 < margine_perc <= 20:
+                        margine_11_a_20 += 1
+                    elif 20 < margine_perc <= 30:
+                        margine_21_a_30 += 1
+                    elif margine_perc > 30:
+                        margine_piu_30 += 1
+
                 except (ValueError, TypeError, KeyError):
                     continue
 
-                if tot_prod_margine == 0:
-                    print(json.dumps({
-                        "status": 0,
-                        "message": "Nessun margine valido trovato",
-                        "response": {}
-                    }))
-            
-            
-            
-            
             # ---------------
             # CONTEGGIO TEMPO DI CONSEGNA
             # ---------------
-            tempo_spedizione = {
-                    "prime": 0,
-                    "24h": 0,
-                    "48h": 0,
-                    "48h o più": 0
-                }
-
+            tmp_cons_prime = 0
+            tmp_cons_24h = 0
+            tmp_cons_48h = 0
+            tmp_cons_more48h = 0
             for v in asin_list:
                 try:
                     offerte = dati['body'][v]['data'][country]['offers']
                     tempi = []
-                    
                     for seller_id, offer_list in offerte.items():
                         if isinstance(offer_list, list):
                             for offer_data in offer_list:
@@ -189,31 +149,29 @@ with open(data_path, 'r', encoding='utf-8') as f:
                     if tempi:
                         spedizione = min(tempi)
                         if spedizione == 0:
-                            tempo_spedizione["prime"] += 1
+                            tmp_cons_prime += 1
                         elif spedizione == 24:
-                            tempo_spedizione["24h"] += 1
+                            tmp_cons_24h += 1
                         elif spedizione <= 48:
-                            tempo_spedizione["48h"] += 1
+                            tmp_cons_48h += 1
                         else:
-                            tempo_spedizione["48h o più"] += 1
-
+                            tmp_cons_more48h += 1
                 except (KeyError, TypeError, AttributeError):
                     pass
-            # ---------------
-            # CONTEGGIO TEMPO DI CONSEGNA
-            # ---------------
 
+            # ---------------
+            # CONTEGGIO IDQ
+            # ---------------
             info_IDQ = {
-                    "totale_immagini": {"scarso": 0, "medio": 0, "ottimo": 0},
-                    "lunghezza_titolo": {"scarso": 0, "medio": 0, "ottimo": 0},
-                    "lunghezza_descrizione": {"scarso": 0, "medio": 0, "ottimo": 0},
-                    "bullet_point": {"scarso": 0, "medio": 0, "ottimo": 0}
-                }
+                "totale_immagini": {"scarso": 0, "medio": 0, "ottimo": 0},
+                "lunghezza_titolo": {"scarso": 0, "medio": 0, "ottimo": 0},
+                "lunghezza_descrizione": {"scarso": 0, "medio": 0, "ottimo": 0},
+                "bullet_point": {"scarso": 0, "medio": 0, "ottimo": 0}
+            }
 
             for v in asin_list:
                 try:
-                    contenuto = offerte = dati['body'][v]['data'][country]['IDQ']
-                    
+                    contenuto = dati['body'][v]['data'][country]['IDQ']
 
                     n_imm = int(contenuto.get("tot_images", 0))
                     if n_imm <= 4:
@@ -250,16 +208,13 @@ with open(data_path, 'r', encoding='utf-8') as f:
 
                 except (KeyError, TypeError, ValueError):
                     pass
-            
-           
-           
+
             # ---------------
             # CONTEGGIO LISTA TOP X
             # ---------------
             prodotti = []
-           
             for v in asin_list:
-                summary = dati['body'][v]['summary'] 
+                summary = dati['body'][v]['summary']
                 data = dati['body'][v]['data']
 
                 if not isinstance(data, dict):
@@ -292,36 +247,41 @@ with open(data_path, 'r', encoding='utf-8') as f:
                             "NODE_RANK": int(ranking_NODE.get("rank", 0)),
                             "IMAGE": summary.get("img_lg") or ""
                         }
-
                         prodotti.append(prodotto)
-
                     except (KeyError, TypeError, ValueError):
                         continue
 
             prodotti_ordinati = sorted(prodotti, key=lambda x: x["NODE_RANK"])[:50]
-            
+
             # ---------------
-            # RISULTATI
+            # RISULTATI FINALI
             # ---------------
             result = {
                 'asin_count': asin_count,
                 'no_asin_count': no_asin_count,
                 'is_AMZ_count': is_AMZ_count,
                 'not_AMZ_count': not_AMZ_count,
-                'category_list': category_list,
-                'node_list': node_list,
+                'category_keys': category_keys,
+                'category_values': category_values,
+                'nodes_keys': nodes_keys,
+                'nodes_values': nodes_values,
                 'offers_count': offers_count,
                 'no_offers_count': no_offers_count,
-                'fasce_margine': fasce_margine,
-                'tempo_spedizione': tempo_spedizione,
+                'margine_meno_0': margine_meno_0,
+                'margine_1_a_10': margine_1_a_10,
+                'margine_11_a_20': margine_11_a_20,
+                'margine_21_a_30': margine_21_a_30,
+                'margine_piu_30': margine_piu_30,
+                'tmp_cons_prime': tmp_cons_prime,
+                'tmp_cons_24h': tmp_cons_24h,
+                'tmp_cons_48h': tmp_cons_48h,
+                'tmp_cons_more48h': tmp_cons_more48h,
                 'info_IDQ': info_IDQ,
                 'prodotti_ordinati': prodotti_ordinati,
             }
-            
-            
-            
-            #print(result)
-            #print(json.dumps(result))
-            # "offers":[]
-          
-                    
+
+            print(json.dumps(result, indent=4, ensure_ascii=False))
+
+    except FileNotFoundError:
+        error_result = {"status": "error"}
+        print(json.dumps(error_result))
