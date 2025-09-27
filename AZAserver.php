@@ -1,57 +1,4 @@
 <?php
-/*
-// 2. Salvo i parametri in un file JSON temporaneo
-$inputFile = "Listino MILLEFIORIO MILANO SS25 ITALIA_AZA_analisi_20250516_132328.json";
-
-
-// 1. Parametri di test (simulano quelli che riceveresti dall'interfaccia)
-$params = [
-    "filename" => $inputFile,   // questo file deve essere presente in "uploads/"
-    "country"  => "IT",
-    "output"   => "J",
-    "kpi"      => ['IS_AMZ']
-];
-
-
-if (!is_dir(__DIR__ . "/tmp")) {
-    mkdir(__DIR__ . "/tmp", 0777, true);
-}
-file_put_contents($inputFile, json_encode($params, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
-
-// 3. Costruisco il comando da lanciare
-$command = "py AZAGrafici.py " . escapeshellarg($inputFile) . " 2>&1";
-
-// 4. Eseguo Python
-exec($command, $output, $return_var);
-
-// 5. Ricostruisco l’output
-$jsonOutput = implode("\n", $output);
-
-// 6. Provo a decodificare il JSON
-$result = json_decode($jsonOutput, true);
-
-// 7. Stampo i risultati
-echo "<pre>";
-echo "Comando eseguito:\n$command\n\n";
-echo "RETURN VAR: $return_var\n\n";
-echo "OUTPUT RAW:\n$jsonOutput\n\n";
-
-if ($result === null) {
-    echo "⚠️ L'output non è un JSON valido\n";
-} else {
-    echo "✅ JSON valido ricevuto:\n";
-    print_r($result);
-}
-echo "</pre>";
-
-// 8. Pulizia
-unlink($inputFile);
-
-exit;
-*/
-
-
-
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     try {
         $action = null;
@@ -67,7 +14,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
 
 
-        
         switch ($action){
             case 'upload': //UPLOAD FILE JSON - elaborazione
                 if (!isset($_FILES['jsonFile'])) {
@@ -204,7 +150,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 file_put_contents($temp_input, json_encode($params));
                 
                 // Esegui lo script Python passando il path del file
-                $cmd = "py C:/xampp/htdocs/AZA/AZAGrafici.py " . escapeshellarg($temp_input);
+                $cmd = "python C:/xampp/htdocs/AZA/AZAGrafici.py " . escapeshellarg($temp_input);
                 
                 // Debug: stampa il comando
                 error_log("Comando eseguito: " . $cmd);
