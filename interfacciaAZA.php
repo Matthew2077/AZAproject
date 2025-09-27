@@ -546,7 +546,7 @@ $(document).ready(function() { //qui inserisci ogni cosa
                     console.log("Risposta completa dal server:", r);
 
 
-                    //console.log("Risposta da AZAserver.php: " + response)
+                    console.log("Risposta da AZAserver.php: " + response)
                     if(r && r.success) {
                         var countries = r.file_info?.countries || [];
                         var filename = r.filename || '';
@@ -655,7 +655,7 @@ $(document).ready(function() { //qui inserisci ogni cosa
         })
         .then(response => response.json())
         .then(data => {
-            // ! console.log('Risposta dal server:', data);
+            console.log('Risposta dal server:', data);
             // !alert('Python eseguito!\n' + data);
             
 
@@ -679,13 +679,15 @@ $(document).ready(function() { //qui inserisci ogni cosa
             const margine_21_a_30 = data.margine_21_a_30;
             const margine_piu_30 = data.margine_piu_30;
 
-            const info_IDQ_scarso = [data.info_IDQ.totale_immagini.scarso, data.info_IDQ.lunghezza_titolo.scarso, data.info_IDQ.lunghezza_descrizione.scarso, data.info_IDQ.bullet_point.scarso];
-            const info_IDQ_medio = [data.info_IDQ.totale_immagini.medio, data.info_IDQ.lunghezza_titolo.medio, data.info_IDQ.lunghezza_descrizione.medio, data.info_IDQ.bullet_point.medio];
-            const info_IDQ_ottimo = [data.info_IDQ.totale_immagini.ottimo, data.info_IDQ.lunghezza_titolo.ottimo, data.info_IDQ.lunghezza_descrizione.ottimo, data.info_IDQ.bullet_point.ottimo];
+
+            //const info_IDQ_scarso = data 
+            //const info_IDQ_scarso = [data.info_IDQ.totale_immagini.scarso, data.info_IDQ.lunghezza_titolo.scarso, data.info_IDQ.lunghezza_descrizione.scarso, data.info_IDQ.bullet_point.scarso];
+            //const info_IDQ_medio = [data.info_IDQ.totale_immagini.medio, data.info_IDQ.lunghezza_titolo.medio, data.info_IDQ.lunghezza_descrizione.medio, data.info_IDQ.bullet_point.medio];
+            //const info_IDQ_ottimo = [data.info_IDQ.totale_immagini.ottimo, data.info_IDQ.lunghezza_titolo.ottimo, data.info_IDQ.lunghezza_descrizione.ottimo, data.info_IDQ.bullet_point.ottimo];
     
-            console.log('Conteggio NODE:', info_IDQ_scarso);
-            console.log('Conteggio NODE:', info_IDQ_medio);
-            console.log('Conteggio NODE:', info_IDQ_ottimo);
+            //console.log('Conteggio NODE:', info_IDQ_scarso);
+           // console.log('Conteggio NODE:', info_IDQ_medio);
+           // console.log('Conteggio NODE:', info_IDQ_ottimo);
 
    
             // ---------------
@@ -1120,7 +1122,7 @@ $(document).ready(function() { //qui inserisci ogni cosa
         // ---------------
         //* GRAFICO IDQ
         // ---------------
-    
+   /* 
 
         var options = {
             series: [{
@@ -1206,7 +1208,7 @@ $(document).ready(function() { //qui inserisci ogni cosa
 
         var chart = new ApexCharts(document.querySelector("#IDQ"), options);
         chart.render();
-
+*/
 
 
         })
