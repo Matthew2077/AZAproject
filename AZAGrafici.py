@@ -5,6 +5,9 @@ import pandas as pd
 import matplotlib
 matplotlib.use('Agg')
 import json
+import logging
+logger = logging.getLogger(__name__)
+logging.basicConfig(filename='AZAgrafici.log', level=logging.INFO)
 
 
 try:
@@ -25,10 +28,11 @@ try:
         KPI = params.get('kpi', [])
         
         
+
         # Caricamento dati JSON
         data_path = os.path.join("uploads", filename) 
         if not os.path.exists(data_path):
-            print(json.dumps({"success": False, "error": f"File non trovato  {params}"}))
+            #logger.info(json.dumps({"success": False, "error": f"File non trovato  {params}"}))
             sys.exit(1)
 
         with open(data_path, 'r', encoding='utf-8') as f:
@@ -58,8 +62,8 @@ try:
                     no_asin_count = no_asin_count + 1
                 else:
                     asin_count = asin_count + 1
-            #print(asin_count)
-            #print(no_asin_count)
+            #logger.info(asin_count)
+            #logger.info(no_asin_count)
 
             # ---------------
             # CONTEGGIO IS_AMZ
@@ -98,7 +102,7 @@ try:
                         pass
                 except (ValueError, TypeError, KeyError):
                     continue
-            #print(category_list)
+            #logger.info(category_list)
 
 
             category_list = {}
@@ -134,7 +138,7 @@ try:
             nodes_keys = list(node_list.keys())
             nodes_values = list(node_list.values())
 
-            #print(node_list)
+            #logger.info(node_list)
          
 
             
@@ -152,8 +156,8 @@ try:
                 else: 
                     no_offers_count = no_offers_count + 1
                 
-            # print(offers_count)
-            # print(no_offers_count)
+            # logger.info(offers_count)
+            # logger.info(no_offers_count)
             
             # ---------------
             # CONTEGGIO MARGINE 
@@ -208,12 +212,12 @@ try:
                 except (ValueError, TypeError, KeyError):
                     continue
 
-                if tot_prod_margine == 0:
-                    print(json.dumps({
-                        "status": 0,
-                        "message": "Nessun margine valido trovato",
-                        "response": {}
-                    }))
+                # if tot_prod_margine == 0:
+                #     logger.info(json.dumps({
+                #         "status": 0,
+                #         "message": "Nessun margine valido trovato",
+                #         "response": {}
+                #     }))
             
             
             
@@ -360,36 +364,37 @@ try:
 
                 prodotti_ordinati = sorted(prodotti, key=lambda x: x["NODE_RANK"])[:50]
                 
-                # ---------------
-                # RISULTATI
-                # ---------------
-                result = {
-                    'asin_count': asin_count,
-                    'no_asin_count': no_asin_count,
-                    'is_AMZ_count': is_AMZ_count,
-                    'not_AMZ_count': not_AMZ_count,
-                    'category_keys': category_keys,
-                    'category_values': category_values,
-                    'nodes_keys': nodes_keys,
-                    'nodes_values': nodes_values,
-                    'offers_count': offers_count,
-                    'no_offers_count': no_offers_count,
-                    'margine_meno_0': margine_meno_0,
-                    'margine_1_a_10': margine_1_a_10,
-                    'margine_11_a_20': margine_11_a_20,
-                    'margine_21_a_30': margine_21_a_30,
-                    'margine_piu_30': margine_piu_30,
-                    'tmp_cons_prime': tmp_cons_prime,
-                    'tmp_cons_24h': tmp_cons_24h,
-                    'tmp_cons_48h': tmp_cons_48h,
-                    'tmp_cons_more48h': tmp_cons_more48h,
-                    'info_IDQ': info_IDQ,
-                    'prodotti_ordinati': prodotti_ordinati,
-                }
-            
-                print(json.dumps(result))
-                
-       
+        # ---------------
+        # RISULTATI
+        # ---------------
+        result = {
+            'asin_count': asin_count,
+            'no_asin_count': no_asin_count,
+            'is_AMZ_count': is_AMZ_count,
+            'not_AMZ_count': not_AMZ_count,
+            'category_keys': category_keys,
+            'category_values': category_values,
+            'nodes_keys': nodes_keys,
+            'nodes_values': nodes_values,
+            'offers_count': offers_count,
+            'no_offers_count': no_offers_count,
+            'margine_meno_0': margine_meno_0,
+            'margine_1_a_10': margine_1_a_10,
+            'margine_11_a_20': margine_11_a_20,
+            'margine_21_a_30': margine_21_a_30,
+            'margine_piu_30': margine_piu_30,
+            'tmp_cons_prime': tmp_cons_prime,
+            'tmp_cons_24h': tmp_cons_24h,
+            'tmp_cons_48h': tmp_cons_48h,
+            'tmp_cons_more48h': tmp_cons_more48h,
+            'info_IDQ': info_IDQ,
+            'prodotti_ordinati': prodotti_ordinati,
+        }
+    
+        logger.info(json.dumps(result))
+        print(json.dumps(result))
+
+        
 
 
         
@@ -399,24 +404,24 @@ try:
             "status": "error",
             "message": "Nessun file di input specificato"
         }
-        print(json.dumps(error_result))
+        logger.info(json.dumps(error_result))
         
 except FileNotFoundError:
     error_result = {
         "status": "error",
         "message": f"File di input non trovato: {sys.argv[1] if len(sys.argv) > 1 else 'N/A'}"
     }
-    print(json.dumps(error_result))
+    logger.info(json.dumps(error_result))
 except json.JSONDecodeError as e:
     error_result = {
         "status": "error", 
         "message": f"Errore nel parsing JSON: {str(e)}"
     }
-    print(json.dumps(error_result))
+    logger.info(json.dumps(error_result))
 except Exception as e:
     # Gestione errori generici
     error_result = {
         "status": "error", 
         "message": f"Errore nello script Python: {str(e)}"
     }
-    print(json.dumps(error_result))
+    logger.info(json.dumps(error_result))
