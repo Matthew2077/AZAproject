@@ -1,4 +1,4 @@
-ì<?php
+<?php
 
 require_once __DIR__ . '/vendor/autoload.php';
 require_once __DIR__ . '/config/dz.php';
@@ -291,6 +291,47 @@ require_once __DIR__ . '/config/dz.php';
   </div>
 </div>
 
+ <!-- TABELLA LISTA_TOP_X-->
+            <div class="row chart-wrapper">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table id="topProductsTable" class="display" style="min-width: 850px">
+                                    <thead>
+                                        <tr>
+                                            <th>Dettaglio</th>
+                                            <th>Titolo Prodotto</th>
+                                            <th>EAN</th>
+                                            <th>ASIN</th>
+                                            <th>Categoria</th>
+                                            <th>Ranking Categoria</th>
+                                            <th>Nodo</th>
+                                            <th>Ranking Nodo</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody id="LISTA_TOP_X"  KPI="LISTA_TOP_X" class="">
+                                        <!-- Qui vengono create le righe della tabella -->
+                                        <tr>
+                                            <td>ciao</td>
+                                            <td>ciao</td>
+                                            <td>ciao</td>
+                                            <td>ciao</td>
+                                            <td>ciao</td>
+                                            <td>ciao</td>
+                                            <td>ciao</td>
+                                            <td>ciao</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
     
 
     
@@ -372,6 +413,92 @@ require_once __DIR__ . '/config/dz.php';
 </div>
 
 
+
+<!-- Modal DETTAGLIO
+ Info nel dettaglio gestito in case LISTA_TOP_X-->
+<div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="myModalLabel">Dettaglio Prodotto</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Chiudi"></button>
+      </div>
+      <div class="modal-body" id="DettaglioBody">
+    <div class="container-fluid">
+        				<!--Row superiore - foto e intestazione-->
+				  <div class="row">
+					  <!-- immagine -->
+					  <div class="col-md-6 pe-4" id="immagine-container">
+						  <div class="image-wrapper" id="immagineDETTAGLIO">
+
+						  </div>
+					  </div>
+						<!-- Sezione Informazioni Prodotto -->
+						<div class="col-md-6 pe-4" id="intestModal">
+							<h3 class="section-header">Informazioni Prodotto</h3>
+							<div class="info-grid">
+								<div class="info-label">Titolo:</div>
+								<div class="info-value" id="DettaglioTITLE"></div>
+
+								<div class="info-label">ASIN:</div>
+								<div class="info-value" id="DettaglioASIN"></div>
+
+								<div class="info-label">EAN:</div>
+								<div class="info-value" id="DettaglioEAN"></div>
+
+								<div class="info-label">Seller ID:</div>
+								<div class="info-value" id="listaSellerID"></div>
+							</div>
+						</div>
+				  </div>
+				  <div class="row">
+					<!-- Sezione Buybox -->
+					<div class="col-md-6 pe-4" id="BBModal">
+						<h3 class="section-header">Buybox</h3>
+						<div class="info-grid">
+							<div class="info-label">Prezzo Amazon:</div>
+							<div class="info-value" id="PREZZOAMZ"></div>
+
+							<!-- <div class="info-label">Prezzo Merchant:</div>
+							<div class="info-value" id="PREZZOMERCHANT"></div> -->
+
+							<div class="info-label">Venduto da Amazon:</div>
+							<div class="info-value" id="DettaglioIS_AMZ"></div>
+
+							<div class="info-label">Disponibile in Prime:</div>
+							<div class="info-value" id="DettaglioPRIME"></div>
+						</div>
+					</div>
+
+					<!-- Sezione FBA/MFN -->
+					<div class="col-md-6 pe-4" id="FBAMFNModal">
+						<h3 class="section-header">FBA e MFN</h3>
+						<div class="info-grid">
+                            <div class="info-label">FBA Low:</div>
+							<div class="info-label">FBA totali:</div>
+
+
+							<div class="info-value" id="FBALOW"></div>
+							<div class="info-value" id="FBATOT"></div>
+
+                            <div class="info-label">MFN Low:</div>
+							<div class="info-label">MFN totali:</div>
+
+							<div class="info-value" id="MFNLOW"></div>
+							<div class="info-value" id="MFNTOT"></div>
+						</div>
+					</div>
+				  </div>
+			  </div>
+		  </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
@@ -546,7 +673,7 @@ $(document).ready(function() { //qui inserisci ogni cosa
                     console.log("Risposta completa dal server:", r);
 
 
-                    console.log("Risposta da AZAserver.php: " + response)
+                    //console.log("Risposta da AZAserver.php: " + response)
                     if(r && r.success) {
                         var countries = r.file_info?.countries || [];
                         var filename = r.filename || '';
@@ -661,33 +788,39 @@ $(document).ready(function() { //qui inserisci ogni cosa
 
             const asin_count = data.asin_count;
             const no_asin_count = data.no_asin_count;
+            
             const is_AMZ_count = data.is_AMZ_count;
             const not_AMZ_count = data.not_AMZ_count;
+
             const offers_count = data.offers_count;
             const no_offers_count = data.no_offers_count;
+
             const nodes_keys = data.nodes_keys;
             const nodes_values = data.nodes_values;
+
             const tmp_cons_prime = data.tmp_cons_prime;
             const tmp_cons_24h = data.tmp_cons_24h;
             const tmp_cons_48h = data.tmp_cons_48h;
             const tmp_cons_more48h = data.tmp_cons_more48h;
+
             const category_keys = data.category_keys;
             const category_values = data.category_values;
+
             const margine_meno_0 = data.margine_meno_0;
             const margine_1_a_10 = data.margine_1_a_10;
             const margine_11_a_20 = data.margine_11_a_20;
             const margine_21_a_30 = data.margine_21_a_30;
             const margine_piu_30 = data.margine_piu_30;
 
+            const info_IDQ_scarso = [data.info_IDQ.totale_immagini.scarso, data.info_IDQ.lunghezza_titolo.scarso, data.info_IDQ.lunghezza_descrizione.scarso, data.info_IDQ.bullet_point.scarso];
+            const info_IDQ_medio = [data.info_IDQ.totale_immagini.medio, data.info_IDQ.lunghezza_titolo.medio, data.info_IDQ.lunghezza_descrizione.medio, data.info_IDQ.bullet_point.medio];
+            const info_IDQ_ottimo = [data.info_IDQ.totale_immagini.ottimo, data.info_IDQ.lunghezza_titolo.ottimo, data.info_IDQ.lunghezza_descrizione.ottimo, data.info_IDQ.bullet_point.ottimo];
+            
+            const lst_prod = data.prodotti
+            lista_prodotti = JSON.parse(lst_prod);
 
-            //const info_IDQ_scarso = data 
-            //const info_IDQ_scarso = [data.info_IDQ.totale_immagini.scarso, data.info_IDQ.lunghezza_titolo.scarso, data.info_IDQ.lunghezza_descrizione.scarso, data.info_IDQ.bullet_point.scarso];
-            //const info_IDQ_medio = [data.info_IDQ.totale_immagini.medio, data.info_IDQ.lunghezza_titolo.medio, data.info_IDQ.lunghezza_descrizione.medio, data.info_IDQ.bullet_point.medio];
-            //const info_IDQ_ottimo = [data.info_IDQ.totale_immagini.ottimo, data.info_IDQ.lunghezza_titolo.ottimo, data.info_IDQ.lunghezza_descrizione.ottimo, data.info_IDQ.bullet_point.ottimo];
-    
-            //console.log('Conteggio NODE:', info_IDQ_scarso);
-           // console.log('Conteggio NODE:', info_IDQ_medio);
-           // console.log('Conteggio NODE:', info_IDQ_ottimo);
+           // console.log('lista prodotti' + lista_prodotti)
+
 
    
             // ---------------
@@ -1122,7 +1255,7 @@ $(document).ready(function() { //qui inserisci ogni cosa
         // ---------------
         //* GRAFICO IDQ
         // ---------------
-   /* 
+   
 
         var options = {
             series: [{
@@ -1208,7 +1341,198 @@ $(document).ready(function() { //qui inserisci ogni cosa
 
         var chart = new ApexCharts(document.querySelector("#IDQ"), options);
         chart.render();
-*/
+
+
+        // ---------------
+        //* TABELLA TOP X
+        // ---------------  
+       if ($.fn.DataTable.isDataTable('#topProductsTable')) {
+            $('#topProductsTable').DataTable().clear().destroy();
+            $('#topProductsTable tbody').empty();
+        }
+
+        const rows = lista_prodotti.map(product => {
+            const formattedCatRank = product.CAT_RANK ? product.CAT_RANK.toLocaleString() : '-';
+            const formattedNodeRank = product.NODE_RANK ? product.NODE_RANK.toLocaleString() : '-';
+            const DETTAGLIO = `<button class='dettaglio btn btn-primary' idx='${product.idx || ''}'>+</button>`;
+            
+            return [
+                DETTAGLIO,
+                product.TITLE || '',
+                product.EAN || '',
+                product.ASIN || '',
+                product.CAT_NAME || '',
+                formattedCatRank,
+                product.NODE_NAME || '',
+                formattedNodeRank
+            ];
+        });
+
+        table = $('#topProductsTable').DataTable({
+            data: rows,
+            pageLength: 10,
+            responsive: true,
+            order: [],
+            columnDefs: [
+                { orderable: false, targets: 0 }
+            ]
+        });
+
+
+
+
+
+                        
+        // ---------------
+        //* DETTAGLIO
+        // ---------------  
+
+                            
+
+                        
+
+
+       /*     drawCallback: function(settings) {
+
+                $('.dettaglio').on('click', function(e) {
+
+                var data = {};
+                var idx = $(this).attr('idx');
+                data['idx'] = idx;
+                data['KPI'] = 'DETTAGLIO';
+                data['output'] = 'J';
+                data['filename'] = currentFileName;
+                ;
+
+                $('.nav-link.country').each(function() {
+                if ($(this).hasClass('active')) {
+                    var country = $(this).attr('country');
+                }
+                });
+
+                data['country'] = country;
+
+                $.ajax({
+                url: 'http://192.168.1.183:5000/api/AZA',
+                type: 'POST',
+                contentType: 'application/json',
+                async: false,
+                data: JSON.stringify(data),
+                success: function(r) {
+                if(r.status == 1) {
+
+
+                    var r = r.response;
+
+                    var offers = r.data.offers || "N/A";
+                    var img = r.summary.img_lg || "N/A";
+
+                    console.log("immagini" + img)
+                     //immagine
+                    $('#immagineDETTAGLIO').empty(); //impedisce accumulo immagini
+                    $('#immagineDETTAGLIO').append(`<img src=${img} alt="ProductImage" class="product-image">`);
+
+                    // INTESTAZIONE...
+                    $('#DettaglioTITLE').html(r.summary?.title);
+                    $('#DettaglioASIN').html(r.summary?.ASIN);
+                    $('#DettaglioEAN').html(r.summary?.EAN);
+
+                    // Seller ID....
+                    let counter = 0; // Inizializza il contatore
+
+                    for (const sellerId in offers) {
+                        if (offers.hasOwnProperty(sellerId)) { // Verifica che la proprietà sia diretta (non ereditata)
+                            counter++; // Incrementa il contatore
+                        }
+                    }
+                    $('#listaSellerID').empty(); // pulisce precedenti seller id
+                    $('#listaSellerID').append(`<span>${counter}</span>`);
+
+
+
+
+                    // SEZIONE BUYBOX
+                    console.log("Lowest Merchant" + LowerMerchant)
+                    var prezzoamaz = r.data?.buybox?.landed || "N/A";
+                    // var prezzoMerchant = r.data?.buybox?.landed || "N/A";
+                    $('#PREZZOAMZ').html(prezzoamaz);
+                    // $('#PREZZOMERCHANT').html();
+
+                    // IS AMZ OR NOT
+                    var ISAMZ = r.data.is_AMZ;
+
+                    if (ISAMZ === "Y") {
+                        $('#DettaglioIS_AMZ').text("Si");
+                    }
+                    else if (ISAMZ === "N") {
+                        $('#DettaglioIS_AMZ').text("No");
+                    }
+                    else {
+                        $('#DettaglioIS_AMZ').text("Non specificato");
+                    }
+
+                    // PRIME....
+                    let BBwinner = null;
+
+                    for (const sellerId in offers) {
+                        if (offers.hasOwnProperty(sellerId)) {
+                            const offer = offers[sellerId][0]; // Prendi il primo elemento dell'array (supponendo che ogni seller abbia solo un'offera)
+
+                            if (offer.is_buy_box_winner) {
+                                BBwinner = offer.is_prime;
+                                break; // Esci dal ciclo una volta trovato il Buy Box Winner
+                            }
+                        }
+                    }
+
+                    if (BBwinner !== null) { // Mostra il risultato nell'HTML
+                        $('#DettaglioPRIME').text(BBwinner ? "Sì" : "No");
+                    } else {
+                        $('#DettaglioPRIME').text("Nessun Buy Box Winner trovato");
+                    }
+
+                    // fba e MFN
+                    var LowerAMZ = r.data?.lowest?.Amazon?.landed || "N/A";
+                    var LowerMerchant = r.data?.lowest?.Merchant?.landed || "N/A";
+
+                    $('#FBATOT').html(r.data?.stats?.Amazon); //FBA è AMAZON, RICORDA!!!
+                    $('#MFNTOT').html(r.data?.stats?.Merchant);
+                    $('#MFNLOW').html(LowerMerchant);
+                    $('#FBALOW').html(LowerAMZ);
+
+                    // // Mostra il modal...
+                    var myModal = new bootstrap.Modal(document.getElementById('myModal'));
+                    myModal.show();
+                }
+            },
+
+                    error: function(xhr, status, error) {
+                        // Mostra errore a schermo
+                        console.error("Errore AJAX:", error);
+                        // mostraErrore("⚠️ Errore: il server non è raggiungibile. Verifica che sia attivo.");
+                    }
+                });
+
+                });
+
+            }
+
+        });
+    */
+    //-------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
         })
