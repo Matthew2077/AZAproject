@@ -46,15 +46,58 @@ try:
         for i in body:
             asin_list.append(i)
     
+        # variabili importanti
+        IS_AMZ_list = []
+        is_AMZ_count = 0
+        not_AMZ_count = 0
 
-             
+        asin_count = 0
+        no_asin_count = 0
+
+        category_list = []
+
+        tmp_cons_prime = 0
+        tmp_cons_24h = 0
+        tmp_cons_48h = 0
+        tmp_cons_more48h = 0
+
+        node_list = {}
+            
+        offers_count = 0
+        no_offers_count = 0
+
+        fasce_margine = {
+            "meno_0": 0,
+            "1_a_10": 0,
+            "11_a_20": 0,
+            "21_a_30": 0,
+            "piu_30": 0
+        }
+
+        margine_meno_0 = 0
+        margine_1_a_10 = 0
+        margine_11_a_20 = 0
+        margine_21_a_30 = 0
+        margine_piu_30 = 0
+        
+        tot_prod_margine = 0
+        
+        info_IDQ = {
+            "totale_immagini": {"scarso": 0, "medio": 0, "ottimo": 0},
+            "lunghezza_titolo": {"scarso": 0, "medio": 0, "ottimo": 0},
+            "lunghezza_descrizione": {"scarso": 0, "medio": 0, "ottimo": 0},
+            "bullet_point": {"scarso": 0, "medio": 0, "ottimo": 0}
+        }
+
+        prodotti = []
+        prodotti_ordinati = []
+
         if output == "J":
 
             # ---------------
             # CONTEGGIO ASIN
             # ---------------
-            asin_count = 0
-            no_asin_count = 0
+
             
             for element in asin_list:
                 asin = dati['body'][element]['summary']['ASIN']
@@ -68,9 +111,7 @@ try:
             # ---------------
             # CONTEGGIO IS_AMZ
             # ---------------
-            IS_AMZ_list = []
-            is_AMZ_count = 0
-            not_AMZ_count = 0
+
             for element in asin_list:
                 try:
                     is_amz = dati['body'][element]['data'][country]['is_AMZ']
@@ -88,7 +129,7 @@ try:
             # ---------------
             # CONTEGGIO CATEGORIE
             # ---------------
-            category_list = []
+            
             
             for element in asin_list:
                 try:
@@ -124,7 +165,7 @@ try:
             # ---------------
             # CONTEGGIO NODI
             # ---------------
-            node_list = {}
+           
 
             for v in asin_list:
                 try:
@@ -145,8 +186,7 @@ try:
             # ---------------
             # CONTEGGIO OFFERS 
             # ---------------
-            offers_count = 0
-            no_offers_count = 0
+
             
             for element in asin_list:
                 offer = dati['body'][element]['data'][country]['offers']
@@ -162,22 +202,7 @@ try:
             # ---------------
             # CONTEGGIO MARGINE 
             # ---------------
-            fasce_margine = {
-                "meno_0": 0,
-                "1_a_10": 0,
-                "11_a_20": 0,
-                "21_a_30": 0,
-                "piu_30": 0
-            }
 
-            margine_meno_0 = 0
-            margine_1_a_10 = 0
-            margine_11_a_20 = 0
-            margine_21_a_30 = 0
-            margine_piu_30 = 0
-            
-            tot_prod_margine = 0
-            
             for v in asin_list:
                 try:
                     buybox = dati['body'][v]['data'][country]['buybox']
@@ -222,148 +247,182 @@ try:
             
             
             
-                # ---------------
-                # CONTEGGIO TEMPO DI CONSEGNA
-                # ---------------
-                # TEMPO_DI_CONSEGNA = {
-                #         "prime": 0,
-                #         "24h": 0,
-                #         "48h": 0,
-                #         "48h o più": 0
-                #     }
-                tmp_cons_prime = 0
-                tmp_cons_24h = 0
-                tmp_cons_48h = 0
-                tmp_cons_more48h = 0
-                for v in asin_list:
-                    try:
-                        offerte = dati['body'][v]['data'][country]['offers']
-                        tempi = []
-                        
-                        for seller_id, offer_list in offerte.items():
-                            if isinstance(offer_list, list):
-                                for offer_data in offer_list:
-                                    try:
-                                        tempo_consegna = offer_data.get("shipping_time_min", None)
-                                        if tempo_consegna is not None:
-                                            tempi.append(int(tempo_consegna))
-                                    except (ValueError, TypeError):
-                                        pass
+            # ---------------
+            # CONTEGGIO TEMPO DI CONSEGNA
+            # ---------------
+            for v in asin_list:
+                try:
+                    offerte = dati['body'][v]['data'][country]['offers']
+                    tempi = []
+                    
+                    for seller_id, offer_list in offerte.items():
+                        if isinstance(offer_list, list):
+                            for offer_data in offer_list:
+                                try:
+                                    tempo_consegna = offer_data.get("shipping_time_min", None)
+                                    if tempo_consegna is not None:
+                                        tempi.append(int(tempo_consegna))
+                                except (ValueError, TypeError):
+                                    pass
 
-                        if tempi:
-                            spedizione = min(tempi)
-                            if spedizione == 0:
-                                tmp_cons_prime += 1
-                            elif spedizione == 24:
-                                tmp_cons_24h += 1
-                            elif spedizione <= 48:
-                                tmp_cons_48h += 1
-                            else:
-                                tmp_cons_more48h += 1
-        
-                    except (KeyError, TypeError, AttributeError):
-                        pass
-                # ---------------
-                # CONTEGGIO TEMPO DI CONSEGNA
-                # ---------------
+                    if tempi:
+                        spedizione = min(tempi)
+                        if spedizione == 0:
+                            tmp_cons_prime += 1
+                        elif spedizione == 24:
+                            tmp_cons_24h += 1
+                        elif spedizione <= 48:
+                            tmp_cons_48h += 1
+                        else:
+                            tmp_cons_more48h += 1
+    
+                except (KeyError, TypeError, AttributeError):
+                    pass
+            # ---------------
+            # CONTEGGIO IDQ
+            # ---------------
+            for v in asin_list:
+                try:
+                    contenuto = dati['body'][v]['data'][country]['IDQ']
+                    #print(contenuto)
+                    #prendi i dati necessari
+                    tot_images = int(contenuto.get('tot_images', 0))
+                    title_length = int(contenuto.get('title_length', 0))
+                    description_length = int(contenuto.get('description_length', 0))
+                    tot_bullet_point = int(contenuto.get('tot_bullet_point', 0))
 
-                info_IDQ = {
-                        "totale_immagini": {"scarso": 0, "medio": 0, "ottimo": 0},
-                        "lunghezza_titolo": {"scarso": 0, "medio": 0, "ottimo": 0},
-                        "lunghezza_descrizione": {"scarso": 0, "medio": 0, "ottimo": 0},
-                        "bullet_point": {"scarso": 0, "medio": 0, "ottimo": 0}
-                    }
-
-                for v in asin_list:
-                    try:
-                        contenuto = offerte = dati['body'][v]['data'][country]['IDQ']
-                        
-
-                        n_imm = int(contenuto.get("tot_images", 0))
-                        if n_imm <= 4:
-                            info_IDQ["totale_immagini"]["scarso"] += 1
-                        elif 5 <= n_imm <= 6:
-                            info_IDQ["totale_immagini"]["medio"] += 1
-                        elif n_imm >= 7:
+                    # numero immagini
+                    if tot_images <=4:
+                        info_IDQ["totale_immagini"]["scarso"] += 1
+                    elif 5 <= tot_images <= 6:
+                        info_IDQ["totale_immagini"]["medio"] += 1
+                    elif tot_images >= 7:
                             info_IDQ["totale_immagini"]["ottimo"] += 1
-
-                        l_tit = int(contenuto.get("title_length", 0))
-                        if l_tit < 100:
+                    #lunghezza titolo
+                    if title_length < 100:
                             info_IDQ["lunghezza_titolo"]["scarso"] += 1
-                        elif 100 <= l_tit <= 149:
+                    elif 100 <= title_length <= 149:
                             info_IDQ["lunghezza_titolo"]["medio"] += 1
-                        elif l_tit >= 150:
+                    elif title_length >= 150:
                             info_IDQ["lunghezza_titolo"]["ottimo"] += 1
 
-                        if "description_length" in contenuto:
-                            l_desc = int(contenuto.get("description_length", 0))
-                            if l_desc < 1000:
-                                info_IDQ["lunghezza_descrizione"]["scarso"] += 1
-                            elif 1000 <= l_desc <= 1499:
-                                info_IDQ["lunghezza_descrizione"]["medio"] += 1
-                            elif l_desc >= 1500:
-                                info_IDQ["lunghezza_descrizione"]["ottimo"] += 1
-
-                        n_bul = int(contenuto.get("tot_bullet_point", 0))
-                        if n_bul <= 2:
+                    # Bullt points
+                    if tot_bullet_point <= 2:
                             info_IDQ["bullet_point"]["scarso"] += 1
-                        elif 3 <= n_bul <= 4:
+                    elif 3 <= tot_bullet_point <= 4:
                             info_IDQ["bullet_point"]["medio"] += 1
-                        elif n_bul >= 5:
+                    elif tot_bullet_point >= 5:
                             info_IDQ["bullet_point"]["ottimo"] += 1
 
-                    except (KeyError, TypeError, ValueError):
-                        pass
+                except (KeyError, TypeError, ValueError):
+                    pass
+
                 
             
             
-                # ---------------
-                # CONTEGGIO LISTA TOP X
-                # ---------------
-                prodotti = []
+            # ---------------
+            # CONTEGGIO LISTA TOP X
+            # ---------------
             
-                for v in asin_list:
-                    summary = dati['body'][v]['summary'] 
-                    data = dati['body'][v]['data']
+        
+            for v in asin_list:
+                summary = dati['body'][v]['summary'] 
+                data = dati['body'][v]['data']
 
-                    if not isinstance(data, dict):
+                if not isinstance(data, dict):
+                    continue
+
+                for country, content in data.items():
+                    if not isinstance(content, dict):
                         continue
 
-                    for country, content in data.items():
-                        if not isinstance(content, dict):
-                            continue
+                    ranking = content.get("ranking", {})
+                    if not isinstance(ranking, dict):
+                        continue
 
-                        ranking = content.get("ranking", {})
-                        if not isinstance(ranking, dict):
-                            continue
+                    ranking_CAT = ranking.get("category", {})
+                    ranking_NODE = ranking.get("node", {})
 
-                        ranking_CAT = ranking.get("category", {})
-                        ranking_NODE = ranking.get("node", {})
+                    if not isinstance(ranking_CAT, dict) or not isinstance(ranking_NODE, dict):
+                        continue
 
-                        if not isinstance(ranking_CAT, dict) or not isinstance(ranking_NODE, dict):
-                            continue
+                    try:
+                        prodotto = {
+                            "idx": v,
+                            "ASIN": summary.get("ASIN", v),
+                            "EAN": summary.get("EAN", ""),
+                            "TITLE": summary.get("title", ""),
+                            "COUNTRY": country,
+                            "CAT_NAME": ranking_CAT.get("name", ""),
+                            "CAT_RANK": int(ranking_CAT.get("rank", 0)),
+                            "NODE_NAME": ranking_NODE.get("name", ""),
+                            "NODE_RANK": int(ranking_NODE.get("rank", 0)),
+                            "IMAGE": summary.get("img_lg") or ""
+                        }
 
-                        try:
-                            prodotto = {
-                                "idx": v,
-                                "ASIN": summary.get("ASIN", v),
-                                "EAN": summary.get("EAN", ""),
-                                "TITLE": summary.get("title", ""),
-                                "COUNTRY": country,
-                                "CAT_NAME": ranking_CAT.get("name", ""),
-                                "CAT_RANK": int(ranking_CAT.get("rank", 0)),
-                                "NODE_NAME": ranking_NODE.get("name", ""),
-                                "NODE_RANK": int(ranking_NODE.get("rank", 0)),
-                                "IMAGE": summary.get("img_lg") or ""
-                            }
+                        prodotti.append(prodotto)
 
-                            prodotti.append(prodotto)
+                    except (KeyError, TypeError, ValueError):
+                        continue
 
-                        except (KeyError, TypeError, ValueError):
-                            continue
+            prodotti_ordinati = sorted(prodotti, key=lambda x: x["NODE_RANK"])[:50]
+            prodottiF = json.dumps(prodotti_ordinati)
 
-                prodotti_ordinati = sorted(prodotti, key=lambda x: x["NODE_RANK"])[:50]
-                
+            # ---------------
+            # CONTEGGIO DETTAGLIO
+            # ---------------
+            
+            
+
+            # req_data = request.get_json()
+            # if req_data:
+            #     idx=req_data.get("idx").strip()
+            # else:
+            #     idx = None
+
+            # if not idx:
+            #     return jsonify({
+            #         "status": 0,
+            #         "message": "ID non fornito",
+            #         "response": {}
+            #     })
+
+            # prodotto = dati.get("body", {}).get(idx)
+            # if not prodotto:
+            #     return jsonify({
+            #         "status": 0,
+            #         "message": "Nessun dettaglio trovato per questo ID",
+            #         "response": {}
+            #     })
+
+            # try:
+            #     summary = prodotto.get("summary", {})
+            #     data_country = prodotto.get("data", {}).get(country, {}) 
+
+            #     risultato = {
+            #         "summary": summary,
+            #         "data": data_country
+            #     }
+
+            #     return jsonify({
+            #         "status": 1,
+            #         "message": "Dettaglio per questo ID",
+            #         "response": risultato
+            #     })
+
+            # except (KeyError, TypeError, AttributeError):
+            #     return jsonify({
+            #         "status": 0,
+            #         "message": "Errore nel recupero dettaglio per questo ID",
+            #         "response": {}
+            #     })
+
+
+
+
+
+
+
         # ---------------
         # RISULTATI
         # ---------------
@@ -388,7 +447,7 @@ try:
             'tmp_cons_48h': tmp_cons_48h,
             'tmp_cons_more48h': tmp_cons_more48h,
             'info_IDQ': info_IDQ,
-            'prodotti_ordinati': prodotti_ordinati,
+            'prodotti': prodottiF,
         }
     
         logger.info(json.dumps(result))
