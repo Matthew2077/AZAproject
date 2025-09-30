@@ -9,7 +9,6 @@ require_once __DIR__ . '/config/dz.php';
 // // validazione accesso
 // checkAccess($auth, ['2']);
 
-
 ?>
 
 <!DOCTYPE html>
@@ -313,16 +312,6 @@ require_once __DIR__ . '/config/dz.php';
                                     </thead>
                                     <tbody id="LISTA_TOP_X"  KPI="LISTA_TOP_X" class="">
                                         <!-- Qui vengono create le righe della tabella -->
-                                        <tr>
-                                            <td>ciao</td>
-                                            <td>ciao</td>
-                                            <td>ciao</td>
-                                            <td>ciao</td>
-                                            <td>ciao</td>
-                                            <td>ciao</td>
-                                            <td>ciao</td>
-                                            <td>ciao</td>
-                                        </tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -416,7 +405,7 @@ require_once __DIR__ . '/config/dz.php';
 
 <!-- Modal DETTAGLIO
  Info nel dettaglio gestito in case LISTA_TOP_X-->
-<div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+<div class="modal fade" id="ModalDETTAGLIO" tabindex="-1" aria-labelledby="myLargeModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
@@ -429,7 +418,7 @@ require_once __DIR__ . '/config/dz.php';
 				  <div class="row">
 					  <!-- immagine -->
 					  <div class="col-md-6 pe-4" id="immagine-container">
-						  <div class="image-wrapper" id="immagineDETTAGLIO">
+						  <div class="image-wrapper" id="imgDETT">
 
 						  </div>
 					  </div>
@@ -819,7 +808,7 @@ $(document).ready(function() { //qui inserisci ogni cosa
             const lst_prod = data.prodotti
             lista_prodotti = JSON.parse(lst_prod);
 
-           // console.log('lista prodotti' + lista_prodotti)
+           console.log('IS AMZ' + is_AMZ_count + not_AMZ_count)
 
 
    
@@ -875,7 +864,7 @@ $(document).ready(function() { //qui inserisci ogni cosa
                 }]
             };
 
-            var chart = new ApexCharts(document.querySelector("#IS_AMZ"), options);
+            var chart = new ApexCharts(document.querySelector("#is_AMZ"), options);
             chart.render();
             // ---------------
             //* GRAFICO ASIN
@@ -1354,7 +1343,15 @@ $(document).ready(function() { //qui inserisci ogni cosa
         const rows = lista_prodotti.map(product => {
             const formattedCatRank = product.CAT_RANK ? product.CAT_RANK.toLocaleString() : '-';
             const formattedNodeRank = product.NODE_RANK ? product.NODE_RANK.toLocaleString() : '-';
-            const DETTAGLIO = `<button class='dettaglio btn btn-primary' idx='${product.idx || ''}'>+</button>`;
+            const DETTAGLIO = `
+                <button 
+                    class="dettaglio btn btn-primary" 
+                    title="${product.TITLE || ''}" 
+                    asin="${product.ASIN || ''}" 
+                    ean="${product.EAN || ''}">
+                    +
+                </button>
+                `;
             
             return [
                 DETTAGLIO,
@@ -1387,7 +1384,72 @@ $(document).ready(function() { //qui inserisci ogni cosa
         //* DETTAGLIO
         // ---------------  
 
-                            
+        $('.dettaglio').on('click', function(e) {
+            const EAN = $(this).attr('ean');
+            const title = $(this).attr('title');
+             const asin = $(this).attr('asin');
+
+            // Chiamata Fetch ad AZAserver
+            const params = {
+                filename,
+                country,
+                action: 'dettaglio',
+                output: 'D',
+                EAN: EAN,
+            };
+
+            fetch('AZAserver.php', { //AZAserver
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(params)
+            })
+            .then(response => response.json())
+            .then(data => {
+                //elaborazione dati:
+                prezzoamz = data.prezzoamz
+                prime = data.prime
+                FBALOW = data.FBALOW
+                FBATOT = data.FBATOT
+                MFNLOW = data.MFNLOW
+                MFNTOT = data.MFNTOT
+                imgLNK = data.imgLINK
+                sellerID = data.sellerID
+                is_AMZ = data.is_AMZ
+
+                //inserimento dati nel modal
+                $('#DettaglioTITLE').html(title)
+                $('#DettaglioASIN').html(asin)
+                $('#DettaglioEAN').html(EAN)
+
+                $('#listaSellerID').html(sellerID)
+                $('#PREZZOAMZ').html(prezzoamz)
+                $('#DettaglioIS_AMZ').html(is_AMZ)
+                $('#DettaglioPRIME').html(prime)
+                $('#FBALOW').html(FBALOW)
+                $('#FBATOT').html(FBATOT)
+                $('#MFNLOW').html(MFNLOW)
+                $('#MFNTOT').html(MFNTOT)
+                $('#imgDETT').html(imgLNK)
+                
+
+                // Mostra il modal...
+                var ModalDETTAGLIO = new bootstrap.Modal(document.getElementById('ModalDETTAGLIO'));
+                ModalDETTAGLIO.show();
+
+
+
+                });
+        });
+
+
+
+
+
+
+
+
 
                         
 
@@ -1429,8 +1491,8 @@ $(document).ready(function() { //qui inserisci ogni cosa
 
                     console.log("immagini" + img)
                      //immagine
-                    $('#immagineDETTAGLIO').empty(); //impedisce accumulo immagini
-                    $('#immagineDETTAGLIO').append(`<img src=${img} alt="ProductImage" class="product-image">`);
+                    $('#imgDETT').empty(); //impedisce accumulo immagini
+                    $('#imgDETT').append(`<img src=${img} alt="ProductImage" class="product-image">`);
 
                     // INTESTAZIONE...
                     $('#DettaglioTITLE').html(r.summary?.title);
