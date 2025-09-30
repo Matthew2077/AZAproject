@@ -26,7 +26,7 @@ try:
         country = params.get('country', '')
         output = params.get('output', '')
         KPI = params.get('kpi', [])
-        
+        EAN = params.get('EAN', '')
         
 
         # Caricamento dati JSON
@@ -43,6 +43,7 @@ try:
         # ---------------
         body = dati['body'] 
         asin_list = []
+        detailData = None
         for i in body:
             asin_list.append(i)
     
@@ -91,6 +92,8 @@ try:
 
         prodotti = []
         prodotti_ordinati = []
+
+
 
         if output == "J":
 
@@ -368,12 +371,137 @@ try:
             prodotti_ordinati = sorted(prodotti, key=lambda x: x["NODE_RANK"])[:50]
             prodottiF = json.dumps(prodotti_ordinati)
 
-            # ---------------
-            # CONTEGGIO DETTAGLIO
-            # ---------------
+           
             
-            
+            # ---------------
+            # RISULTATI
+            # ---------------
+            result = {
+                'asin_count': asin_count,
+                'no_asin_count': no_asin_count,
+                'is_AMZ_count': is_AMZ_count,
+                'not_AMZ_count': not_AMZ_count,
+                'category_keys': category_keys,
+                'category_values': category_values,
+                'nodes_keys': nodes_keys,
+                'nodes_values': nodes_values,
+                'offers_count': offers_count,
+                'no_offers_count': no_offers_count,
+                'margine_meno_0': margine_meno_0,
+                'margine_1_a_10': margine_1_a_10,
+                'margine_11_a_20': margine_11_a_20,
+                'margine_21_a_30': margine_21_a_30,
+                'margine_piu_30': margine_piu_30,
+                'tmp_cons_prime': tmp_cons_prime,
+                'tmp_cons_24h': tmp_cons_24h,
+                'tmp_cons_48h': tmp_cons_48h,
+                'tmp_cons_more48h': tmp_cons_more48h,
+                'info_IDQ': info_IDQ,
+                'prodotti': prodottiF,
+            }
+        
+            logger.info(json.dumps(result))
+            print(json.dumps(result))
 
+        
+        if output == 'D':
+
+            try: 
+                for v in asin_list:
+                    datiEAN = dati['body'][v]['summary']['EAN']
+                    datieanstr = str(datiEAN).strip()
+                    EANstr = str(EAN).strip()
+
+                    #logger.info(f'Dati: {datiEAN}')
+                    logger.info(f"datiEAN={datiEAN} ({type(datiEAN)}), EAN={EAN} ({type(EAN)})")
+
+                    if datieanstr == EANstr:
+                        logger.info('bingo')
+                        # Prezzo Amazon:
+                        prezzoamz = dati['body'][v]['data'][country].get('buybox', {}).get('landed', "no data")
+                        FBALOW = dati['body'][v]['data'][country].get('lowest', {}).get('Amazon', "no data")
+                        FBATOT = dati['body'][v]['data'][country].get('stats', {}).get('Amazon', "no data")
+                        MFNLOW = dati['body'][v]['data'][country].get('lowest', {}).get('Merchant', "no data")
+                        MFNTOT = dati['body'][v]['data'][country].get('stats', {}).get('Merchant', "no data")
+                        imgLNK  = dati['body'][v]['summary'].get('dimensions', {}).get('img_lg', "no data")
+                        
+                        
+                        detailData = {
+                            'prezzoamz': prezzoamz,
+                            'FBALOW': FBALOW,
+                            'FBATOT': FBATOT,
+                            'MFNLOW': MFNLOW,
+                            'MFNTOT' : MFNTOT,
+                            'imgLNK' : imgLNK,
+                        }
+                        logger.info(f'Dati: {detailData}')
+                        break 
+
+
+            except FileNotFoundError:
+                error_result = {"status": "error"}
+                logger.info(json.dumps(error_result))
+
+
+
+       
+
+            
+            # ---------------
+            # RISULTATI
+            # ---------------
+            # result = {
+            #     'prezzoamz': 'prezzoamz',
+            #     'FBALOW': 'FBALOW',
+            #     'FBATOT': 'FBATOT',
+            #     'MFNLOW': 'MFNLOW',
+            #     'MFNTOT' : 'MFNTOT',
+            #     'imgLNK' : 'imgLNK',
+            #     'is_AMZ' : 'is_AMZ',
+            #     'prime' : 'prime',
+            # }
+            logger.info(json.dumps(detailData))
+            print(json.dumps(detailData))
+        
+
+
+
+
+            #dati da restituire:
+            # PRIME / Buybox winner 
+            # 
+                    # for (const sellerId in offers) {
+                    #     if (offers.hasOwnProperty(sellerId)) {
+                    #         const offer = offers[sellerId][0]; // Prendi il primo elemento dell'array (supponendo che ogni seller abbia solo un'offera)
+
+                    #         if (offer.is_buy_box_winner) {
+                    #             BBwinner = offer.is_prime;
+                    #             break; // Esci dal ciclo una volta trovato il Buy Box Winner
+                    #         }
+                    #     }
+                    # }
+
+                    # if (BBwinner !== null) { // Mostra il risultato nell'HTML
+                    #     $('#DettaglioPRIME').text(BBwinner ? "Sì" : "No");
+                    # } else {
+                    #     $('#DettaglioPRIME').text("Nessun Buy Box Winner trovato");
+                    # }
+
+#  // Seller ID....
+#                     let counter = 0; // Inizializza il contatore
+
+#                     for (const sellerId in offers) {
+#                         if (offers.hasOwnProperty(sellerId)) { // Verifica che la proprietà sia diretta (non ereditata)
+#                             counter++; // Incrementa il contatore
+#                         }
+#                     }
+#                     $('#listaSellerID').empty(); // pulisce precedenti seller id
+#                     $('#listaSellerID').append(`<span>${counter}</span>`);
+
+
+
+
+            
             # req_data = request.get_json()
             # if req_data:
             #     idx=req_data.get("idx").strip()
@@ -420,38 +548,6 @@ try:
 
 
 
-
-
-
-        # ---------------
-        # RISULTATI
-        # ---------------
-        result = {
-            'asin_count': asin_count,
-            'no_asin_count': no_asin_count,
-            'is_AMZ_count': is_AMZ_count,
-            'not_AMZ_count': not_AMZ_count,
-            'category_keys': category_keys,
-            'category_values': category_values,
-            'nodes_keys': nodes_keys,
-            'nodes_values': nodes_values,
-            'offers_count': offers_count,
-            'no_offers_count': no_offers_count,
-            'margine_meno_0': margine_meno_0,
-            'margine_1_a_10': margine_1_a_10,
-            'margine_11_a_20': margine_11_a_20,
-            'margine_21_a_30': margine_21_a_30,
-            'margine_piu_30': margine_piu_30,
-            'tmp_cons_prime': tmp_cons_prime,
-            'tmp_cons_24h': tmp_cons_24h,
-            'tmp_cons_48h': tmp_cons_48h,
-            'tmp_cons_more48h': tmp_cons_more48h,
-            'info_IDQ': info_IDQ,
-            'prodotti': prodottiF,
-        }
-    
-        logger.info(json.dumps(result))
-        print(json.dumps(result))
 
         
 
