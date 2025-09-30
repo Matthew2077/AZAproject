@@ -23,7 +23,7 @@ __$('#uploadForm').on('submit', function(e))__, quando l'azione viene registrata
 
 ## Creazione PDF:
 1. L'utente clicca su crea pdf;
-2. Doing it later on;
+2. Doing it
 
 
 ## Creazione grafici interattivi (dopo il click su una qualsiasi tab country):
@@ -42,9 +42,3 @@ Mando i parametri al file python che risponderà con un il JSON con tutti i dati
 7. AZAserver.php chiama Python con gli stessi parametri.
 8. Python risponde con i dati del dettaglio di quel idx.
 9. I dati del dettaglio vengono visualizzati in un modal boostrap.  
-
-
-
-# Task attuali: 
-- Sistemare UI grafici, spazi e fose un grafico migliore per NODES;
-- Fare dettaglio. 
