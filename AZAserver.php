@@ -204,8 +204,26 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 file_put_contents($temp_input, json_encode($params));
                 
                 // Esegui lo script Python passando il path del file
-                $cmd = "py C:/xampp/htdocs/AZA/AZAGrafici.py " . escapeshellarg($temp_input);
-                
+                //$python = __DIR__ . "/.venv/bin/python";
+                //$cmd = "$python AZAGrafici.py" . escapeshellarg($temp_input);
+                $python = __DIR__ . "/.venv/bin/python";
+                $script = __DIR__ . "/AZAgrafici.py";
+                $cmd = "$python $script $temp_input";
+                /*
+
+                                $python = __DIR__ . "/.venv/bin/python";
+                $script = __DIR__ . "/AZAgrafici.py";
+
+                $cmd = escapeshellcmd($python)
+                    . " "
+                    . escapeshellarg($script)
+                    . " "
+                    . escapeshellarg($temp_input);
+
+                $pyoutput = shell_exec($cmd . " 2>&1");
+
+
+                */
                 // Debug: stampa il comando
                 error_log("Comando eseguito: " . $cmd);
                 error_log("File input: " . $temp_input);
