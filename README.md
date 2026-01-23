@@ -1,9 +1,54 @@
-# READ ME - Everything About this project
+# AZAproject - Refactory late 2025
 
-Il presente progetto ha come obbiettivo quello di creare una interfaccia grafica carina e interattiva per visualizzare dati di un'analisi precedente. <br>
-Di seguito una spiegazione dettagliata di come funziona il programma
+## Panoramica:
+### Processo principale:
+[ Utente ]
+    |
+    | 1. Upload JSON
+    v
+[ interfacciaAZA.php ]  <-- Frontend (form + JS + Bootstrap)
+    |
+    | 2. submit form + AJAX
+    v
+[ AZAserver.php ]        <-- Backend PHP
+    |  - Verifica JSON
+    |  - Salva file in /uploads
+    |  - Calcola statistiche base (asin_count, countries, ecc.)
+    |
+    | 3. richiesta grafici / dettagli
+    v
+[ AZAgrafici.py ]        <-- Elaborazione Python
+    |  - Carica JSON
+    |  - Calcola KPI
+    |  - Genera array/lista risultati
+    v
+[ AZAserver.php ]        <-- ritorno dei dati JSON
+    |
+    | 4. Render frontend (grafici / PDF / modals)
+    v
+[ interfacciaAZA.php ]
+    |
+    v
+[ Utente ]               <-- visualizza dati, PDF, grafici, dettagli
 
-## Creazione Dati aggregati e tabs:
+### Tecnologie utilizzate:
+- **Front-end:** HTML5, CSS3, PHP, Javascript;
+- **Back-end:** Python, PHP;
+- **scambi di informazioni client/server:** json_encode (Azaserver), CURL (PDF e Azaserver), Ajax (InterfacciaAZA.php)
+
+### Funzionalità principali
+- Visualizzazione aggregata dati da file JSON;
+- Visualizzazione Tabella tutti i prodotti;
+- Creazione PDF dinamico
+
+## Installazione:
+1. Clona il repository: git clone https://github.com/Matthew2077/Xproject.git
+2. Installa le dipendenze:
+3. Avvia InterfacciaAZA.php: 
+
+
+## Dettagli funzionamento:
+### Creazione Dati aggregati e tabs:
 1. L'utente inserisce un file di tipo JSON in un form php
 2. Il file viene spedito ad AZAserver.php con action "upload".
 3. action upload in AZAserver.php: 
@@ -21,12 +66,8 @@ __$('#uploadForm').on('submit', function(e))__, quando l'azione viene registrata
     3. I dati sono inseriti;
     4. Vengono create le tab per paese basandosi sulle info del file (anche la tab per il PDF.)
 
-## Creazione PDF:
-1. L'utente clicca su crea pdf;
-2. Doing it
 
-
-## Creazione grafici interattivi (dopo il click su una qualsiasi tab country):
+### Creazione grafici interattivi (dopo il click su una qualsiasi tab country):
 1. L'utente clicca in una qualsiasi tab del paese che vuole visualizzare (eccetto PDF);
 2. La funzione prende filename dalla pagina (id: filename), la country selezionata dall'utente. Dopo di che si avvia una chiamata fetch che manda in forma di JSON i parametri che sono: filename, country, action (grafici), output(J) e i **KPI** (ASIN, is_AMZ, OFFERS, NODE, TEMPO_DI_CONSEGNA, CAT, MARGINE, LISTA_TOP_X, IDQ, DETTAGLIO)
 3. In AZAserver.php, action <i>grafici</i> riceve i dati e li reindirizza al file python AZAgrafici.py. Params: filename, output, country, kpi. <br>
