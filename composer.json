@@ -1,6 +1,6 @@
 {
     "require": {
-        "mpdf/mpdf": "8.2",
+        "mpdf/mpdf": "^8.2.7",
         "phpauth/phpauth": "^1.5",
         "bjeavons/zxcvbn-php": "^1.4",
         "delight-im/auth": "^8.3",

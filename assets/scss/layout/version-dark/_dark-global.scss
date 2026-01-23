@@ -1,0 +1,256 @@
+[data-theme-version="dark"] {
+    #chartBar {
+        line {
+            stroke: $d-border;
+        }
+    }
+
+    #redial .apexcharts-datalabels-group {
+        stroke: $white;
+    }
+
+    .morris_chart_height text tspan {
+        fill: $white;
+    }
+
+    .ct-grid {
+        stroke: rgba(255, 255, 255, 0.1);
+    }
+
+    .project .nav-tabs .nav-item .nav-link.active {
+        background-color: $dark-card;
+    }
+
+    .btn-link g [fill] {
+        fill: #fff;
+    }
+
+    .light-login {
+        display: inline-block;
+    }
+
+    .dark-login {
+        display: none;
+    }
+
+    .badge-outline-light {
+        color: #f5f5f5;
+    }
+
+    .badge-outline-dark,
+    .btn-outline-dark {
+        border-color: #f5f5f5;
+        color: $white;
+    }
+
+    .btn-light {
+        color: #f5f5f5;
+    }
+
+    .sidebar-right-inner {
+        .btn-light {
+            color: var(--text);
+        }
+    }
+
+    .btn-dark {
+        color: $white;
+    }
+
+    #overiewChart,
+    #marketChart,
+    #lineBar,
+    #chartTimeline {
+        line {
+            stroke: $d-border;
+        }
+    }
+
+    .apexcharts-text tspan {
+        fill: white;
+    }
+
+    .chartTimeline3 .apexcharts-series .apexcharts-backgroundBar {
+        fill: $d-bg;
+    }
+
+    .svg-details {
+        fill: $white;
+    }
+
+    .logo-compact {
+
+        filter: invert(1);
+
+    }
+
+    .companies-media img {
+        filter: brightness(8.5);
+    }
+
+    .seller-slider,
+    .best-selling-slider {
+        .card {
+            background: white;
+        }
+    }
+
+    .product .product-imfo h6,
+    .product .product-imfo .h6 {
+        color: black;
+    }
+
+    .active-map-main:after {
+        background: $d-border;
+    }
+
+    .active-country .country-list {
+        border-color: $d-border;
+    }
+
+    --secondary:#ffff;
+
+    .search-area.style-1 .input-group-text,
+    .search-area.style-1 .form-control {
+        background-color: $d-bg;
+    }
+
+    .transaction a {
+        background-color: $d-bg;
+    }
+
+    .transaction a svg {
+        path {
+            stroke: white;
+        }
+    }
+
+    .transaction-tbl.dataTable thead tr th,
+    .custome-d {
+        background-color: $d-bg;
+    }
+
+    .custome-d {
+        svg {
+            rect {
+                fill: white;
+            }
+        }
+    }
+
+    .ttl-project .pr-data::after {
+        background-color: $d-border;
+    }
+
+    .apexcharts-canvas {
+        line {
+            stroke: $d-border;
+        }
+    }
+
+    .bg-purple-light,
+    .bg-cream-light {
+        background-color: $d-bg;
+    }
+
+    .mix-chart-tab .nav-item .nav-link {
+        background-color: #2e384c;
+    }
+
+    .mix-chart-tab .nav-item .nav-link.active {
+        background-color: var(--primary);
+    }
+
+    .card {
+        box-shadow: none;
+    }
+
+    .widget-timeline-status .timeline>li:not(:last-child):after {
+        background-color: white;
+    }
+
+    .border-dark {
+        border-color: rgba(199, 199, 199, 1) !important;
+    }
+
+    .success-tab .nav-item .nav-link span {
+        color: white;
+    }
+
+    .header-right .notification_dropdown .nav-link {
+        background-color: $d-bg;
+        border-color: $d-border;
+    }
+
+    .ic-sidenav .metismenu>li.mm-active>a {
+        box-shadow: 0 10px 20px rgb(24, 34, 55);
+    }
+
+    .widget-timeline-icons .timeline-media {
+        background-color: $d-bg;
+    }
+
+    .widget-timeline-icons .timeline>li:not(:last-child):before {
+        border-color: $d-border;
+    }
+
+    .companies-inner .companies-media {
+        background-color: $dark-card;
+    }
+
+    .dropzone {
+        background-color: $d-bg;
+        border-color: $d-border;
+    }
+
+    .kanbanimg1 li a,
+    .kanbanimg1 img {
+        border-color: $d-border;
+    }
+
+    .btn-outline-secondary {
+        --bs-btn-color: #c0c7d1;
+        border-color: $d-border;
+    }
+
+    #chartProfileProgress {
+        line {
+            stroke: none;
+        }
+    }
+
+    .bg-success-light,
+    .bg-danger-light {
+        h3 {
+            color: black;
+        }
+    }
+
+    .bootstrap-select.custom-image-select .btn {
+        color: #ffffff !important;
+    }
+
+    .btn-outline-primary:hover svg g path {
+        stroke: white !important;
+    }
+
+    .badge-outline-secondary {
+        border: 0.0625rem solid #5a6370;
+        color: #9f9f9f;
+    }
+    .badge-secondary {
+        background-color: #4c4f54;
+    }
+    #tabContentMyProfileBottom{
+        .bg-light{
+            background-color: $d-bg!important;
+        }
+    }
+    .setting-list{
+        svg{
+            path{
+                stroke: white;
+            }
+        }
+    }
+}

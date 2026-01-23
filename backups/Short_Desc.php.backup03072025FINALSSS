@@ -1,0 +1,331 @@
+<?php
+include_once "vendor/autoload.php";
+//require_once 'config.php';
+//IMPORTANT INFO ------
+$yourApiKey = ('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');
+$client = OpenAI::client($yourApiKey);
+
+
+
+
+/*
+Step to success:
+1. FIle in input (poi da interfaccia);
+2. Elaborazione file, fai una prima "scrematura" inserendo in un array soltanto ciò che 
+l'AI deve sapere, ovvero la descrizione (poi si potrebbe togliere idk);
+3. Crea Assisstente e thread;
+4. Fai un ciclo sull'array nomiLunghi creato;
+5. ad ogni ciclo crea un messaggio con stesso prompt ma diversa descrizione da sistemare;
+6. alla fine di ogni ciclo aggiungi la riga in un nuovo array;
+7. Alla fine del ciclo, scrivi nel csv originale una nuova colonna con le descrizioni accorciate;
+
+
+
+ https://platform.openai.com/docs/api-reference/assistants-streaming/events
+    Eventi: ogni volta che succede qualcosa, fa un evento... interessante
+    */
+
+
+//1. Ottenimento file etc-------------------------
+
+
+
+    set_time_limit(300);
+   //2. MANAGE FILE & CREATE ARRAY-------------------------
+    try {
+            /*
+
+Qui devo analizzare il file in input: 
+1. Prendi il contenuto
+2. Ottieni tutti gli index colonna; (Sel; ID; Cat; SubcaT; Nome; Len; Prezzo; Iva; Dispo gg.; In Ordine;Insert;	Uscita; Promo_Cod; Promo_Desc;Promo_Scad;Link)
+3. Filtra righe in base a valore di Len (prendi solo le righe con len > 80), filtra per insert (solo data 2025), Sel non deve corrispondere a X;
+
+
+    */
+
+
+
+
+            $inputFile = 'ebay_catalogo_SMF_20250623172428.csv';
+            $outputFile = 'filtrato_2025.csv';
+
+            // Array per contenere i nomi validi
+            $nomiLunghi = [];
+
+            if (($inputHandle = fopen($inputFile, 'r')) !== false) {
+                $header = fgetcsv($inputHandle, 0, ';');
+                
+                // Trova gli indici delle colonne
+                $selIndex = array_search('Sel', $header);
+                $lenIndex = array_search('Len', $header);
+                $insertIndex = array_search('Insert', $header);
+                $nomeIndex = array_search('Nome', $header);
+
+                if ($selIndex === false || $lenIndex === false || $insertIndex === false || $nomeIndex === false) {
+                    die("Errore: alcune colonne richieste non sono state trovate.");
+                }
+
+                // Apri output CSV
+                $outputHandle = fopen($outputFile, 'w');
+                fputcsv($outputHandle, $header, ';'); // Scrivi intestazione
+
+                while (($row = fgetcsv($inputHandle, 0, ';')) !== false) {
+                    $sel = trim($row[$selIndex]);
+                    $len = (int)($row[$lenIndex] ?? 0);
+                    $insertDate = $row[$insertIndex] ?? '';
+
+                    // Estrai anno da Insert (formato gg/mm/yyyy)
+                    $year = substr($insertDate, 0, 4); // Prende i primi 4 caratteri
+
+                    if ($len > 80 && $year === '2025' && strtoupper($sel) !== 'X') {
+                        fputcsv($outputHandle, $row, ';'); // Scrivi nel CSV filtrato
+
+                        // Aggiungi il valore di "Nome" all'array
+                        $nomiLunghi[] = $row[$nomeIndex];
+                        /*$nomiLunghi[] = [
+                            'id' => $row[$idIndex],
+                            'descrizione_originale' => $row[$nomeIndex]
+                        ];
+                        */
+                    }
+                }
+                
+                fclose($inputHandle);
+                fclose($outputHandle);
+
+                // Output opzionale dei nomi (puoi toglierlo o gestirlo diversamente)
+                echo "<pre>";
+                print_r($nomiLunghi);
+                echo "</pre>";
+                
+
+            } else {
+                die("Errore: impossibile aprire il file.");
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        //3. Ciclo per inviare un messaggio per ogni descrizione-------------------------
+        $descrizioniAccorciate = []; // Array dove salvare descrizioni accorciate
+        
+
+
+        //apri il file e aggiungi una colonna
+        $ListNewDesc = []; // nuove descrizioni
+        foreach ($nomiLunghi as $descrizioneOriginale) {
+            //3.1 prompt-------------------------
+            $prompt = <<<PROMPT
+            Genera una nuova descrizione basata su queste regole per la descrizione che ti invio:
+            1. Le descrizioni devono avere meno di 80 caratteri.
+            2. Sostituisci le frasi lunghe con sinonimi più brevi.
+            3. Usa abbreviazioni dove appropriato.
+            
+
+            Tutte le descrizioni devono essere in italiano.
+                                    
+            Descrizione originale:"$descrizioneOriginale"
+            Risposta:
+            PROMPT;
+
+                try {
+                    // manda messaggio
+                        $response = $client->chat()->create([
+                            'model' => 'gpt-4.1-nano-2025-04-14',
+                            'messages' => [
+                                ['role' => 'user', 'content' => $prompt],
+                            ],
+                        ]);
+
+
+                        $response->id; // 'chatcmpl-6pMyfj1HF4QXnfvjtfzvufZSQq6Eq'
+                        $response->created; // 1677701073
+                        
+
+
+                        
+
+
+
+                        //cicla su tutte le descrizioni
+                        foreach ($response->choices as $choice) {
+                            $choice->index; // 0
+                            $shortendesc = $choice->message->content; // contiene descrizione accoricata
+
+                            
+                            //verifica che la descrizione sia più corta di 80 caratteri
+                            if (mb_strlen($shortendesc, 'UTF-8') > 80){
+                                /*se maggiore - LOG PER DEBUG
+                                echo '<br>';
+                                echo "Descrizione originale: ";
+                                echo '<br>';
+                                print_r ($descrizioneOriginale);
+                                echo '<br>';
+                                    */
+
+                                //$failed[] = $shortendesc;
+                                
+
+                                
+
+                                //nuovo prompt per secondo messaggio
+                                $Newprompt = <<<PROMPT
+                                    Genera una nuova descrizione accorciata che deve avere meno di 80 caratteri.
+
+                                    Tutte le descrizioni devono essere in italiano.
+                                    
+                                    Descrizione originale: "$shortendesc"
+                                    Risposta:
+                                    PROMPT;
+                                //manda nuovo messaggio
+                                $response = $client->chat()->create([
+                                    'model' => 'gpt-4.1-nano-2025-04-14',
+                                    'messages' => [
+                                        ['role' => 'user', 'content' => $Newprompt],
+                                    ],
+                                ]);
+
+                                $response->id;
+                                $response->created;
+                                //cicla sulla risposta 
+                                foreach ($response->choices as $choice) {
+                                    $choice->index; // 0
+                                    $Newshortendesc = $choice->message->content; //descrizione nuova
+                                    /*
+                                    echo '<br>';
+                                     echo "Descrizione fallita sistemata: ";
+                                     echo '<br>';
+                                    print_r ($Newshortendesc); 
+                                    echo '<br>';
+
+                                    */
+
+                                    $ListNewDesc[] = $Newshortendesc;
+
+                                    
+                                }
+
+                                continue;
+
+
+                            } else {
+                                /*se inferiore - LOG PER DEBUG
+                                echo '<br>';
+                                echo "descrizione accorciata";
+                                echo '<br>';
+                                echo $shortendesc;
+                                echo '<br>';
+                                */
+                                $ListNewDesc[] = $shortendesc;
+                               
+                                continue;
+
+
+                            }
+                        }
+
+                        
+                        
+
+print_r ($ListNewDesc);
+
+
+// CREA CSV FINALE
+$finalCsv = 'descrizioni_finali.csv';
+
+        // Apri il file filtrato
+        if (($inputHandle = fopen($outputFile, 'r')) !== false) {
+            $header = fgetcsv($inputHandle, 0, ';');
+
+            // Aggiungi la nuova colonna al header
+            $header[] = 'NuovaDescrizione';
+
+            // Apri il file finale in scrittura
+            $outputHandle = fopen($finalCsv, 'w');
+            fputcsv($outputHandle, $header, ';'); // Scrivi intestazione
+
+            $i = 0; // Indice per accedere a $ListNewDesc
+
+            // Cicla sulle righe originali
+            while (($row = fgetcsv($inputHandle, 0, ';')) !== false) {
+                // Aggiungi la nuova descrizione se disponibile
+                $row[] = $ListNewDesc[$i] ?? ''; // fallback se mancante
+                $i++;
+                fputcsv($outputHandle, $row, ';');
+            }
+
+            fclose($inputHandle);
+            fclose($outputHandle);
+
+            echo "<br>✅ File generato: <strong>$finalCsv</strong>";
+        } else {
+            echo "Errore: impossibile aprire $outputFile per scrittura finale.";
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                } catch (Exception $e) {
+            echo 'Error: ' . $e->getMessage();
+        }
+
+
+
+
+            }
+
+
+print_r($ListNewDesc);
+
+
+        } catch (Exception $e) {
+            echo 'Error: ' . $e->getMessage();
+        }
+

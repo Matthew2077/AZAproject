@@ -5,14 +5,11 @@ import pandas as pd
 import matplotlib
 matplotlib.use('Agg')
 import json
-import logging
-logger = logging.getLogger(__name__)
-logging.basicConfig(filename='AZAgrafici.log', level=logging.INFO)
 
 
 try:
     # ---------------
-    # Leggi i parametri dal file passato come argomento
+    # *Leggi i parametri dal file passato come argomento
     # ---------------
     if len(sys.argv) > 1:
         input_file = sys.argv[1]
@@ -26,81 +23,34 @@ try:
         country = params.get('country', '')
         output = params.get('output', '')
         KPI = params.get('kpi', [])
-        EAN = params.get('EAN', '')
         
-
+        
         # Caricamento dati JSON
         data_path = os.path.join("uploads", filename) 
         if not os.path.exists(data_path):
-            #logger.info(json.dumps({"success": False, "error": f"File non trovato  {params}"}))
+            print(json.dumps({"success": False, "error": f"File non trovato  {params}"}))
             sys.exit(1)
 
         with open(data_path, 'r', encoding='utf-8') as f:
             dati = json.load(f) #DATI FILE QUI --------
 
         # ---------------
-        # DATI GENERALI
+        # *DATI GENERALI
         # ---------------
         body = dati['body'] 
         asin_list = []
-        detailData = None
         for i in body:
             asin_list.append(i)
     
-        # variabili importanti
-        IS_AMZ_list = []
-        is_AMZ_count = 0
-        not_AMZ_count = 0
 
-        asin_count = 0
-        no_asin_count = 0
-
-        category_list = []
-
-        tmp_cons_prime = 0
-        tmp_cons_24h = 0
-        tmp_cons_48h = 0
-        tmp_cons_more48h = 0
-
-        node_list = {}
-            
-        offers_count = 0
-        no_offers_count = 0
-
-        fasce_margine = {
-            "meno_0": 0,
-            "1_a_10": 0,
-            "11_a_20": 0,
-            "21_a_30": 0,
-            "piu_30": 0
-        }
-
-        margine_meno_0 = 0
-        margine_1_a_10 = 0
-        margine_11_a_20 = 0
-        margine_21_a_30 = 0
-        margine_piu_30 = 0
-        
-        tot_prod_margine = 0
-        
-        info_IDQ = {
-            "totale_immagini": {"scarso": 0, "medio": 0, "ottimo": 0},
-            "lunghezza_titolo": {"scarso": 0, "medio": 0, "ottimo": 0},
-            "lunghezza_descrizione": {"scarso": 0, "medio": 0, "ottimo": 0},
-            "bullet_point": {"scarso": 0, "medio": 0, "ottimo": 0}
-        }
-
-        prodotti = []
-        prodotti_ordinati = []
-
-
-
+             
         if output == "J":
 
             # ---------------
-            # CONTEGGIO ASIN
+            # *CONTEGGIO ASIN
             # ---------------
-
+            asin_count = 0
+            no_asin_count = 0
             
             for element in asin_list:
                 asin = dati['body'][element]['summary']['ASIN']
@@ -108,13 +58,15 @@ try:
                     no_asin_count = no_asin_count + 1
                 else:
                     asin_count = asin_count + 1
-            #logger.info(asin_count)
-            #logger.info(no_asin_count)
+            #print(asin_count)
+            #print(no_asin_count)
 
             # ---------------
-            # CONTEGGIO IS_AMZ
+            # *CONTEGGIO IS_AMZ
             # ---------------
-
+            IS_AMZ_list = []
+            is_AMZ_count = 0
+            not_AMZ_count = 0
             for element in asin_list:
                 try:
                     is_amz = dati['body'][element]['data'][country]['is_AMZ']
@@ -130,9 +82,9 @@ try:
            
             
             # ---------------
-            # CONTEGGIO CATEGORIE
+            # *CONTEGGIO CATEGORIE
             # ---------------
-            
+            category_list = []
             
             for element in asin_list:
                 try:
@@ -146,50 +98,36 @@ try:
                         pass
                 except (ValueError, TypeError, KeyError):
                     continue
-            #logger.info(category_list)
-
-
-            category_list = {}
-
-            for v in asin_list:
+            #?print(category_list)
+            
+            
+            # ---------------
+            # *CONTEGGIO NODI
+            # ---------------
+            node_list = []
+            
+            for element in asin_list:
                 try:
-                    category = dati['body'][v]['data'][country]['ranking']['category']['name']
-                    if category:
-                        category_list[category] = category_list.get(category, 0) + 1
-                except (KeyError, TypeError, AttributeError):
+                    
+                    node = dati['body'][element]['data'][country]['ranking']['node']['name']
+                    
+                    if node is None:
                         pass
-
-
-            category_keys = list(category_list.keys())
-            category_values = list(category_list.values())
-
+                    elif node not in node_list:
+                        node_list.append(node)
+                    else: 
+                        pass
+                except (ValueError, TypeError, KeyError):
+                    continue
+                
+            #?print(node_list)
             
             
             # ---------------
-            # CONTEGGIO NODI
+            # *CONTEGGIO OFFERS 
             # ---------------
-           
-
-            for v in asin_list:
-                try:
-                    node = dati['body'][v]['data'][country]['ranking']['node']['name']
-                    if node:
-                        node_list[node] = node_list.get(node, 0) + 1
-                        
-                except (KeyError, TypeError, AttributeError):
-                    pass
-
-            nodes_keys = list(node_list.keys())
-            nodes_values = list(node_list.values())
-
-            #logger.info(node_list)
-         
-
-            
-            # ---------------
-            # CONTEGGIO OFFERS 
-            # ---------------
-
+            offers_count = 0
+            no_offers_count = 0
             
             for element in asin_list:
                 offer = dati['body'][element]['data'][country]['offers']
@@ -199,13 +137,22 @@ try:
                 else: 
                     no_offers_count = no_offers_count + 1
                 
-            # logger.info(offers_count)
-            # logger.info(no_offers_count)
+            # ?print(offers_count)
+            # ?print(no_offers_count)
             
             # ---------------
-            # CONTEGGIO MARGINE 
+            # *CONTEGGIO MARGINE 
             # ---------------
-
+            fasce_margine = {
+                "meno_0%": 0,
+                "1_a_10%": 0,
+                "11_a_20%": 0,
+                "21_a_30%": 0,
+                "piu_30%": 0
+            }
+            
+            tot_prod_margine = 0
+            
             for v in asin_list:
                 try:
                     buybox = dati['body'][v]['data'][country]['buybox']
@@ -225,34 +172,41 @@ try:
                     tot_prod_margine += 1
                     
                     if margine_perc <= 0:
-                        margine_meno_0 += 1
+                        fasce_margine["meno_0%"] += 1
                     elif 0 < margine_perc <= 10:
-                       margine_1_a_10 += 1
+                        fasce_margine["1_a_10%"] += 1
                     elif 10 < margine_perc <= 20:
-                        margine_11_a_20 += 1
+                        fasce_margine["11_a_20%"] += 1
                     elif 20 < margine_perc <= 30:
-                        margine_21_a_30 += 1
-                    elif margine_perc > 30:
-                        margine_piu_30 += 1
+                        fasce_margine["21_a_30%"] += 1
+                    elif margine_perc >30:
+                        fasce_margine ["piu_30%"] += 1
 
                         
                     
                 except (ValueError, TypeError, KeyError):
                     continue
 
-                # if tot_prod_margine == 0:
-                #     logger.info(json.dumps({
-                #         "status": 0,
-                #         "message": "Nessun margine valido trovato",
-                #         "response": {}
-                #     }))
+                if tot_prod_margine == 0:
+                    print(json.dumps({
+                        "status": 0,
+                        "message": "Nessun margine valido trovato",
+                        "response": {}
+                    }))
             
             
             
             
             # ---------------
-            # CONTEGGIO TEMPO DI CONSEGNA
+            # *CONTEGGIO TEMPO DI CONSEGNA
             # ---------------
+            tempo_spedizione = {
+                    "prime": 0,
+                    "24h": 0,
+                    "48h": 0,
+                    "48h o più": 0
+                }
+
             for v in asin_list:
                 try:
                     offerte = dati['body'][v]['data'][country]['offers']
@@ -271,63 +225,75 @@ try:
                     if tempi:
                         spedizione = min(tempi)
                         if spedizione == 0:
-                            tmp_cons_prime += 1
+                            tempo_spedizione["prime"] += 1
                         elif spedizione == 24:
-                            tmp_cons_24h += 1
+                            tempo_spedizione["24h"] += 1
                         elif spedizione <= 48:
-                            tmp_cons_48h += 1
+                            tempo_spedizione["48h"] += 1
                         else:
-                            tmp_cons_more48h += 1
-    
+                            tempo_spedizione["48h o più"] += 1
+
                 except (KeyError, TypeError, AttributeError):
                     pass
             # ---------------
-            # CONTEGGIO IDQ
+            # *CONTEGGIO TEMPO DI CONSEGNA
             # ---------------
+
+            info_IDQ = {
+                    "totale_immagini": {"scarso": 0, "medio": 0, "ottimo": 0},
+                    "lunghezza_titolo": {"scarso": 0, "medio": 0, "ottimo": 0},
+                    "lunghezza_descrizione": {"scarso": 0, "medio": 0, "ottimo": 0},
+                    "bullet_point": {"scarso": 0, "medio": 0, "ottimo": 0}
+                }
+
             for v in asin_list:
                 try:
-                    contenuto = dati['body'][v]['data'][country]['IDQ']
-                    #print(contenuto)
-                    #prendi i dati necessari
-                    tot_images = int(contenuto.get('tot_images', 0))
-                    title_length = int(contenuto.get('title_length', 0))
-                    description_length = int(contenuto.get('description_length', 0))
-                    tot_bullet_point = int(contenuto.get('tot_bullet_point', 0))
+                    contenuto = offerte = dati['body'][v]['data'][country]['IDQ']
+                    
 
-                    # numero immagini
-                    if tot_images <=4:
+                    n_imm = int(contenuto.get("tot_images", 0))
+                    if n_imm <= 4:
                         info_IDQ["totale_immagini"]["scarso"] += 1
-                    elif 5 <= tot_images <= 6:
+                    elif 5 <= n_imm <= 6:
                         info_IDQ["totale_immagini"]["medio"] += 1
-                    elif tot_images >= 7:
-                            info_IDQ["totale_immagini"]["ottimo"] += 1
-                    #lunghezza titolo
-                    if title_length < 100:
-                            info_IDQ["lunghezza_titolo"]["scarso"] += 1
-                    elif 100 <= title_length <= 149:
-                            info_IDQ["lunghezza_titolo"]["medio"] += 1
-                    elif title_length >= 150:
-                            info_IDQ["lunghezza_titolo"]["ottimo"] += 1
+                    elif n_imm >= 7:
+                        info_IDQ["totale_immagini"]["ottimo"] += 1
 
-                    # Bullt points
-                    if tot_bullet_point <= 2:
-                            info_IDQ["bullet_point"]["scarso"] += 1
-                    elif 3 <= tot_bullet_point <= 4:
-                            info_IDQ["bullet_point"]["medio"] += 1
-                    elif tot_bullet_point >= 5:
-                            info_IDQ["bullet_point"]["ottimo"] += 1
+                    l_tit = int(contenuto.get("title_length", 0))
+                    if l_tit < 100:
+                        info_IDQ["lunghezza_titolo"]["scarso"] += 1
+                    elif 100 <= l_tit <= 149:
+                        info_IDQ["lunghezza_titolo"]["medio"] += 1
+                    elif l_tit >= 150:
+                        info_IDQ["lunghezza_titolo"]["ottimo"] += 1
+
+                    if "description_length" in contenuto:
+                        l_desc = int(contenuto.get("description_length", 0))
+                        if l_desc < 1000:
+                            info_IDQ["lunghezza_descrizione"]["scarso"] += 1
+                        elif 1000 <= l_desc <= 1499:
+                            info_IDQ["lunghezza_descrizione"]["medio"] += 1
+                        elif l_desc >= 1500:
+                            info_IDQ["lunghezza_descrizione"]["ottimo"] += 1
+
+                    n_bul = int(contenuto.get("tot_bullet_point", 0))
+                    if n_bul <= 2:
+                        info_IDQ["bullet_point"]["scarso"] += 1
+                    elif 3 <= n_bul <= 4:
+                        info_IDQ["bullet_point"]["medio"] += 1
+                    elif n_bul >= 5:
+                        info_IDQ["bullet_point"]["ottimo"] += 1
 
                 except (KeyError, TypeError, ValueError):
                     pass
-
-                
             
-            
+           
+           
             # ---------------
-            # CONTEGGIO LISTA TOP X
+            # *CONTEGGIO LISTA TOP X
             # ---------------
-            
-        
+            prodotti = []
+           
             for v in asin_list:
                 summary = dati['body'][v]['summary'] 
                 data = dati['body'][v]['data']
@@ -369,214 +335,53 @@ try:
                         continue
 
             prodotti_ordinati = sorted(prodotti, key=lambda x: x["NODE_RANK"])[:50]
-            prodottiF = json.dumps(prodotti_ordinati)
-
-           
             
             # ---------------
-            # RISULTATI
+            # *RISULTATI
             # ---------------
             result = {
                 'asin_count': asin_count,
                 'no_asin_count': no_asin_count,
                 'is_AMZ_count': is_AMZ_count,
                 'not_AMZ_count': not_AMZ_count,
-                'category_keys': category_keys,
-                'category_values': category_values,
-                'nodes_keys': nodes_keys,
-                'nodes_values': nodes_values,
+                'category_list': category_list,
+                'node_list': node_list,
                 'offers_count': offers_count,
                 'no_offers_count': no_offers_count,
-                'margine_meno_0': margine_meno_0,
-                'margine_1_a_10': margine_1_a_10,
-                'margine_11_a_20': margine_11_a_20,
-                'margine_21_a_30': margine_21_a_30,
-                'margine_piu_30': margine_piu_30,
-                'tmp_cons_prime': tmp_cons_prime,
-                'tmp_cons_24h': tmp_cons_24h,
-                'tmp_cons_48h': tmp_cons_48h,
-                'tmp_cons_more48h': tmp_cons_more48h,
+                'fasce_margine': fasce_margine,
+                'tempo_spedizione': tempo_spedizione,
                 'info_IDQ': info_IDQ,
-                'prodotti': prodottiF,
+                'prodotti_ordinati': prodotti_ordinati,
             }
         
-            logger.info(json.dumps(result))
-            print(json.dumps(result))
-
-        
-        if output == 'D':
-
-            try: 
-                for v in asin_list:
-                    datiEAN = dati['body'][v]['summary']['EAN']
-                    datieanstr = str(datiEAN).strip()
-                    EANstr = str(EAN).strip()
-
-                    #logger.info(f'Dati: {datiEAN}')
-                    logger.info(f"datiEAN={datiEAN} ({type(datiEAN)}), EAN={EAN} ({type(EAN)})")
-
-                    if datieanstr == EANstr:
-                        logger.info('bingo')
-                        # Prezzo Amazon:
-                        prezzoamz = dati['body'][v]['data'][country].get('buybox', {}).get('landed', "no data")
-                        FBALOW = dati['body'][v]['data'][country].get('lowest', {}).get('Amazon', "no data")
-                        FBATOT = dati['body'][v]['data'][country].get('stats', {}).get('Amazon', "no data")
-                        MFNLOW = dati['body'][v]['data'][country].get('lowest', {}).get('Merchant', "no data")
-                        MFNTOT = dati['body'][v]['data'][country].get('stats', {}).get('Merchant', "no data")
-                        imgLNK  = dati['body'][v]['summary'].get('dimensions', {}).get('img_lg', "no data")
-                        
-                        
-                        detailData = {
-                            'prezzoamz': prezzoamz,
-                            'FBALOW': FBALOW,
-                            'FBATOT': FBATOT,
-                            'MFNLOW': MFNLOW,
-                            'MFNTOT' : MFNTOT,
-                            'imgLNK' : imgLNK,
-                        }
-                        logger.info(f'Dati: {detailData}')
-                        break 
-
-
-            except FileNotFoundError:
-                error_result = {"status": "error"}
-                logger.info(json.dumps(error_result))
-
-
-
-       
-
+        print(json.dumps(result))
             
-            # ---------------
-            # RISULTATI
-            # ---------------
-            # result = {
-            #     'prezzoamz': 'prezzoamz',
-            #     'FBALOW': 'FBALOW',
-            #     'FBATOT': 'FBATOT',
-            #     'MFNLOW': 'MFNLOW',
-            #     'MFNTOT' : 'MFNTOT',
-            #     'imgLNK' : 'imgLNK',
-            #     'is_AMZ' : 'is_AMZ',
-            #     'prime' : 'prime',
-            # }
-            logger.info(json.dumps(detailData))
-            print(json.dumps(detailData))
-        
-
-
-
-
-            #dati da restituire:
-            # PRIME / Buybox winner 
-            # 
-                    # for (const sellerId in offers) {
-                    #     if (offers.hasOwnProperty(sellerId)) {
-                    #         const offer = offers[sellerId][0]; // Prendi il primo elemento dell'array (supponendo che ogni seller abbia solo un'offera)
-
-                    #         if (offer.is_buy_box_winner) {
-                    #             BBwinner = offer.is_prime;
-                    #             break; // Esci dal ciclo una volta trovato il Buy Box Winner
-                    #         }
-                    #     }
-                    # }
-
-                    # if (BBwinner !== null) { // Mostra il risultato nell'HTML
-                    #     $('#DettaglioPRIME').text(BBwinner ? "Sì" : "No");
-                    # } else {
-                    #     $('#DettaglioPRIME').text("Nessun Buy Box Winner trovato");
-                    # }
-
-#  // Seller ID....
-#                     let counter = 0; // Inizializza il contatore
-
-#                     for (const sellerId in offers) {
-#                         if (offers.hasOwnProperty(sellerId)) { // Verifica che la proprietà sia diretta (non ereditata)
-#                             counter++; // Incrementa il contatore
-#                         }
-#                     }
-#                     $('#listaSellerID').empty(); // pulisce precedenti seller id
-#                     $('#listaSellerID').append(`<span>${counter}</span>`);
-
-
-
-
-            
-            # req_data = request.get_json()
-            # if req_data:
-            #     idx=req_data.get("idx").strip()
-            # else:
-            #     idx = None
-
-            # if not idx:
-            #     return jsonify({
-            #         "status": 0,
-            #         "message": "ID non fornito",
-            #         "response": {}
-            #     })
-
-            # prodotto = dati.get("body", {}).get(idx)
-            # if not prodotto:
-            #     return jsonify({
-            #         "status": 0,
-            #         "message": "Nessun dettaglio trovato per questo ID",
-            #         "response": {}
-            #     })
-
-            # try:
-            #     summary = prodotto.get("summary", {})
-            #     data_country = prodotto.get("data", {}).get(country, {}) 
-
-            #     risultato = {
-            #         "summary": summary,
-            #         "data": data_country
-            #     }
-
-            #     return jsonify({
-            #         "status": 1,
-            #         "message": "Dettaglio per questo ID",
-            #         "response": risultato
-            #     })
-
-            # except (KeyError, TypeError, AttributeError):
-            #     return jsonify({
-            #         "status": 0,
-            #         "message": "Errore nel recupero dettaglio per questo ID",
-            #         "response": {}
-            #     })
-
-
-
-
-
-        
-
-
+    
         
     else:
-        # Nessun parametro ricevuto
+        #!Nessun parametro ricevuto
         error_result = {
             "status": "error",
             "message": "Nessun file di input specificato"
         }
-        logger.info(json.dumps(error_result))
+        print(json.dumps(error_result))
         
 except FileNotFoundError:
     error_result = {
         "status": "error",
         "message": f"File di input non trovato: {sys.argv[1] if len(sys.argv) > 1 else 'N/A'}"
     }
-    logger.info(json.dumps(error_result))
+    print(json.dumps(error_result))
 except json.JSONDecodeError as e:
     error_result = {
         "status": "error", 
         "message": f"Errore nel parsing JSON: {str(e)}"
     }
-    logger.info(json.dumps(error_result))
+    print(json.dumps(error_result))
 except Exception as e:
-    # Gestione errori generici
+    # ? Gestione errori generici
     error_result = {
         "status": "error", 
         "message": f"Errore nello script Python: {str(e)}"
     }
-    logger.info(json.dumps(error_result))
+    print(json.dumps(error_result))

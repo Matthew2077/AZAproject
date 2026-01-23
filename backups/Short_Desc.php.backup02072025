@@ -1,0 +1,303 @@
+<?php
+include_once "vendor/autoload.php";
+require_once 'config.php';
+//IMPORTANT INFO ------
+$client = OpenAI::client($yourApiKey);
+
+
+
+/*
+Step to success:
+1. FIle in input (poi da interfaccia);
+2. Elaborazione file, fai una prima "scrematura" inserendo in un array soltanto ciò che 
+l'AI deve sapere, ovvero la descrizione (poi si potrebbe togliere idk);
+3. Crea Assisstente e thread;
+4. Fai un ciclo sull'array nomiLunghi creato;
+5. ad ogni ciclo crea un messaggio con stesso prompt ma diversa descrizione da sistemare;
+6. alla fine di ogni ciclo aggiungi la riga in un nuovo array;
+7. Alla fine del ciclo, scrivi nel csv originale una nuova colonna con le descrizioni accorciate;
+*/
+
+
+//1. Ottenimento file etc-------------------------
+
+
+
+
+        //2. MANAGE FILE & CREATE ARRAY-------------------------
+        try {
+            //$originalFilePath = $fileName;
+            $originalFilePath = 'ebay_catalogo_SMF_20250623172428.csv';
+
+            $inputHandle = fopen($originalFilePath, 'r');
+
+            if ($inputHandle === false) {
+                die("Unable to open input file.");
+            }
+
+            $header = fgetcsv($inputHandle, 0, ';');
+            if ($header === false) {
+                die("CSV is empty or unreadable.");
+            }
+
+            // Trova indici
+            $lenIndex = array_search('Len', $header);
+            $nomeIndex = array_search('Nome', $header);
+            $insertIndex = array_search('Insert', $header);
+
+            if ($lenIndex === false || $nomeIndex === false || $insertIndex === false) {
+                die("Required columns 'Len', 'Nome' or 'Insert' not found in header.");
+            }
+
+            $nomiLunghi = [];
+
+            while (($row = fgetcsv($inputHandle, 0, ';')) !== false) {
+                $lenValue = $row[$lenIndex] ?? null;
+                $insertDate = $row[$insertIndex] ?? '';
+                set_time_limit(300); //tempo massimo per ricevere risposta
+                // Estrai l'anno dal formato gg/mm/yyyy
+
+                $insertYear = substr($insertDate, 0, 4); // Prende i primi 4 caratteri
+
+
+                if (is_numeric($lenValue) && $lenValue > 80 && $insertYear === '2025') {
+                    $nomeValue = $row[$nomeIndex] ?? '';
+                    $nomiLunghi[] = $nomeValue;
+                    //echo "Len: {$lenValue}, Insert: {$insertDate} (Year: {$insertYear})<br>";
+                }
+            }
+
+
+
+        fclose($inputHandle);
+            
+
+        $userinput = implode(';', $nomiLunghi);
+        /*
+        echo "<pre>";
+        print_r($userinput);
+        echo "</pre>";
+        exit();
+        */ 
+
+
+
+            //2.1 Istruzione per assistant-------------------------
+
+            $instructions = ' You are an assistant that helps to maximize the 80 characters that be the maximum length of a description.
+                Generate a new descritpion based on this rules for every description that I send you: 
+                1. Keep descriptions concise and under 80 characters.
+                2. Replace long phrases with shorter synonyms.
+                3. Use abbreviations where appropriate.
+                4. Maintain essential product information.
+                
+                Put all description on the same line and separate every description with ";"
+                ';
+
+
+
+
+
+        //3. Crea assistant-------------------------
+            $response = $client->assistants()->create([
+                'instructions' => $instructions,
+                'name' => 'Ebay Description Shorten',
+                'temperature' => 0.0,
+                'tools' => [
+                    [
+                        'type' => 'code_interpreter',
+                    ],
+                ],
+                'model' => 'gpt-4.1-nano-2025-04-14',
+            ]);
+
+
+
+            $assistantId = $response->id;
+            echo "Assistant ID: " . $assistantId . "<br>";
+            $response->toArray();
+
+
+
+
+
+            //4. Crea Thread dove poi metti il messaggio-------------------------
+            $response = $client->threads()->create([]);
+            $threadID = $response->id;
+            //print_r ($threadID);
+
+            //5. mandare il messaggio-------------------------
+            $client->threads()->messages()->create($threadID, [
+                'role' => 'user',
+                'content' => $userinput,
+            ]);
+
+
+        //7. Attendere fine run-------------------------
+            $run = $client->threads()->runs()->create($threadID, [
+                'assistant_id' => $assistantId,
+            ]);
+
+            $runId = $run->id;
+
+            // Aspetta che la run finisca
+            do {
+                $runStatus = $client->threads()->runs()->retrieve($threadID, $runId);
+                sleep(1);
+            } while (!in_array($runStatus->status, ['completed', 'failed', 'cancelled']));
+
+            //8. Recupera risposta-------------------------
+            $messages = $client->threads()->messages()->list($threadID);
+
+            
+            foreach ($messages->data as $message) {
+                if ($message->role === 'assistant') {
+                    foreach ($message->content as $content) {
+                        if ($content->type === 'text') {
+                            //9. Inserisci risposta in un nuovo file-------------------------
+                            $shDescs = $content->text->value;
+                            echo nl2br($shDescs) . "<br><br>";
+                            $shorterDescs = explode(';', $shDescs);
+/*                            
+                                    echo "<pre>";
+                            print_r($shDescs);
+                            echo "</pre>";
+                            exit();
+*/
+
+                            //print_r($shorterDescs);
+
+                            //$inputFile = $fileName;
+                            $inputFile = 'ebay_catalogo_SMF_20250623172428.csv';
+                            $outputFile = 'catalogo_modificato.csv';
+
+                            $inputHandle = fopen($inputFile, 'r');
+                            $outputHandle = fopen($outputFile, 'w');
+
+                            if ($inputHandle === false || $outputHandle === false) {
+                                die("Errore nell'aprire i file.");
+                            }
+
+                            //aggiungi colonna per nomi
+                            $header = fgetcsv($inputHandle, 0, ';');
+                            $header[] = 'Nome_accorciato'; 
+                            fputcsv($outputHandle, $header, ';');
+
+                        
+                            $index = 0;
+                            while (($row = fgetcsv($inputHandle, 0, ';')) !== false) {
+                                $row[] = $shorterDescs[$index] ?? ''; 
+                                fputcsv($outputHandle, $row, ';');
+                                $index++;
+                            }
+
+                            fclose($inputHandle);
+                            fclose($outputHandle);
+
+
+                            /*
+                            $outputfile = file_get_contents($outputFile);
+                            echo json_encode([
+                                'success' => true,
+                                'fileUrl' => 'uploads/catalogo_modificato.csv',
+                                'assistantId' => $assistantId,
+                                'descriptions' => $outputfile
+                            ]);
+*/
+                   
+
+
+//header("Location: page-create-user.php?error=" . urlencode($fileName));
+                                                    
+                       
+                        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            
+                        }
+                    }
+                }
+            }
+
+
+
+            
+
+
+
+
+        } catch (\Exception $e) {
+            echo 'Error: ' . $e->getMessage();
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*
+    DA AGGIUNGERESSSS
+    senza X
+    titolo + lung odi 80
+    colonna: data di caricamento, non deve essere antecedente al 2024. 
+
+
+    https://platform.openai.com/docs/api-reference/assistants-streaming/events
+    Eventi: ogni volta che succede qualcosa, fa un evento... interessante
+    */
+
+
+

@@ -1,0 +1,213 @@
+<?php
+include_once "vendor/autoload.php";
+
+//IMPORTANT INFO ------
+$yourApiKey = ('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');
+$client = OpenAI::client($yourApiKey);
+
+
+
+/*
+Step to success:
+1. FIle in input (poi da interfaccia);
+2. Elaborazione file, fai una prima "scrematura" inserendo in un array soltanto ciò che 
+l'AI deve sapere, ovvero la descrizione (poi si potrebbe togliere idk);
+3. Crea Assisstente e thread;
+4. Fai un ciclo sull'array appena creato;
+5. ad ogni ciclo crea un messaggio con stesso prompt ma diversa descrizione da sistemare;
+6. alla fine di ogni ciclo aggiungi la riga in un nuovo array;
+7. Alla fine del ciclo, scrivi nel csv originale una nuova colonna con le descrizioni accorciate;
+*/
+
+
+//1. Ottenimento file etc-------------------------
+
+
+
+
+
+//2. MANAGE FILE & CREATE ARRAY-------------------------
+try {
+    $originalFilePath = 'ebay_catalogo_SMF_20250623172428.csv';
+
+    $inputHandle = fopen($originalFilePath, 'r');
+
+    if ($inputHandle === false) {
+        die("Unable to open input file.");
+    }
+
+    $header = fgetcsv($inputHandle, 0, ';');
+    if ($header === false) {
+        die("CSV is empty or unreadable.");
+    }
+
+    // Trova indici
+    $lenIndex = array_search('Len', $header);
+    $nomeIndex = array_search('Nome', $header);
+    $insertIndex = array_search('Insert', $header);
+
+    if ($lenIndex === false || $nomeIndex === false || $insertIndex === false) {
+        die("Required columns 'Len', 'Nome' or 'Insert' not found in header.");
+    }
+
+    $nomiLunghi = [];
+
+    while (($row = fgetcsv($inputHandle, 0, ';')) !== false) {
+        $lenValue = $row[$lenIndex] ?? null;
+        $insertDate = $row[$insertIndex] ?? '';
+        set_time_limit(300);
+        // Estrai l'anno dal formato gg/mm/yyyy
+        $parts = explode('/', $insertDate);
+        $insertYear = isset($parts[2]) ? $parts[2] : null;
+
+        if (is_numeric($lenValue) && $lenValue > 80 && $insertYear === '2025') {
+            $nomeValue = $row[$nomeIndex] ?? '';
+            $nomiLunghi[] = $nomeValue;
+            //echo "Len: {$lenValue}, Insert: {$insertDate} (Year: {$insertYear})<br>";
+        }
+    }
+
+
+
+fclose($inputHandle);
+/*
+echo "<pre>";
+print_r($nomiLunghi);
+echo "</pre>";
+exit();
+*/
+
+
+
+    //2.1 Istruzione per assistant-------------------------
+
+    $instructions = ' You are an assistant that helps to maximize the 80 characters that be the maximum length of a description. 
+        Here some rules to follow:
+        1. Keep descriptions concise and under 80 characters.
+        2. Replace long phrases with shorter synonyms.
+        3. Use abbreviations where appropriate.
+        4. Maintain essential product information.
+
+
+        ';
+
+
+
+
+
+ //3. Crea assistant-------------------------
+    $response = $client->assistants()->create([
+        'instructions' => $instructions,
+        'name' => 'Ebay Description Shorten',
+        'tools' => [
+            [
+                'type' => 'code_interpreter',
+            ],
+        ],
+        'model' => 'gpt-4.1-nano-2025-04-14',
+    ]);
+
+
+
+    $assistantId = $response->id;
+    echo "Assistant ID: " . $assistantId . "<br>";
+    $response->toArray();
+
+
+
+
+    foreach ($nomiLunghi as $shortname) {
+
+        //4. Crea Thread dove poi metti il messaggio-------------------------
+        $response = $client->threads()->create([]);
+        $threadID = $response->id;
+        //print_r ($threadID);
+
+        //5. mandare i messaggi-------------------------
+        $client->threads()->messages()->create($threadID, [
+            'role' => 'user',
+            'content' => $shortname,
+        ]);
+
+
+    //7. Attendere fine run-------------------------
+        $run = $client->threads()->runs()->create($threadID, [
+            'assistant_id' => $assistantId,
+        ]);
+
+        $runId = $run->id;
+
+        // Aspetta che la run finisca
+        do {
+            $runStatus = $client->threads()->runs()->retrieve($threadID, $runId);
+            sleep(1);
+        } while (!in_array($runStatus->status, ['completed', 'failed', 'cancelled']));
+
+        //8. Recupera risposta
+        $messages = $client->threads()->messages()->list($threadID);
+
+        foreach ($messages->data as $message) {
+            if ($message->role === 'assistant') {
+                foreach ($message->content as $content) {
+                    if ($content->type === 'text') {
+                        $shorterDescs[] = $content->text->value;
+                        print_r($shorterDescs);
+                    }
+                }
+            }
+        }
+    }
+/*
+    echo "<pre>";
+    print_r($shorterDescs);
+    echo "</pre>";
+    exit();
+*/
+
+
+
+
+
+} catch (\Exception $e) {
+    echo 'Error: ' . $e->getMessage();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*
+    DA AGGIUNGERESSSS
+    senza X
+    titolo + lung odi 80
+    colonna: data di caricamento, non deve essere antecedente al 2024. 
+
+
+    https://platform.openai.com/docs/api-reference/assistants-streaming/events
+    Eventi: ogni volta che succede qualcosa, fa un evento... interessante
+    */
+
+
+
