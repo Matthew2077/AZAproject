@@ -13,7 +13,7 @@ try:
     # ---------------
     if len(sys.argv) > 1:
         input_file = sys.argv[1]
-        
+
         # Leggi il contenuto del file JSON
         with open(input_file, 'r', encoding='utf-8') as f:
             params = json.load(f)
@@ -84,18 +84,20 @@ try:
             # ---------------
             # *CONTEGGIO CATEGORIE
             # ---------------
-            category_list = []
+            category_list = {}
             
             for element in asin_list:
                 try:
                     category = dati['body'][element]['data'][country]['ranking']['category']['name']
                     
                     if category is None:
-                        pass
-                    elif category not in category_list:
-                        category_list.append(category)
+                        continue
+
+                    if category not in category_list:
+                        category_list[category] += 1
                     else: 
-                        pass
+                        category_list[category] += 1
+                        
                 except (ValueError, TypeError, KeyError):
                     continue
             #?print(category_list)
@@ -104,22 +106,23 @@ try:
             # ---------------
             # *CONTEGGIO NODI
             # ---------------
-            node_list = []
-            
+            node_list = {}
+
             for element in asin_list:
                 try:
-                    
                     node = dati['body'][element]['data'][country]['ranking']['node']['name']
-                    
+
                     if node is None:
-                        pass
-                    elif node not in node_list:
-                        node_list.append(node)
-                    else: 
-                        pass
+                        continue
+
+                    if node in node_list:
+                        node_list[node] += 1
+                    else:
+                        node_list[node] = 1
+
                 except (ValueError, TypeError, KeyError):
                     continue
-                
+
             #?print(node_list)
             
             

@@ -38,10 +38,6 @@ require_once __DIR__ . '/config/dz.php';
     <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 
-    <!-- PDF Libraries -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 
 
     	<!--SWEET ALERT-->
@@ -120,12 +116,6 @@ require_once __DIR__ . '/config/dz.php';
     color: #212529;
     font-size: 0.95rem;
     word-break: break-word;
-}
-
-/*NECESSARIO PER PDF*/
-.chart-wrapper {
-  page-break-inside: avoid;
-  break-inside: avoid;
 }
 
     </style>
@@ -219,86 +209,68 @@ require_once __DIR__ . '/config/dz.php';
                         <a class="nav-link country active" aria-current="page" country="IT" href="#">IT</a>
                     </li>
 
-                    qui viene messo anche il bottone per il pdf-->
+                    -->
                 </ul>
 
             </div>
 
 
 
+            <!-- Qui vengono creati i grafici -->
+            <div class="row chart-wrapper"> <!--class dashboard è usato per ciclare su questi div e ottenere i KPI-->
+				<div class="col-md-6 dashboard" id="is_AMZ" KPI="is_AMZ" output="J"></div>
+				<div class="col-md-6 dashboard" id="ASIN" KPI="ASIN" output="J"></div>
+			</div>
 
+			<div class="row chart-wrapper">
+				<div class="col-md-4 dashboard" id="OFFERS" KPI="OFFERS" output="J"></div>
+				<div class="col-md-8 dashboard" id="NODE" KPI="NODE" output="J"></div>
+				</div>
+			</div>
 
+            <div class="row chart-wrapper">
+                <div class="col-md-4 dashboard" id="TEMPO_DI_CONSEGNA" KPI="TEMPO_DI_CONSEGNA" output="J"></div>
+                <div class="col-md-8 dashboard" id="CAT" KPI="CAT" output="J"></div>
+            </div>
+            <div class="row chart-wrapper">
+                <div class="col-md-6 dashboard" id="MARGINE" KPI="MARGINE" output="J"></div>
+                <div class="col-md-6 dashboard" id="IDQ" KPI="IDQ" output="J"></div>
+            </div>
+            <div class="row chart-wrapper">
+            <div class="col-md-6 dashboard" id="" KPI="LISTA_TOP_X" output="J"></div>
+            </div>
+            <!-- TABELLA LISTA_TOP_X-->
+            <div class="row chart-wrapper">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table id="topProductsTable" class="display" style="min-width: 850px">
+                                    <thead>
+                                        <tr>
+                                            <th>Dettaglio</th>
+                                            <th>Titolo Prodotto</th>
+                                            <th>EAN</th>
+                                            <th>ASIN</th>
+                                            <th>Categoria</th>
+                                            <th>Ranking Categoria</th>
+                                            <th>Nodo</th>
+                                            <th>Ranking Nodo</th>
 
-
-<!-- MODALE PER GENERAZIONE PDF -->
-<div class="modal fade" id="pdfmodal" tabindex="-1" aria-labelledby="pdfmodalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg"> <!-- Aumenta dimensione -->
-    <div class="modal-content">
-      <!-- Header -->
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="pdfmodalLabel">Configurazione PDF</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Chiudi"></button>
-      </div>
-
-      <!-- Form -->
-      <form action="AZAserver.php" method="POST" target="_blank"> <!--redirect al server-->
-
-        <div class="modal-body">
-          <!-- Nome Cliente -->
-          <div class="mb-3">
-            <label for="nomecliente" class="form-label">Nome Cliente</label>
-            <input type="text" class="form-control" id="nomecliente" name="nomecliente" required>
-          </div>
-
-          <!-- Gli altri elementi-->
-          <div class="row">
-            <!-- prima colonna  -->
-            <div class="col-md-6">
-                <div class="mb-3">
-                    <label for="datareport" class="form-label">Data Report</label>
-                    <input type="text" class="form-control" id="PDFdatareport" name="datareport">
-                </div>
-                <div class="mb-3">
-                    <label for="filename" class="form-label">Paese scelto</label>
-                    <input type="text" class="form-control" id="countryforpdf" value="" name="country" >
-                </div>
-                <div class="mb-3">
-                    <label for="filename" class="form-label">Nome File</label>
-                    <input type="text" class="form-control" id="PDFfilename"  name="filename" >
-                </div>
-                <div class="mb-3">
-                    <label for="ASIN" class="form-label">Numero ASIN</label>
-                    <input type="text" class="form-control" id="PDFASIN" name="ASIN">
+                                        </tr>
+                                    </thead>
+                                    <tbody id="LISTA_TOP_X"  KPI="LISTA_TOP_X" class="">
+                                        <!-- Qui vengono create le righe della tabella -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <!-- Seconda colonna -->
-            <div class="col-md-6">
-              <div class="mb-3">
-                <label for="EAN" class="form-label">Numero EAN</label>
-                <input type="text" class="form-control" id="PDFEAN"  name="EAN">
-              </div>
-              <div class="mb-3">
-                <label for="AMZ" class="form-label">Prodotti Amazon</label>
-                <input type="text" class="form-control" id="PDFAMZ"  name="AMZ">
-              </div>
-              <div class="mb-3">
-                <label for="totaleprodotti" class="form-label">Totale Prodotti</label>
-                <input type="text" class="form-control" id="PDFtotaleprodotti" name="totaleprodotti">
-                <input type="hidden" name="action" value="PDF">
-              </div>
-            </div>
-          </div>
-        </div>
 
-        <!-- Footer -->
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
-          <button ID="generaPDF" type="submit" class="btn btn-primary">Genera PDF</button>
-        </div>
-      </form>
-    </div>
-  </div>
-</div>
+
+
 
 
 
@@ -385,12 +357,7 @@ function generateCountryTabs(countries, filename, lastupdate, asin_count, ean_co
         tabsContainer.append(tabHtml);
     });
 
-    // Aggiungi il pulsante PDF dopo le tab dei paesi
-    tabsContainer.append(`
-        <li class="nav-item">
-            <button id="generaPDF" class="btn btn-danger btn-block">Genera PDF</button>
-        </li>
-    `);
+    
 
 }
 
@@ -522,44 +489,6 @@ $(document).ready(function() { //qui inserisci ogni cosa
     });
 
 
-    //EVENTO PDF
-    $(document).on('click', '#generaPDF', function() {
-
-
-        function createPDF(){
-            // Recupera i valori dalla pagina
-            const lastUpdate = $('#last-update').text();
-            const asinCount = $('#asin_count').text();
-            const eanCount = $('#ean_count').text();
-            const amazonProducts = $('#amazon_products').text();
-            const totalProducts = $('#total_products').text();
-            const filename = $('#filename').text();
-
-            // Recupera il paese selezionato
-            const activeTab = $('.nav-link.country.active');
-            const country = activeTab.length ? activeTab.attr('country') : 'N/A';
-
-            // Popola i campi del modal
-            $('#PDFdatareport').val(lastUpdate);
-            $('#PDFASIN').val(asinCount);
-            $('#PDFEAN').val(eanCount);
-            $('#PDFAMZ').val(amazonProducts);
-            $('#PDFtotaleprodotti').val(totalProducts);
-            $('#PDFfilename').val(filename);
-            $('#PDFcountry').val(country);
-
-            // Imposta il valore dell'input hidden con il paese selezionato
-            $('#countryforpdf').val(country);
-
-            // Mostra il modal
-            var PDFmodal = new bootstrap.Modal(document.getElementById('pdfmodal'));
-            PDFmodal.show();
-        }
-
-        createPDF()
-
-    });
-
 
     //RICHIESTE A PYTHON PER I GRAFICI        
     $(document).on('click', '.country', function() {
@@ -582,10 +511,623 @@ $(document).ready(function() { //qui inserisci ogni cosa
         },
         body: JSON.stringify(params)
     })
-    .then(response => response.text())
+    .then(response => response.text())  // text o json
     .then(data => {
-        console.log('Risposta dal server:', data);
-        alert('Python eseguito!\n' + data);
+        //console.log('Risposta dal server:' + data);
+        alert('Python eseguito!\n');
+        //console.log(typeof data);
+
+        const r = JSON.parse(data);
+
+        //IS_AMZ
+        const is_AMZ_count = r.is_AMZ_count;
+        const not_AMZ_count = r.not_AMZ_count;
+
+        //ASIN
+        const asin_count = r.asin_count;
+        const no_asin_count = r.no_asin_count;
+
+        //LISTA_TOP_X
+        const prodotti_ordinati = r.prodotti_ordinati;
+
+        //NODE
+        const nodes = r.node_list;
+        const node_names = Object.keys(nodes);
+        const node_num = Object.values(nodes);
+
+        //CAT
+        const categories = r.category_list;
+        const cat_names = Object.keys(categories);
+        const cat_num = Object.values(categories);
+
+        //TEMPO_DI_CONSEGNA
+        const tmp_sped = r.tempo_spedizione;
+        const tmp_labels = Object.keys(tmp_sped);
+        const tmp_num = Object.values(tmp_sped);
+        // OFFERS
+        const offers_count = r.offers_count;
+        const no_offers_count = r.no_offers_count;
+
+        //MARGINE
+        const margine = r.fasce_margine;
+        const margine_labels = Object.keys(margine);
+        const margine_num = Object.values(margine);
+        //IDQ
+        const IDQ = r.info_IDQ;
+        const IDQ_labels = Object.keys(IDQ);
+        const IDQ_num = Object.values(IDQ);
+        //DEBUG
+        RispostaOrdinata =  {
+            'IS_AMZ' : is_AMZ_count,
+            'NO_AMZ' : not_AMZ_count,
+            'asin_count' : asin_count,
+            'no_asin_count' : no_asin_count,
+            'node_names' : node_names,
+            'node_num' : node_num,
+            'cat_names' : cat_names,
+            'cat_num' : cat_num,
+            'tmp_labels' : tmp_labels,
+            'tmp_num' : tmp_num,
+            'offers_count' : offers_count,
+            'no_offers_count' : no_offers_count,
+            'margine_labels' : margine_labels,
+            'margine_num': margine_num,
+            'IDQ_labels' : IDQ_labels,
+            'IDQ_num' : IDQ_num,
+            'prodotti_ordinati': prodotti_ordinati
+        }
+        
+        console.log(prodotti_ordinati)
+        
+
+        //-----------IS_AMZ------------
+        var options = {
+                        series: [is_AMZ_count, not_AMZ_count],
+                        chart: {
+                            width: 380,
+                            type: 'pie',
+                        },
+                        title: {
+                            text: "Amazon Seller:",
+                            align: 'center',
+                            style: {
+                                fontSize: '16px',
+                                fontWeight: 'bold',
+                                color: '#333'
+                            }
+                        },
+                        labels: ["AMAZON VENDOR", "NON AMAZON"],
+                        colors: ['#0edf8d', '#27b00e'], // Blu per "Yes", blu chiaro per "No"
+                        dataLabels: {
+                        enabled: true,
+                        style: {
+                            colors: ['#000000', '#000000'] // Testo nero per entrambe le etichette
+                        },
+                        dropShadow: { //toglie le ombre
+                            enabled: false
+                        },
+                        formatter: function(val, opts) {
+                            return opts.w.globals.series[opts.seriesIndex] + " (" + val.toFixed(1) + "%)";
+                        },
+                        style: {
+                            colors: ['#FFFFFF'] // Colore del testo in basso (percentuale)
+                        }
+                    },
+                        legend: {
+                            position: 'bottom', // Posizione legenda
+                            fontSize: '14px'
+                        },
+                        responsive: [{
+                            breakpoint: 480,
+                            options: {
+                                chart: {
+                                    width: 200
+                                },
+                                legend: {
+                                    position: 'bottom'
+                                }
+                            }
+                        }]
+                    };
+
+                    var chart = new ApexCharts(document.querySelector("#IS_AMZ"), options);
+                    chart.render();
+
+
+    //-----------ASIN------------
+    var options = {
+                        series: [asin_count, no_asin_count],
+                        chart: {
+                            width: 380,
+                            type: 'pie',
+                        },
+                        title: {
+                            text: "Distribuzione ASIN: ",
+                            align: 'center',
+                            style: {
+                                fontSize: '16px',
+                                fontWeight: 'bold',
+                                color: '#333'
+                            }
+                        },
+                        labels: ["CON ASIN", "NO ASIN"],
+                        colors: ['#0edf8d', '#27b00e'], // Blu per "Yes", blu chiaro per "No"
+                        dataLabels: {
+                        enabled: true,
+                        style: {
+                            colors: ['#000000', '#000000'] // Testo nero per entrambe le etichette
+                        },
+                        dropShadow: { //toglie le ombre
+                            enabled: false
+                        },
+                        formatter: function(val, opts) {
+                            return opts.w.globals.series[opts.seriesIndex] + " (" + val.toFixed(1) + "%)";
+                        },
+                        style: {
+                            colors: ['#FFFFFF'] // Colore del testo in basso (percentuale)
+                        }
+                    },
+                        legend: {
+                            position: 'bottom', // Posizione legenda
+                            fontSize: '14px'
+                        },
+                        responsive: [{
+                            breakpoint: 480,
+                            options: {
+                                chart: {
+                                    width: 200
+                                },
+                                legend: {
+                                    position: 'bottom'
+                                }
+                            }
+                        }]
+                    };
+
+                    var chart = new ApexCharts(document.querySelector("#ASIN"), options);
+                    chart.render();
+
+
+
+
+
+    //-----------NODE------------
+var options = {
+                    series: [{
+                    data: node_num
+                    }],
+                    title: {
+                            text: "Nodi:",
+                            align: 'center',
+                            style: {
+                                fontSize: '16px',
+                                fontWeight: 'bold',
+                                color: '#333'
+                            }
+                        },
+                    chart: {
+                    type: 'bar',
+                    height: 350
+                    },
+                    plotOptions: {
+                    bar: {
+                        borderRadius: 4,
+                        borderRadiusApplication: 'end',
+                        horizontal: true,
+                    }
+                    },
+                    dataLabels: {
+                    enabled: false
+                    },
+                    xaxis: {
+                    categories: node_names
+                    }
+                    };
+
+        var chart = new ApexCharts(document.querySelector("#NODE"), options);
+        chart.render();
+
+    //-----------CATEGORIE------------
+                    var options = {
+                    series: [{
+                    data: node_num
+                    }],
+                    title: {
+                            text: "Categorie:",
+                            align: 'center',
+                            style: {
+                                fontSize: '16px',
+                                fontWeight: 'bold',
+                                color: '#333'
+                            }
+                        },
+                    chart: {
+                    type: 'bar',
+                    height: 350
+                    },
+                    plotOptions: {
+                    bar: {
+                        borderRadius: 4,
+                        borderRadiusApplication: 'end',
+                        horizontal: true,
+                    }
+                    },
+                    dataLabels: {
+                    enabled: false
+                    },
+                    xaxis: {
+                    categories: cat_names
+                    }
+                    };
+
+        var chart = new ApexCharts(document.querySelector("#CAT"), options);
+        chart.render();
+
+   //-----------TEMPO DI CONSEGNA------------
+   var options = {
+                                series: tmp_num,
+                                title: {
+                                    text: "Tempo di Consegna:",
+                                    align: 'center',
+                                    style: {
+                                        fontSize: '16px',
+                                        fontWeight: 'bold',
+                                        color: '#333'
+                                    }
+                                },
+                                chart: {
+                                    height: 350,
+                                    width: '100%',
+                                    type: 'radialBar',
+                                },
+                                plotOptions: {
+                                radialBar: {
+                                    offsetY: 0,
+                                    startAngle: 0,
+                                    endAngle: 270,
+                                    hollow: {
+                                    margin: 5,
+                                    size: '30%',
+                                    background: 'transparent',
+                                    image: undefined,
+                                    },
+                                    dataLabels: {
+                                    name: {
+                                        show: false,
+                                    },
+                                    value: {
+                                        show: false,
+                                    }
+                                    },
+
+                                    barLabels: {
+                                    enabled: true,
+                                    useSeriesColors: true,
+                                    offsetX: -8,
+                                    fontSize: '16px',
+                                    formatter: function(seriesName, opts) {
+                                        return seriesName + ":  " + opts.w.globals.series[opts.seriesIndex]
+                                    },
+                                    },
+                                }
+                                },
+                                colors: ['#1ab7ea', '#0084ff', '#39539E', '#0077B5'],
+                                labels: tmp_labels,
+                                responsive: [{
+                                breakpoint: 480,
+                                options: {
+                                    legend: {
+                                        show: false
+                                    }
+                                }
+                                }]
+                                };
+
+            var chart = new ApexCharts(document.querySelector("#TEMPO_DI_CONSEGNA"), options);
+            chart.render();
+
+   //-----------offers------------
+var options = {
+                    series: [offers_count, no_offers_count],
+                    labels: ['Con Offerte', 'Senza Offerte'],
+                    chart: {
+                        width: '100%',
+                        height: 450,
+                        type: 'donut',
+                    },
+                    plotOptions: {
+                        pie: {
+                            startAngle: -90,
+                            endAngle: 270,
+                            donut: {
+                                labels: {
+                                    show: true,
+                                    name: {
+                                        show: true,
+                                        fontSize: '14px',
+                                        fontWeight: 'bold',
+                                        color: undefined
+                                    },
+                                    value: {
+                                        show: true,
+                                        fontSize: '16px',
+                                        fontWeight: 'bold',
+                                        color: '#333',
+                                        formatter: function (val) {
+                                            return val
+                                        }
+                                    },
+                                }
+                            }
+                        }
+                    },
+                    dataLabels: {
+                        enabled: false
+                    },
+                    fill: {
+                        type: 'gradient',
+                    },
+                    legend: {
+                        formatter: function(val, opts) {
+                            return val + " - " + opts.w.globals.series[opts.seriesIndex]
+                        },
+                        position: 'right',
+                        horizontalAlign: 'center'
+                    },
+                    title: {
+                        text: 'Offerte Attive',
+                        align: 'center',
+                        style: {
+                            fontSize: '16px',
+                            fontWeight: 'bold'
+                        }
+                    },
+                    responsive: [{
+                        breakpoint: 480,
+                        options: {
+                            chart: {
+                                width: 200
+                            },
+                            legend: {
+                                position: 'bottom'
+                            }
+                        }
+                    }]
+                };
+
+                    var chart = new ApexCharts(document.querySelector("#OFFERS"), options);
+                    chart.render();
+
+
+//-----------MARGINE------------
+var options = {
+                        series: [{
+                        name: 'MARGINE',
+                        data: margine_num,
+                        }],
+                        chart: {
+                        height: 350,
+                        type: 'bar',
+                        },
+                        plotOptions: {
+                        bar: {
+                            borderRadius: 10,
+                            dataLabels: {
+                            position: 'top', // top, center, bottom
+                            },
+                        }
+                        },
+                        dataLabels: {
+                        enabled: true,
+                        formatter: function (val) {
+                            return val;
+                        },
+                        offsetY: -20,
+                        style: {
+                            fontSize: '12px',
+                            colors: ["#304758"]
+                        }
+                        },
+
+                        xaxis: {
+                        categories: margine_labels,
+                        position: 'top',
+                        axisBorder: {
+                            show: false
+                        },
+                        axisTicks: {
+                            show: false
+                        },
+                        crosshairs: {
+                            fill: {
+                            type: 'gradient',
+                            gradient: {
+                                colorFrom: '#D8E3F0',
+                                colorTo: '#BED1E6',
+                                stops: [0, 100],
+                                opacityFrom: 0.4,
+                                opacityTo: 0.5,
+                            }
+                            }
+                        },
+                        tooltip: {
+                            enabled: true,
+                        }
+                        },
+                        yaxis: {
+                        axisBorder: {
+                            show: false
+                        },
+                        axisTicks: {
+                            show: false,
+                        },
+                        labels: {
+                            show: false,
+                            formatter: function (val) {
+                            return val + "%";
+                            }
+                        }
+
+                        },
+                        title: {
+                        text: 'Margine',
+                        floating: true,
+                        offsetY: 330,
+                        align: 'center',
+                        style: {
+                            color: '#444'
+                        }
+                        }
+                        };
+
+                        var chart = new ApexCharts(document.querySelector("#MARGINE"), options);
+                    chart.render();
+
+
+
+        
+//-----------IDQ------------
+const info_IDQ = r.info_IDQ;
+
+// categorie asse X
+const formattedCategories = Object.keys(info_IDQ);
+
+// serie dati
+const scarsoData = formattedCategories.map(cat => info_IDQ[cat].scarso || 0);
+const medioData  = formattedCategories.map(cat => info_IDQ[cat].medio || 0);
+const ottimoData = formattedCategories.map(cat => info_IDQ[cat].ottimo || 0);
+
+
+                    var options = {
+                        series: [{
+                            name: 'Scarso',
+                            data: scarsoData,
+                            color: '#068EF8'
+                        }, {
+                            name: 'Medio',
+                            data: medioData,
+                            color: '#FFB6B3'
+                        }, {
+                            name: 'Ottimo',
+                            data: ottimoData,
+                            color: '#1ee811'
+                        }],
+                        chart: {
+                            type: 'bar',
+                            height: 350,  // Aumenta l'altezza per bilanciare la larghezza ridotta
+                            width: '100%', // Usa il 100% del contenitore
+                            stacked: true,
+                            toolbar: {
+                                show: true
+                            },
+                            zoom: {
+                                enabled: true
+                            }
+                        },
+                        plotOptions: {
+                            bar: {
+                                horizontal: false,
+                                borderRadius: 4,
+                                dataLabels: {
+                                    total: {
+                                        enabled: true,
+                                        style: {
+                                            fontSize: '13px',
+                                            fontWeight: 900
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        xaxis: {
+                            categories: formattedCategories,
+                            labels: {
+                                style: {
+                                    fontSize: '12px',
+                                    fontWeight: 'bold'
+                                },
+                                formatter: function(value) {
+                                    return value.split(' ').map(function(word) {
+                                        return word.charAt(0).toUpperCase() + word.slice(1);
+                                    }).join(' ');
+                                }
+                            }
+                        },
+                        legend: {
+                            position: 'right',
+                            offsetY: 40
+                        },
+                        fill: {
+                            opacity: 1
+                        },
+                        title: {
+                            text: 'Analisi qualitativa prodotti (IDQ)',
+                            align: 'center',
+                            style: {
+                                fontSize: '16px',
+                                fontWeight: 'bold',
+                                color: '#333'
+                            }
+                        },
+                        tooltip: {
+                            y: {
+                                formatter: function(val) {
+                                    return val;
+                                }
+                            }
+                        }
+                    };
+
+
+
+                    var chart = new ApexCharts(document.querySelector("#IDQ"), options);
+                    chart.render();
+
+
+
+//----------LISTA_TOP_X------------
+if (Array.isArray(prodotti_ordinati)) {
+
+    const sortedProducts = prodotti_ordinati.sort(
+        (a, b) => (a.NODE_RANK ?? 999999) - (b.NODE_RANK ?? 999999)
+    );
+
+    sortedProducts.forEach((product) => {
+
+        const formattedCatRank = product.CAT_RANK
+            ? Number(product.CAT_RANK).toLocaleString()
+            : '-';
+
+        const formattedNodeRank = product.NODE_RANK
+            ? Number(product.NODE_RANK).toLocaleString()
+            : '-';
+
+        // const DETTAGLIO = `
+        //     <button class='dettaglio btn btn-primary'
+        //         idx='${ || ''}'>+</button>
+        // `;
+
+        $('#topProductsTable tbody').append(`
+            <tr>
+                <td>${product.idx}</td>
+                <td>${product.TITLE || ''}</td>
+                <td>${product.EAN || ''}</td>
+                <td>${product.ASIN || ''}</td>
+                <td>${product.CAT_NAME || ''}</td>
+                <td>${formattedCatRank}</td>
+                <td>${product.NODE_NAME || ''}</td>
+                <td>${formattedNodeRank}</td>
+            </tr>
+        `);
+    });
+
+}
+
+
+
+
+
+
     })
     .catch(error => {
         console.error('Errore:', error);
@@ -595,7 +1137,8 @@ $(document).ready(function() { //qui inserisci ogni cosa
 
 
 
-    // qui inizia il bello
+        
+    
 
     });
 

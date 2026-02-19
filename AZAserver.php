@@ -199,6 +199,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     "kpi" => $KPI
                 ];
                 
+
+
+
+                
                 // Crea file temporaneo per i parametri
                 $temp_input = tempnam(sys_get_temp_dir(), 'aza_input_');
                 file_put_contents($temp_input, json_encode($params));
@@ -207,7 +211,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 //$python = __DIR__ . "/.venv/bin/python";
                 //$cmd = "$python AZAGrafici.py" . escapeshellarg($temp_input);
                 $python = __DIR__ . "/.venv/bin/python";
-                $script = __DIR__ . "/AZAgrafici.py";
+                $script = __DIR__ . "/AZAGrafici.py";
                 $cmd = "$python $script $temp_input";
                 /*
 
@@ -255,7 +259,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     echo json_encode($response);
                 }
                 
-                break; // IMPORTANTE: break per uscire dal case
+                break;
             case 'PDF';
                 //eseguire il python con le info necessarie
 
